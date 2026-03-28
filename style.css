@@ -1,50 +1,49 @@
 :root {
-    --primary-color: #00ff41;
-    --primary-hover: #00d436;
-    --dark-bg: #050505;
-    --darker-bg: #020202;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --text-main: #ffffff;
-    --text-muted: #888888;
-    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    --neon-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+    --primary-color: #003366; /* Corporate Navy */
+    --secondary-color: #495057; /* Steel Grey */
+    --accent-color: #007bff;
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --transition: all 0.3s ease;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: var(--dark-bg);
-    color: var(--text-main);
+    background-color: var(--bg-white);
+    color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    letter-spacing: 0.2px;
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 4%;
 }
 
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
 
-/* Navbar - Ultra Sleek Glass */
+/* Navbar - Corporate Professional */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     z-index: 1000;
-    background: rgba(5, 5, 5, 0.7);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .navbar .container {
@@ -57,65 +56,61 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    letter-spacing: -1px;
 }
 
-.logo span { color: var(--primary-color); text-shadow: var(--neon-shadow); }
+.logo span { color: var(--secondary-color); }
 
-.nav-links { display: flex; gap: 3rem; }
-.nav-links a { font-weight: 500; font-size: 0.95rem; color: #fff; opacity: 0.7; }
-.nav-links a:hover { opacity: 1; color: var(--primary-color); }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { font-weight: 700; font-size: 0.9rem; color: var(--text-dark); text-transform: uppercase; }
+.nav-links a:hover { color: var(--primary-color); }
 
-/* Hero - Cinematic obsidian */
+/* Hero - Industrial Success */
 .hero {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
-    background: radial-gradient(circle at 70% 30%, rgba(0, 255, 65, 0.05) 0%, transparent 50%),
-                linear-gradient(135deg, #050505 0%, #000 100%);
-    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2000') no-repeat center center/cover;
+    color: #fff;
+    text-align: left;
 }
 
 .hero::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
-    height: 30vh;
-    background: linear-gradient(to top, var(--dark-bg), transparent);
+    height: 100px;
+    background: #fff;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 1000px;
     z-index: 2;
 }
 
 .premium-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(3rem, 7vw, 5rem);
     font-weight: 900;
     line-height: 1;
     margin-bottom: 2rem;
-    letter-spacing: -2px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
 }
 
-.premium-title span {
-    background: linear-gradient(90deg, #fff, var(--primary-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+.premium-title span { color: #fff; border-bottom: 5px solid var(--primary-color); }
 
 .premium-p {
-    font-size: 1.3rem;
-    color: var(--text-muted);
-    max-width: 600px;
+    font-size: 1.4rem;
+    color: #f1f1f1;
+    max-width: 700px;
     margin-bottom: 3rem;
+    font-weight: 400;
 }
 
 /* Emergency Call Section - SEO Power */
@@ -171,147 +166,146 @@ ul { list-style: none; }
     }
 }
 
-/* Topic Clusters - Neo Industrial Style */
+/* Services/Clusters - High Authority Industrial */
 .topic-clusters {
-    padding: 12rem 0;
-    background: var(--dark-bg);
+    padding: 10rem 0;
+    background: var(--bg-light);
 }
 
 .cluster-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem;
-    margin-top: 6rem;
+    margin-top: 5rem;
 }
 
 .cluster-card {
-    background: var(--glass-bg);
+    background: #fff;
     padding: 4rem 3rem;
-    border-radius: 30px;
-    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    border-bottom: 4px solid var(--primary-color);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
     transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-    height: 100%;
 }
 
 .cluster-card:hover {
-    background: rgba(0, 255, 65, 0.02);
-    border-color: var(--primary-color);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,33,102,0.1);
 }
 
 .cluster-icon {
     font-size: 3rem;
-    background: linear-gradient(135deg, var(--primary-color), #fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary-color);
     margin-bottom: 2rem;
 }
 
 .cluster-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -1px;
+    font-weight: 800;
 }
 
 .cluster-card p {
-    font-size: 1.1rem;
     color: var(--text-muted);
-    font-weight: 300;
+    font-size: 1.05rem;
 }
 
-/* Pricing Table - Clean Fintech Style */
-.pricing {
-    padding: 12rem 0;
-    background: var(--darker-bg);
+/* Statistics Section */
+.stats-section {
+    padding: 6rem 0;
+    background: var(--primary-color);
+    color: #fff;
 }
 
-.price-table-container {
-    background: rgba(255, 255, 255, 0.01);
-    border-radius: 40px;
-    padding: 4rem;
-    border: 1px solid var(--glass-border);
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.stat-suffix {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+/* Working Process Section */
+.work-process {
+    padding: 10rem 0;
+    background: #fff;
+    position: relative;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     margin-top: 5rem;
 }
 
-.premium-price-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 0.8rem;
-    text-align: left;
-    min-width: 700px;
-}
-
-.premium-price-table th {
-    padding: 1.5rem 2rem;
-    color: var(--primary-color);
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    border-bottom: 2px solid rgba(0, 255, 65, 0.2);
-}
-
-.premium-price-table td {
-    padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.premium-price-table td:first-child {
-    border-radius: 15px 0 0 15px;
-    font-size: 1.1rem;
-}
-
-.premium-price-table td:last-child {
-    border-radius: 0 15px 15px 0;
-    font-weight: 800;
-    color: var(--primary-color);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
-}
-
-.premium-price-table tr:hover td {
-    background: rgba(0, 255, 65, 0.05);
-    color: #fff;
-    cursor: default;
-}
-
-/* Buttons - Premium Obsidion */
-.btn {
-    padding: 1.2rem 2.8rem;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
+.process-step {
+    padding: 3rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
     transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    border: none;
+    position: relative;
 }
 
-.btn-primary {
+.process-step:hover {
+    border-color: var(--primary-color);
+    background: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.step-num {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    opacity: 0.1;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+.process-step h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Emergency Call Out */
+.emergency-call {
     background: var(--primary-color);
-    color: #000;
-    box-shadow: 0 15px 35px rgba(0, 255, 65, 0.2);
-}
-
-.btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 45px rgba(0, 255, 65, 0.4);
-}
-
-.btn-secondary {
-    background: var(--glass-bg);
     color: #fff;
-    border: 1px solid var(--glass-border);
+    padding: 4rem 0;
 }
-
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
+.btn-emergency {
+    background: #fff;
+    color: var(--primary-color);
+    padding: 1.5rem 3rem;
+    font-weight: 800;
 }
 
 /* Quote Section - Decompressed & Modern */
