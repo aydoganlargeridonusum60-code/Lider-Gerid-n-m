@@ -183,6 +183,59 @@ h1, h2, h3 {
     transform: translateY(-5px);
 }
 
+/* Emergency Call Section - SEO Power */
+.emergency-call {
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 3rem 0;
+    border-top: 1px solid rgba(0, 255, 65, 0.2);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.emergency-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.emergency-text h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.emergency-text p {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.btn-emergency {
+    background: var(--primary-color);
+    color: #000;
+    padding: 1.5rem 3rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 255, 65, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0); }
+}
+
+@media (max-width: 768px) {
+    .emergency-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* Pricing Table (Decompressed & Modern) */
 .pricing {
     padding: 10rem 0;
