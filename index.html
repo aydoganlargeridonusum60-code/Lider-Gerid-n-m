@@ -328,18 +328,45 @@
         </div>
     </section>
 
-    <!-- Regional Marquee (SEO & Visual Beauty) -->
+    <!-- Regional Marquee (Interactive SEO) -->
     <section class="marquee-section">
         <div class="marquee-container">
-            <div class="marquee-content">
-                <span>İSTANBUL</span> <span>ANKARA</span> <span>İZMİR</span> <span>BURSA</span> <span>KOCAELİ</span> <span>GEBZE</span> <span>ARNAVUTKÖY</span> <span>BAŞAKŞEHİR</span> <span>TUZLA</span> <span>ÜMRANİYE</span> <span>PENDİK</span> <span>ESENYURT</span> <span>GAZİANTEP</span> <span>KAYSERİ</span> <span>ADANA</span> <span>ANTALYA</span> <span>KONYA</span> <span>SAMSUN</span> <span>TRABZON</span> <span>ESKİŞEHİR</span> <span>DENİZLİ</span> <span>AYDIN</span> <span>ÇANAKKALE</span> <span>TEKİRDAĞ</span> <span>SAKARYA</span> <span>MANİSA</span> <span>MUĞLA</span> <span>MERSİN</span>
+            <div class="marquee-content" id="marquee-content-1">
+                <span class="region-chip" data-city="İSTANBUL" data-districts="Arnavutköy, Başakşehir, Tuzla, Gebze, Ümraniye, Pendik, Bağcılar, Esenyurt, Kadıköy, Kartal, Maltepe, Silivri, Çatalca, Beylikdüzü">İSTANBUL</span>
+                <span class="region-chip" data-city="ANKARA" data-districts="Ostim, İvedik, Sincan, Etimesgut, Yenimahalle, Gölbaşı, Polatlı, Kahramankazan">ANKARA</span>
+                <span class="region-chip" data-city="İZMİR" data-districts="Aliağa, Bornova, Çiğli, Kemalpaşa, Menemen, Torbalı, Gaziemir">İZMİR</span>
+                <span class="region-chip" data-city="BURSA" data-districts="Nilüfer, Osmangazi, Yıldırım, İnegöl, Gürsu, Kestel">BURSA</span>
+                <span class="region-chip" data-city="KOCAELİ" data-districts="Gebze, Dilovası, Çayırova, Darıca, İzmit, Körfez, Kartepe">KOCAELİ</span>
+                <span class="region-chip" data-city="TEKİRDAĞ" data-districts="Çorlu, Çerkezköy, Kapaklı, Ergene, Muratlı">TEKİRDAĞ</span>
+                <span class="region-chip" data-city="SAKARYA" data-districts="Adapazarı, Erenler, Arifiye, Serdivan, Hendek, Akyazı">SAKARYA</span>
             </div>
             <!-- Duplicate for loop -->
-            <div class="marquee-content marquee-duplicate">
-                <span>İSTANBUL</span> <span>ANKARA</span> <span>İZMİR</span> <span>BURSA</span> <span>KOCAELİ</span> <span>GEBZE</span> <span>ARNAVUTKÖY</span> <span>BAŞAKŞEHİR</span> <span>TUZLA</span> <span>ÜMRANİYE</span> <span>PENDİK</span> <span>ESENYURT</span> <span>GAZİANTEP</span> <span>KAYSERİ</span> <span>ADANA</span> <span>ANTALYA</span> <span>KONYA</span> <span>SAMSUN</span> <span>TRABZON</span> <span>ESKİŞEHİR</span> <span>DENİZLİ</span> <span>AYDIN</span> <span>ÇANAKKALE</span> <span>TEKİRDAĞ</span> <span>SAKARYA</span> <span>MANİSA</span> <span>MUĞLA</span> <span>MERSİN</span>
+            <div class="marquee-content marquee-duplicate" id="marquee-content-2">
+                <span class="region-chip" data-city="İSTANBUL" data-districts="Arnavutköy, Başakşehir, Tuzla, Gebze, Ümraniye, Pendik, Bağcılar, Esenyurt, Kadıköy, Kartal, Maltepe, Silivri, Çatalca, Beylikdüzü">İSTANBUL</span>
+                <span class="region-chip" data-city="ANKARA" data-districts="Ostim, İvedik, Sincan, Etimesgut, Yenimahalle, Gölbaşı, Polatlı, Kahramankazan">ANKARA</span>
+                <span class="region-chip" data-city="İZMİR" data-districts="Aliağa, Bornova, Çiğli, Kemalpaşa, Menemen, Torbalı, Gaziemir">İZMİR</span>
+                <span class="region-chip" data-city="BURSA" data-districts="Nilüfer, Osmangazi, Yıldırım, İnegöl, Gürsu, Kestel">BURSA</span>
+                <span class="region-chip" data-city="KOCAELİ" data-districts="Gebze, Dilovası, Çayırova, Darıca, İzmit, Körfez, Kartepe">KOCAELİ</span>
+                <span class="region-chip" data-city="TEKİRDAĞ" data-districts="Çorlu, Çerkezköy, Kapaklı, Ergene, Muratlı">TEKİRDAĞ</span>
+                <span class="region-chip" data-city="SAKARYA" data-districts="Adapazarı, Erenler, Arifiye, Serdivan, Hendek, Akyazı">SAKARYA</span>
             </div>
         </div>
     </section>
+
+    <!-- District Info Modal -->
+    <div id="district-modal" class="district-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3 id="modal-title">Hizmet Bölgeleri</h3>
+            </div>
+            <p id="modal-districts"></p>
+            <div class="modal-footer">
+                <a href="tel:+905364863466" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen Ara</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Nationwide SEO Network (81 Il & Districts) -->
     <section class="regions">
