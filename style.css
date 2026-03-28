@@ -618,15 +618,16 @@ footer {
     transform: scale(1.05);
 }
 
-/* Regional Marquee - Modern & Infinite */
+/* Regional Marquee - Muted & Minimalist (Hayalet Stil) */
 .marquee-section {
     background: #050505;
-    padding: 2.5rem 0;
+    padding: 1.5rem 0; /* Daha dar, daha az yer kaplayan */
     overflow: hidden;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    border-bottom: 2px solid var(--primary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02); /* Neon çizgiyi kaldırdım */
     position: relative;
     user-select: none;
+    opacity: 0.8; /* Genel bir sönüklük */
 }
 
 .marquee-container {
@@ -637,12 +638,11 @@ footer {
 
 .marquee-content {
     display: flex;
-    animation: marquee-infinite 40s linear infinite;
-    padding-right: 0;
+    animation: marquee-infinite 60s linear infinite; /* Daha yavaş, göz yormayan akış */
 }
 
 .marquee-container:hover .marquee-content {
-    animation-play-state: paused; /* Tıklamak için durması daha iyi, ama akmasını istersen burayı silebiliriz */
+    animation-play-state: paused;
 }
 
 @keyframes marquee-infinite {
@@ -651,27 +651,28 @@ footer {
 }
 
 .region-chip {
-    padding: 0.8rem 2rem;
-    margin: 0 1rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 255, 65, 0.15);
-    border-radius: 50px;
+    padding: 0.5rem 1.5rem; /* Daha küçük, zarif kutular */
+    margin: 0 1.5rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Çok ince beyaz çerçeve */
+    border-radius: 4px; /* Keskin, kurumsal köşeler */
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.4s ease;
+    font-weight: 500; /* Daha ince font */
+    font-size: 0.95rem; /* Daha küçük yazı */
+    color: rgba(255, 255, 255, 0.4); /* Silik gri yazı */
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    letter-spacing: 1px;
 }
 
 .region-chip:hover {
-    background: var(--primary-color);
-    color: #000;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color);
     border-color: var(--primary-color);
-    box-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
-    transform: scale(1.05);
+    box-shadow: none; /* Parlamayı kaldırdım */
+    transform: translateY(-2px);
 }
 
 /* District Modal - Premium Glassmorphism (Restored) */
