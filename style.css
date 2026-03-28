@@ -618,27 +618,63 @@ footer {
     transform: scale(1.05);
 }
 
-/* Regional Marquee - Interactive Chips */
+/* Regional Marquee - Modern & Infinite */
+.marquee-section {
+    background: #050505;
+    padding: 2.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 2px solid var(--primary-color);
+    position: relative;
+    user-select: none;
+}
+
+.marquee-container {
+    display: flex;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee-infinite 40s linear infinite;
+    padding-right: 0;
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused; /* Tıklamak için durması daha iyi, ama akmasını istersen burayı silebiliriz */
+}
+
+@keyframes marquee-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 .region-chip {
-    padding: 0.5rem 1.5rem;
+    padding: 0.8rem 2rem;
     margin: 0 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 65, 0.2);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 65, 0.15);
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap;
-    display: inline-block;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .region-chip:hover {
     background: var(--primary-color);
     color: #000;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
+    transform: scale(1.05);
 }
 
-/* District Modal - Premium Glassmorphism */
+/* District Modal - Premium Glassmorphism (Restored) */
 .district-modal {
     display: none;
     position: fixed;
@@ -706,7 +742,7 @@ footer {
 
 @media (max-width: 768px) {
     .marquee-container:hover .marquee-content {
-        animation-play-state: running; /* Keep playing on touch if no precise hover */
+        animation-play-state: running;
     }
 }
 
