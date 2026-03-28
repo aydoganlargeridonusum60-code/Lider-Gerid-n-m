@@ -7,32 +7,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Navbar Scroll    // Regional Marquee Interaction (Modal Logic)
+// Navbar Scroll    // Regional Marquee Interaction (Modal Logic) - Mobile Optimized
     const modal = document.getElementById('district-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalDistricts = document.getElementById('modal-districts');
     const closeModal = document.querySelector('.close-modal');
 
+    const openDistrictModal = (chip) => {
+        const city = chip.getAttribute('data-city');
+        const districts = chip.getAttribute('data-districts');
+        
+        modalTitle.innerText = city + ' Hizmet Bölgelerimiz';
+        modalDistricts.innerText = districts;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Sayfa kaymasını engelle
+    };
+
     document.querySelectorAll('.region-chip').forEach(chip => {
-        chip.addEventListener('click', () => {
-            const city = chip.getAttribute('data-city');
-            const districts = chip.getAttribute('data-districts');
-            
-            modalTitle.innerText = city + ' Hizmet Bölgelerimiz';
-            modalDistricts.innerText = districts;
-            modal.style.display = 'flex';
+        // Hem tıklama hem dokunma desteği
+        chip.addEventListener('click', (e) => {
+            e.preventDefault();
+            openDistrictModal(chip);
         });
     });
 
+    const closeDistrictModal = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Kaymayı geri aç
+    };
+
     if(closeModal) {
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+        closeModal.addEventListener('click', closeDistrictModal);
     }
 
-    window.addEventListener('click', (e) => {
+    // Modal dışına tıklayınca kapat (Mobil dostu)
+    modal.addEventListener('click', (e) => {
         if (e.target == modal) {
-            modal.style.display = 'none';
+            closeDistrictModal();
         }
     });
 
