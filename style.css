@@ -1,12 +1,40 @@
+/* Breadcrumbs - Visual SEO */
+.breadcrumb-nav {
+    padding: 1rem 0;
+    margin-top: 80px; /* Navbar space */
+    font-size: 0.85rem;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    color: var(--text-muted);
+}
+
+.breadcrumb-item a {
+    color: var(--primary-color);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding-right: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #fff;
+    font-weight: 600;
+}
+
 :root {
     --primary-color: #00FF41; /* Recycling Green */
     --secondary-color: #C0C0C0; /* Metallic Silver */
     --dark-bg: #121212;
-    --darker-bg: #0a0a0a;
-    --light-text: #e0e0e0;
-    --accent-color: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --darker-bg: #080808;
+    --text-main: #FFFFFF;
+    --text-muted: #A0A0A0;
+    --accent-color: #FFD700;
+    --transition: all 0.3s ease;
 }
 
 * {
@@ -739,7 +767,58 @@ html {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Regions Section */
+/* Expertise/Knowledge Base Section - Featured Snippet Booster */
+.seo-knowledge-base {
+    padding: 6rem 0;
+    background: #080808;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.kb-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+}
+
+.kb-item p {
+    line-height: 1.9;
+    color: #ccc;
+}
+
+.kb-item em {
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* SEO Content Booster */
+.seo-text-block h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.seo-text-block p {
+    font-size: 1.2rem;
+    line-height: 2;
+    opacity: 0.7;
+}
+
+/* Responsive KB */
+@media (max-width: 768px) {
+    .kb-grid {
+        grid-template-columns: 1fr;
+    }
+}
 .regions {
     padding: 8rem 0;
     text-align: center;
