@@ -183,6 +183,56 @@ h1, h2, h3 {
     transform: translateY(-5px);
 }
 
+/* Pricing Table (Premium Steel Look) */
+.pricing {
+    padding: 8rem 0;
+    background-color: var(--dark-bg);
+}
+
+.price-table-wrapper {
+    overflow-x: auto;
+    background: var(--glass-bg);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+}
+
+.price-table th, .price-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-table th {
+    background: rgba(0, 255, 65, 0.05);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.price-table td strong {
+    color: #fff;
+}
+
+.price-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.price-notice {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
 /* Quote Section - Decompressed & Modern */
 .quote-section {
     padding: 10rem 0;
