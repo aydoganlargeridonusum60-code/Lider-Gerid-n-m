@@ -383,6 +383,8 @@ footer {
     padding: 5rem 0;
     text-align: center;
     background: linear-gradient(to right, #121212, #1a1a1a);
+    width: 100%;
+    overflow: hidden;
 }
 
 .regions h3 {
@@ -485,10 +487,12 @@ footer {
 @media (max-width: 968px) {
     .premium-title { font-size: 2.8rem; }
     .about-grid, .services-grid, .footer-grid, .why-us-grid, .faq-grid { grid-template-columns: 1fr; }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
     .nav-links { display: none; }
     .hero-content { text-align: center; }
     .btn { width: 100%; margin: 0.5rem 0; }
     .hero-btns { display: flex; flex-direction: column; }
+    .section-header h2 { font-size: 2.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -496,6 +500,18 @@ footer {
     .container { padding: 0 1.5rem; }
     .logo { font-size: 1.4rem; gap: 8px; }
     .logo svg { width: 35px; height: 35px; }
-    .about-text h2 { font-size: 2rem; }
+    .about-text h2 { font-size: 1.8rem; }
+    .section-header h2 { font-size: 2rem; }
+    .cat-grid { grid-template-columns: 1fr; }
     .service-card { padding: 2rem 1rem; }
+    .floating-contact { right: 1rem; bottom: 1rem; }
+    .footer-grid { gap: 2rem; }
+}
+
+/* Fix for AOS potential overflow */
+[data-aos] {
+    pointer-events: none;
+}
+.aos-animate {
+    pointer-events: auto;
 }
