@@ -183,54 +183,71 @@ h1, h2, h3 {
     transform: translateY(-5px);
 }
 
-/* Pricing Table (Premium Steel Look) */
+/* Pricing Table (Decompressed & Modern) */
 .pricing {
-    padding: 8rem 0;
-    background-color: var(--dark-bg);
+    padding: 10rem 0;
+    background-color: var(--darker-bg);
 }
 
-.price-table-wrapper {
-    overflow-x: auto;
-    background: var(--glass-bg);
-    border-radius: 15px;
+.price-table-container {
+    margin-top: 4rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 25px;
+    padding: 2rem;
     border: 1px solid rgba(0, 255, 65, 0.1);
-    margin-top: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    overflow-x: auto;
 }
 
-.price-table {
+.premium-price-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 0.8rem;
     text-align: left;
-    min-width: 600px;
+    min-width: 700px;
 }
 
-.price-table th, .price-table td {
-    padding: 1.5rem;
+.premium-price-table th {
+    padding: 1.5rem 2rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgba(0, 255, 65, 0.2);
+}
+
+.premium-price-table td {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.price-table th {
-    background: rgba(0, 255, 65, 0.05);
+.premium-price-table td:first-child {
+    border-radius: 15px 0 0 15px;
+    font-size: 1.1rem;
+}
+
+.premium-price-table td:last-child {
+    border-radius: 0 15px 15px 0;
+    font-weight: 800;
     color: var(--primary-color);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.price-table td strong {
+.premium-price-table tr:hover td {
+    background: rgba(0, 255, 65, 0.05);
     color: #fff;
+    cursor: default;
 }
 
-.price-table tr:hover {
-    background: rgba(255, 255, 255, 0.02);
-}
-
-.price-notice {
-    margin-top: 1.5rem;
-    font-size: 0.85rem;
+.price-footer-note {
+    margin-top: 2rem;
+    text-align: center;
     color: #666;
-    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.price-footer-note i {
+    color: var(--primary-color);
 }
 
 /* Quote Section - Decompressed & Modern */
