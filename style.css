@@ -472,33 +472,97 @@ footer {
     margin-right: 1rem;
 }
 
-/* Categories Section */
+/* Topic Clusters - Authority Section */
+.topic-clusters {
+    padding: 8rem 0;
+    background: #0d0d0d;
+}
+
+.cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.cluster-card {
+    background: var(--glass-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.cluster-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.cluster-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.cluster-card:hover::before {
+    transform: scaleX(1);
+}
+
+.cluster-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.cluster-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.cluster-card p {
+    font-size: 0.95rem;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* Detailed Categories Section */
 .categories {
-    padding: 6rem 0;
-    background-color: #080808;
+    padding: 8rem 0;
+    background: var(--dark-bg);
 }
 
 .cat-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
 }
 
 .cat-item {
     background: rgba(255, 255, 255, 0.03);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1.2rem;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--primary-color);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     font-weight: 600;
+    font-size: 0.9rem;
     transition: var(--transition);
+    color: #ccc;
 }
 
 .cat-item:hover {
     background: var(--primary-color);
     color: #000;
+    transform: scale(1.05);
 }
 
 /* Marquee Section */
