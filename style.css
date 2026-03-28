@@ -61,11 +61,22 @@ h1, h2, h3 {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     font-size: 1.8rem;
     font-weight: 800;
     color: #fff;
     text-decoration: none;
     letter-spacing: 2px;
+}
+
+.logo svg {
+    transition: var(--transition);
+}
+
+.logo:hover svg {
+    transform: rotate(180deg) scale(1.1);
 }
 
 .logo span {
