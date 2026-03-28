@@ -618,16 +618,15 @@ footer {
     transform: scale(1.05);
 }
 
-/* Regional Marquee - Muted & Minimalist (Hayalet Stil) */
+/* Regional Marquee - Back to Original 'Ghost Text' Look */
 .marquee-section {
     background: #050505;
-    padding: 1.5rem 0; /* Daha dar, daha az yer kaplayan */
+    padding: 2rem 0;
     overflow: hidden;
-    border-top: 1px solid rgba(255, 255, 255, 0.02);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.02); /* Neon çizgiyi kaldırdım */
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     position: relative;
     user-select: none;
-    opacity: 0.8; /* Genel bir sönüklük */
 }
 
 .marquee-container {
@@ -638,7 +637,7 @@ footer {
 
 .marquee-content {
     display: flex;
-    animation: marquee-infinite 60s linear infinite; /* Daha yavaş, göz yormayan akış */
+    animation: marquee-infinite 50s linear infinite;
 }
 
 .marquee-container:hover .marquee-content {
@@ -651,28 +650,23 @@ footer {
 }
 
 .region-chip {
-    padding: 0.5rem 1.5rem; /* Daha küçük, zarif kutular */
-    margin: 0 1.5rem;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Çok ince beyaz çerçeve */
-    border-radius: 4px; /* Keskin, kurumsal köşeler */
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-right: 5rem !important; /* Eskisi gibi geniş boşluk */
     cursor: pointer;
-    transition: all 0.4s ease;
-    font-weight: 500; /* Daha ince font */
-    font-size: 0.95rem; /* Daha küçük yazı */
-    color: rgba(255, 255, 255, 0.4); /* Silik gri yazı */
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-weight: 800;
+    font-size: 1.5rem; /* Orijinal büyük font */
+    color: rgba(255, 255, 255, 0.08); /* Çok silik, dikkat çekmeyen hayalet yazı */
+    display: inline-block;
+    letter-spacing: 2px;
 }
 
 .region-chip:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: none; /* Parlamayı kaldırdım */
-    transform: translateY(-2px);
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 /* District Modal - Premium Glassmorphism (Restored) */
