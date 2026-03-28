@@ -548,11 +548,31 @@ footer {
     color: #777;
 }
 
+/* SEO Text Block */
+.seo-text-block {
+    padding: 6rem 0;
+    background-color: var(--darker-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.seo-text-block h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.seo-text-block p {
+    color: #888;
+    max-width: 900px;
+    line-height: 1.8;
+}
+
 /* Updated Responsive */
 @media (max-width: 968px) {
     .premium-title { font-size: 2.8rem; }
     .about-grid, .services-grid, .footer-grid, .why-us-grid, .faq-grid { grid-template-columns: 1fr; }
     .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .region-grid { grid-template-columns: 1fr; gap: 2rem; }
     .nav-links { display: none; }
     .hero-content { text-align: center; }
     .btn { width: 100%; margin: 0.5rem 0; }
