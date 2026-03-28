@@ -185,49 +185,41 @@ h1, h2, h3 {
     transform: translateY(-5px);
 }
 
-/* Pricing Table */
-.pricing {
-    padding: 8rem 0;
-    background-color: var(--dark-bg);
+/* Quote Section */
+.quote-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--darker-bg) 0%, #1a1a1a 100%);
+    position: relative;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-.price-table-wrapper {
-    overflow-x: auto;
-    background: var(--glass-bg);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    margin-top: 2rem;
+.quote-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.price-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    min-width: 600px;
+.quote-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
 }
 
-.price-table th, .price-table td {
-    padding: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+.quote-content p {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 2.5rem;
 }
 
-.price-table th {
-    background: rgba(255, 255, 255, 0.02);
-    color: var(--primary-color);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+.quote-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-.price-table tr:hover {
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.price-notice {
-    margin-top: 1.5rem;
-    font-size: 0.85rem;
-    color: #666;
-    font-style: italic;
+@media (max-width: 768px) {
+    .quote-actions { flex-direction: column; }
+    .quote-content h2 { font-size: 2.2rem; }
 }
 
 /* About Section */
