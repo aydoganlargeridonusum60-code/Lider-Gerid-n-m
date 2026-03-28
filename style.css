@@ -33,6 +33,7 @@
     --darker-bg: #080808;
     --text-main: #FFFFFF;
     --text-muted: #A0A0A0;
+    --light-text: #FFFFFF; /* Geri eklenen kritik değişken */
     --accent-color: #FFD700;
     --transition: all 0.3s ease;
 }
