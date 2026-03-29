@@ -1733,10 +1733,13 @@ html {
 
 /* Fix for AOS potential overflow */
 [data-aos] {
-    pointer-events: none;
+    /* pointer-events: none; REMOVED AS IT BLOCKS CLICKS */
 }
-    /* MARKET SUMMARY SNIPPET STYLES (V23) */
-    .market-summary-snippet { padding: 40px 0; background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
+.aos-animate {
+    pointer-events: auto;
+}
+/* MARKET SUMMARY SNIPPET STYLES (V23) */
+    .market-summary-snippet { padding: 40px 0; background: #000; border-top: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 100; }
     .summary-box { 
         background: linear-gradient(90deg, #111, #050505); 
         border: 1px solid var(--glass-border); 
