@@ -709,6 +709,105 @@ footer {
     border-color: var(--primary-color);
 }
 
+/* SEO Overdrive Section V8 */
+.overdrive-section {
+    padding: 10rem 0;
+    background: #050505;
+}
+
+.faq-accordion {
+    margin-top: 3rem;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-question {
+    padding: 2rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.faq-answer {
+    padding: 0 2rem 2rem;
+    color: #aaa;
+    font-size: 1rem;
+    line-height: 1.7;
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.faq-item.active {
+    border-color: var(--primary-color);
+    background: rgba(0, 255, 65, 0.03);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+}
+
+/* Expertise Knowledge Hub */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.expertise-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.expertise-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.expertise-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.expertise-card h4 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.expertise-card p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .expertise-grid { grid-template-columns: 1fr; }
+    .overdrive-section { padding: 6rem 0; }
+}
+
 /* Topic Clusters - Authority Section */
 .topic-clusters {
     padding: 8rem 0;

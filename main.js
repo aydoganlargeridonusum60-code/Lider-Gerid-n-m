@@ -175,4 +175,23 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+
+    // FAQ Accordion Logic (V8 Overdrive)
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').style.display = 'none';
+            });
+            
+            if(!isActive) {
+                faqItem.classList.add('active');
+                faqItem.querySelector('.faq-answer').style.display = 'block';
+            }
+        });
+    });
 });
