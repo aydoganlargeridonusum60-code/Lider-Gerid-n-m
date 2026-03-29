@@ -841,18 +841,39 @@ footer {
     .table-wrapper {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 0.5rem;
+        padding: 0.2rem;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
     }
     
     .borsa-table {
-        min-width: 600px; /* Force scroll on very small screens to keep layout */
+        min-width: 100%; /* Changed from 600px to ensure full fit */
+        font-size: 0.85rem;
     }
 
-    .table-live-header { font-size: 0.75rem; padding: 1rem; }
+    /* Hide serial number column on mobile to save space */
+    .borsa-table th:nth-child(1),
+    .borsa-table td:nth-child(1) {
+        display: none;
+    }
+
+    .borsa-table td {
+        padding: 0.8rem 0.6rem;
+    }
+
+    .table-live-header { font-size: 0.72rem; padding: 0.8rem; }
     
-    .price-val { font-size: 1rem; }
+    .price-val { 
+        font-size: 1.1rem; /* Slightly larger for visibility */
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .price-cell {
+        min-width: auto;
+        white-space: nowrap;
+    }
     
-    /* Compact Sticky Mobile Actions */
     .floating-contact {
         bottom: 20px;
         right: 20px;
