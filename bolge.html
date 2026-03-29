@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="region-title">Lider Hurda | Bölgesel Alım Merkezi</title>
+    <meta name="description" id="region-meta" content="Türkiye genelinde profesyonel hurda alımı.">
+    
+    <!-- Design & Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .region-hero {
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #151515 100%);
+            border-bottom: 2px solid var(--neon-green);
+        }
+        .region-content-section {
+            padding: 80px 0;
+            background: #0d0d0d;
+        }
+        .region-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(0, 255, 102, 0.1);
+            color: var(--neon-green);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            border: 1px solid var(--neon-green);
+        }
+        .region-h1 { font-size: 3.5rem; color: #fff; margin-bottom: 30px; line-height: 1.2; }
+        .region-text { font-size: 1.2rem; color: #aaa; max-width: 800px; margin-bottom: 40px; }
+        
+        @media (max-width: 768px) {
+            .region-h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header (Same as Index) -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i>
+                LİDER<span>HURDA</span>
+            </a>
+            <div class="nav-actions">
+                <a href="tel:05321234567" class="btn-primary">TEKLİF AL</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Region Hero -->
+        <section class="region-hero">
+            <div class="container">
+                <div class="region-badge" id="region-badge-text">SEKTÖREL DOMİNASYON</div>
+                <h1 class="region-h1" id="dynamic-h1">Bölgesel Hurda Alım Terminali</h1>
+                <p class="region-text" id="dynamic-content">Yükleniyor...</p>
+                <div class="hero-actions">
+                    <a href="#" id="region-whatsapp" class="btn-primary">
+                        <i class="fab fa-whatsapp"></i> ŞİMDİ KONUM AT
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing (Synced) -->
+        <section class="region-content-section">
+            <div class="container">
+                <h2 class="section-title">Anlık Borsa Fiyatları (Synced)</h2>
+                <div id="borsa-module" class="borsa-terminal">
+                   <!-- Fiyat tablosu buraya gelecek (main.js veya script ile) -->
+                   <div style="color: #fff; text-align: center; padding: 40px; border: 1px dashed var(--neon-green);">
+                      <i class="fas fa-sync fa-spin"></i> Canlı Veriler Sayfaya Aktarılıyor...
+                   </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Matrix Matrix Logic) -->
+    <footer class="footer">
+        <div class="container">
+           <div style="text-align:center; padding-top:40px; border-top: 1px solid #333;">
+              <a href="index.html" style="color: var(--neon-green);">← Ana Sayfaya Dön</a>
+           </div>
+        </div>
+    </footer>
+
+    <!-- Regions Logic -->
+    <script src="assets/js/regions.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cityKey = urlParams.get('city');
+            
+            if (cityKey && REGIONS_DATA[cityKey]) {
+                const data = REGIONS_DATA[cityKey];
+                document.getElementById('region-title').innerText = data.title;
+                document.getElementById('region-meta').setAttribute('content', data.meta);
+                document.getElementById('dynamic-h1').innerText = data.h1;
+                document.getElementById('dynamic-content').innerText = data.content;
+                document.getElementById('region-badge-text').innerText = cityKey.toUpperCase() + " BÖLGESEL TERMİNALİ";
+                
+                // WhatsApp Link
+                const waLink = `https://wa.me/905445214040?text=${encodeURIComponent(data.whatsapp)}`;
+                document.getElementById('region-whatsapp').setAttribute('href', waLink);
+            } else if (cityKey) {
+                // Default handling for other cities
+                const defaultData = REGIONS_DATA['default'];
+                const cityName = cityKey.charAt(0).toUpperCase() + cityKey.slice(1);
+                
+                document.getElementById('region-title').innerText = defaultData.title.replace('[ŞEHİR]', cityName);
+                document.getElementById('region-meta').setAttribute('content', defaultData.meta.replace('[ŞEHİR]', cityName));
+                document.getElementById('dynamic-h1').innerText = defaultData.h1.replace('[ŞEHİR]', cityName);
+                document.getElementById('dynamic-content').innerText = defaultData.content.replace('[ŞEHİR]', cityName);
+                document.getElementById('region-badge-text').innerText = cityName.toUpperCase() + " BÖLGESEL TERMİNALİ";
+                
+                const waLink = `https://wa.me/905445214040?text=${encodeURIComponent(defaultData.whatsapp.replace('[ŞEHİR]', cityName))}`;
+                document.getElementById('region-whatsapp').setAttribute('href', waLink);
+            }
+            
+            AOS.init({ duration: 1000, once: true });
+        });
+    </script>
+</body>
+</html>
