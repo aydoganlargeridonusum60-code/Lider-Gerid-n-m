@@ -946,6 +946,22 @@ footer {
         opacity: 1;
         text-decoration: underline;
     }
+
+    /* NAVBAR BUTTON HIGHLIGHT */
+    .nav-btn-highlight {
+        background: var(--neon-green) !important;
+        color: #000 !important;
+        padding: 10px 20px !important;
+        border-radius: 50px !important;
+        font-weight: 800 !important;
+        transition: 0.3s ease !important;
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+    }
+    .nav-btn-highlight:hover {
+        background: #fff !important;
+        box-shadow: 0 0 25px rgba(0, 255, 65, 0.7);
+        transform: scale(1.05);
+    }
     
     .floating-contact {
         bottom: 20px;
