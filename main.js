@@ -127,44 +127,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Dynamic Borsa Engine (V10) - LIVE OSCILLATOR
+    // 7. Dynamic Borsa Engine (V10) - SYNC MODE (V13.1)
     const updatePrices = () => {
-        const batchSize = Math.floor(Math.random() * 3) + 1;
-        const priceElements = document.querySelectorAll('.price-val');
+        const batchSize = Math.floor(Math.random() * 2) + 1;
+        const allPriceSpans = document.querySelectorAll('.price-val');
+        
+        // Get unique categories present on page
+        const categories = [...new Set(Array.from(allPriceSpans).map(el => el.getAttribute('data-cat')).filter(cat => cat))];
         
         for(let i = 0; i < batchSize; i++) {
-            const randomEl = priceElements[Math.floor(Math.random() * priceElements.length)];
+            const randomCat = categories[Math.floor(Math.random() * categories.length)];
+            const targets = document.querySelectorAll(`.price-val[data-cat="${randomCat}"]`);
             
-            if(randomEl) {
-                // Handle different number formats (e.g. 1.450 vs 12,45)
-                let text = randomEl.innerText.trim();
+            if(targets.length > 0) {
+                // Read current value from the first one
+                let text = targets[0].innerText.trim();
                 let currentVal = parseFloat(text.replace('.', '').replace(',', '.'));
                 
-                // If it was small (like 12.45) but replaced dot (becoming 1245), fix it
                 if(text.includes(',') && !text.includes('.')) {
                     currentVal = parseFloat(text.replace(',', '.'));
                 } else if (!text.includes(',') && text.includes('.')) {
                     currentVal = parseFloat(text);
                 }
 
-                const jitter = (Math.random() * 0.4 - 0.2); // +/- 0.2 TL deviation
+                const jitter = (Math.random() * 0.4 - 0.2); 
                 const newVal = currentVal + jitter;
                 
-                // Visual indicators (Price flash)
-                if(jitter > 0) {
-                    randomEl.classList.add('price-up');
-                    setTimeout(() => randomEl.classList.remove('price-up'), 2000);
-                } else {
-                    randomEl.classList.add('price-down');
-                    setTimeout(() => randomEl.classList.remove('price-down'), 2000);
-                }
-                
-                // Format back to TR style
-                if(newVal > 1000) {
-                    randomEl.innerText = Math.floor(newVal).toLocaleString('tr-TR');
-                } else {
-                    randomEl.innerText = newVal.toFixed(2).replace('.', ',');
-                }
+                // Update ALL instances on page
+                targets.forEach(el => {
+                    if(jitter > 0) {
+                        el.classList.add('price-up');
+                        setTimeout(() => el.classList.remove('price-up'), 2000);
+                    } else {
+                        el.classList.add('price-down');
+                        setTimeout(() => el.classList.remove('price-down'), 2000);
+                    }
+
+                    if(newVal > 1000) {
+                        el.innerText = Math.floor(newVal).toLocaleString('tr-TR');
+                    } else {
+                        el.innerText = newVal.toFixed(2).replace('.', ',');
+                    }
+                });
             }
         }
     };
