@@ -325,109 +325,130 @@
         </div>
     </section>
 
-    <!-- Detail Grid Section (Interactive Mastery) -->
-    <section class="detail-center" id="details">
+    <!-- Corporate Product Index & Detail Segment (V6) -->
+    <section class="corporate-index" id="details">
         <div class="container" data-aos="fade-up">
             <div class="section-header">
-                <span class="sub-title">HİZMET KATALOGUMUZ</span>
-                <h2>Geri Dönüşüm Detayları</h2>
+                <span class="sub-title">ENDÜSTRİYEL PORTFÖY</span>
+                <h2>Geri Dönüşüm Ürün Endeksi</h2>
                 <div class="header-line"></div>
-                <p class="section-p">Her bir metal türü için uzman kadromuz ve teknik ekipmanlarımızla, tüm Türkiye geneli adresten alım yapıyoruz. Bilgi almak için kartlara tıklayın.</p>
+                <p class="section-p">Tüm metal ve hurda türlerini kurumsal standartlarda, güncel borsa değerinden ve 81 il geneli yerinde alıyoruz.</p>
             </div>
             
-            <div class="detail-grid">
-                <!-- Cards will be populated or stay as static placeholders for SEO -->
-                <div class="detail-card" data-category="dkp-demir">
-                    <i class="fas fa-hammer"></i>
-                    <h3>DKP Demir</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
+            <div class="index-container">
+                <!-- Left: Professional Table -->
+                <div class="table-wrapper">
+                    <table class="corporate-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Ürün Adı</th>
+                                <th>Alım Bölgeleri</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-rows">
+                            <tr class="active-row" data-category="dkp-demir">
+                                <td>01</td>
+                                <td><strong>DKP Demir</strong></td>
+                                <td>Türkiye Geneli</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="insaat-demiri">
+                                <td>02</td>
+                                <td><strong>İnşaat Demiri</strong></td>
+                                <td>Büyükşehirler</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="soyma-bakir">
+                                <td>03</td>
+                                <td><strong>Soyma Bakır</strong></td>
+                                <td>81 İl</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="lama-bakir">
+                                <td>04</td>
+                                <td><strong>Lama Bakır</strong></td>
+                                <td>Organize Sanayi</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="kablo">
+                                <td>05</td>
+                                <td><strong>Kablo (Pvc/Altı)</strong></td>
+                                <td>Marmara & Ege</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="aluminyum">
+                                <td>06</td>
+                                <td><strong>Profil Alüminyum</strong></td>
+                                <td>Turizm & İnşaat</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="pirinc-sari">
+                                <td>07</td>
+                                <td><strong>Sarı (Pirinç)</strong></td>
+                                <td>Ostim & İkitelli</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="krom">
+                                <td>08</td>
+                                <td><strong>Krom 304/316</strong></td>
+                                <td>Fabrika Hattı</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="kursun">
+                                <td>09</td>
+                                <td><strong>Kurşun Levha</strong></td>
+                                <td>Kıyı Bölgeleri</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="motor">
+                                <td>10</td>
+                                <td><strong>Elektrik Motoru</strong></td>
+                                <td>Tüm Bölgeler</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="klima">
+                                <td>11</td>
+                                <td><strong>Kombi & Klima</strong></td>
+                                <td>Kent Dönüşüm</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                            <tr data-category="elektronik">
+                                <td>12</td>
+                                <td><strong>Elektronik Atık</strong></td>
+                                <td>Anlaşmalı Kurumlar</td>
+                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="detail-card" data-category="insaat-demiri">
-                    <i class="fas fa-building"></i>
-                    <h3>İnşaat Demiri</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="soyma-bakir">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Soyma Bakır</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="lama-bakir">
-                    <i class="fas fa-layer-group"></i>
-                    <h3>Lama Bakır</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="kablo">
-                    <i class="fas fa-plug"></i>
-                    <h3>Kablo (Pvc/Altı)</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="aluminyum">
-                    <i class="fas fa-window-maximize"></i>
-                    <h3>Profil Alüminyum</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="pirinc-sari">
-                    <i class="fas fa-faucet"></i>
-                    <h3>Sarı (Pirinç)</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="krom">
-                    <i class="fas fa-hard-hat"></i>
-                    <h3>Krom 304/316</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="kursun">
-                    <i class="fas fa-weight-hanging"></i>
-                    <h3>Kurşun Levha</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="motor">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Elektrik Motoru</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="klima">
-                    <i class="fas fa-fan"></i>
-                    <h3>Kombi & Klima</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
-                </div>
-                <div class="detail-card" data-category="elektronik">
-                    <i class="fas fa-microchip"></i>
-                    <h3>Elektronik Atık</h3>
-                    <span>Detayları Gör <i class="fas fa-chevron-right"></i></span>
+
+                <!-- Right: Analysis Segment -->
+                <div class="analysis-segment" id="info-display-segment">
+                    <div class="segment-header">
+                        <i id="segment-icon" class="fas fa-hammer"></i>
+                        <h3 id="segment-title">DKP Demir Hurdası</h3>
+                    </div>
+                    <div class="segment-body">
+                        <div class="segment-group">
+                            <label>Ürün Analizi</label>
+                            <p id="segment-description">DKP Demir, sac üretiminden kalan ve geri dönüşüm verimi en yüksek olan saf demir türüdür. Sanayi tesisleri ve otomotiv sektöründeki atıkların en değerli parçasıdır.</p>
+                        </div>
+                        <div class="segment-group">
+                            <label>Lojistik & Alım Bölgeleri</label>
+                            <p id="segment-regions">İstanbul (Esenyurt, Gebze, Tuzla), Ankara (Ostim), Kocaeli ve Tekirdağ sanayi bölgeleri başta olmak üzere tüm Türkiye geneli adresten alım yapmaktayız.</p>
+                        </div>
+                        <div class="segment-footer">
+                            <a href="tel:+905364863466" class="btn btn-primary btn-block">TEKLİF AL</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Product Information Modal -->
-    <div id="product-detail-modal" class="detail-modal-v2">
-        <div class="modal-v2-container">
-            <span class="close-modal-v2">&times;</span>
-            <div class="modal-v2-body">
-                <div class="modal-info-header">
-                    <i id="v2-icon" class="fas fa-info-circle"></i>
-                    <h2 id="v2-title">Ürün Detayı</h2>
-                </div>
-                <div class="modal-info-content">
-                    <div class="info-group">
-                        <h4><i class="fas fa-align-left"></i> Ürün Hakkında Bilgi</h4>
-                        <p id="v2-description">Seçilen ürün hakkında detaylı uzman görüşü buraya gelecek.</p>
-                    </div>
-                    <div class="info-group">
-                        <h4><i class="fas fa-map-marked-alt"></i> Hizmet Verdiğimiz İller</h4>
-                        <p id="v2-regions">İstanbul başta olmak üzere, tüm Türkiye geneli (Ankara, İzmir, Kocaeli, Bursa, Tekirdağ vb.) adresten alım yapmaktayız.</p>
-                    </div>
-                </div>
-                <div class="modal-v2-footer">
-                    <a href="tel:+905364863466" class="btn btn-primary">Şimdi Fiyat Al</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Detailed Categories Section (Keywords Rich) -->
+    <!-- Detailed Categories Section (Keywords Rich Content Booster) -->
     <section class="categories">
         <div class="container" data-aos="fade-up">
             <div class="section-header">

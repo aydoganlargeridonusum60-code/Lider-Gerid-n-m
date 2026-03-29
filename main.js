@@ -6,13 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 100,
     });
 
-    // Product Detail Interaction Logic
-    const detailModal = document.getElementById('product-detail-modal');
-    const v2Title = document.getElementById('v2-title');
-    const v2Desc = document.getElementById('v2-description');
-    const v2Regions = document.getElementById('v2-regions');
-    const v2Icon = document.getElementById('v2-icon');
-    const closeV2 = document.querySelector('.close-modal-v2');
+    // Corporate Index & Detail Segment Interaction (V6)
+    const segmentDisplay = document.getElementById('info-display-segment');
+    const segTitle = document.getElementById('segment-title');
+    const segDesc = document.getElementById('segment-description');
+    const segRegions = document.getElementById('segment-regions');
+    const segIcon = document.getElementById('segment-icon');
 
     const productData = {
         'dkp-demir': {
@@ -89,34 +88,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    document.querySelectorAll('.detail-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const cat = card.getAttribute('data-category');
+    document.querySelectorAll('.corporate-table tr').forEach(row => {
+        row.addEventListener('click', () => {
+            const cat = row.getAttribute('data-category');
+            if(!cat) return;
+
             const data = productData[cat];
-            
             if(data) {
-                v2Title.innerText = data.title;
-                v2Desc.innerText = data.desc;
-                v2Regions.innerText = data.regions;
-                v2Icon.className = `fas ${data.icon}`;
-                detailModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
+                // Remove active class from all rows
+                document.querySelectorAll('.corporate-table tr').forEach(r => r.classList.remove('active-row'));
+                // Add to current
+                row.classList.add('active-row');
+
+                // Update Segment with animation
+                segmentDisplay.style.opacity = '0';
+                setTimeout(() => {
+                    segTitle.innerText = data.title;
+                    segDesc.innerText = data.desc;
+                    segRegions.innerText = data.regions;
+                    segIcon.className = `fas ${data.icon}`;
+                    segmentDisplay.style.opacity = '1';
+                }, 200);
             }
         });
-    });
-
-    if(closeV2) {
-        closeV2.addEventListener('click', () => {
-            detailModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-    }
-
-    detailModal.addEventListener('click', (e) => {
-        if(e.target == detailModal) {
-            detailModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
     });
 });
 
