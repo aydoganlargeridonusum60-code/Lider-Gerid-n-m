@@ -762,45 +762,75 @@ footer {
     transform: rotate(45deg);
 }
 
-/* Expertise Knowledge Hub */
-.expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+/* Expertise Snippets V8 - Visualized */
+.expertise-list {
     margin-top: 3rem;
 }
 
-.expertise-card {
+.expertise-snippet {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     background: rgba(255, 255, 255, 0.02);
-    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 20px;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: default;
 }
 
-.expertise-card:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-bottom-color: var(--primary-color);
-    transform: translateY(-5px);
+.expertise-snippet:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary-color);
+    transform: translateX(10px);
 }
 
-.expertise-card i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+.snippet-content {
+    flex: 1;
 }
 
-.expertise-card h4 {
+.snippet-content h4 {
     color: #fff;
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
 }
 
-.expertise-card p {
+.snippet-content p {
     color: #888;
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
+}
+
+.snippet-image {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.snippet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.expertise-snippet:hover .snippet-image img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+    .expertise-snippet { padding: 1.5rem; gap: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+    .expertise-snippet { flex-direction: column-reverse; align-items: flex-start; text-align: left; }
+    .snippet-image { width: 100%; height: 200px; }
 }
 
 @media (max-width: 768px) {
