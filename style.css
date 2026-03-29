@@ -824,12 +824,61 @@ footer {
     padding: 1.2rem 1.5rem;
 }
 
-.premium-price-table.borsa-table td {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(255, 255, 255, 0.01);
+/* Mobile Overdrive (V14) - Responsive Master Queries */
+@media (max-width: 991px) {
+    .premium-title { font-size: 2.8rem; }
+    .index-container { flex-direction: column; gap: 2rem; }
+    .table-wrapper { width: 100%; border-right: none; border-bottom: 2px solid rgba(0, 255, 65, 0.1); }
+    .info-display-segment { width: 100%; min-height: auto; }
+    .expertise-snippet { flex-direction: column; text-align: center; }
+    .snippet-image { width: 100%; margin-top: 1rem; }
 }
 
-.price-cell { min-width: 120px; }
+@media (max-width: 768px) {
+    .premium-title { font-size: 2.2rem; }
+    .hero { padding: 120px 0 60px; }
+    
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.5rem;
+    }
+    
+    .borsa-table {
+        min-width: 600px; /* Force scroll on very small screens to keep layout */
+    }
+
+    .table-live-header { font-size: 0.75rem; padding: 1rem; }
+    
+    .price-val { font-size: 1rem; }
+    
+    /* Compact Sticky Mobile Actions */
+    .floating-contact {
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .float-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .emergency-flex { flex-direction: column; text-align: center; gap: 1.5rem; }
+    
+    .pricing { padding: 4rem 0; }
+    .premium-price-table { min-width: 500px; }
+    .price-table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+@media (max-width: 480px) {
+    .premium-title { font-size: 1.8rem; }
+    .btn { width: 100%; margin-bottom: 10px; }
+    .nav-links { display: none; } /* Standard Mobile Menu Simplification */
+}
 
 /* Expertise Snippets V8 - Visualized */
 .expertise-list {
