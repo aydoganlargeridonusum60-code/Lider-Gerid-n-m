@@ -1077,6 +1077,14 @@ footer {
         font-size: 22px;
     }
 
+    .market-summary-snippet {
+        background: rgba(0, 255, 65, 0.05);
+        border: 1px solid var(--neon-green);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
     .emergency-flex { flex-direction: column; text-align: center; gap: 1.5rem; }
     
     .pricing { padding: 4rem 0; }
@@ -1270,6 +1278,107 @@ footer {
     background: rgba(255, 255, 255, 0.03);
     color: #fff;
 }
+
+    /* ANALYSIS PAGE & DATA TERMINAL STYLES (V23) */
+    .analysis-page { background: #050505; }
+    .analysis-hero { padding: 120px 0 80px; background: radial-gradient(circle at center, #111 0%, #050505 100%); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    
+    .analysis-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 50px;
+        margin-top: -60px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .analysis-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 30px;
+        padding: 50px;
+        margin-bottom: 40px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+    .card-tag { 
+        display: inline-block; 
+        background: rgba(0,255,65,0.1); 
+        color: var(--neon-green); 
+        padding: 6px 15px; 
+        border-radius: 5px; 
+        font-size: 0.8rem; 
+        font-weight: 800; 
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    .analysis-card h2 { font-size: 2.5rem; margin-bottom: 15px; color: #fff; line-height: 1.2; }
+    .analysis-meta { color: #555; font-size: 0.9rem; margin-bottom: 30px; display: flex; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px; }
+    .analysis-meta i { color: var(--neon-green); margin-right: 5px; }
+
+    .analysis-content p { font-size: 1.15rem; line-height: 1.8; color: #ccc; margin-bottom: 25px; }
+    .featured-img { width: 100%; border-radius: 20px; margin: 30px 0; border: 1px solid rgba(255,255,255,0.1); }
+    .analysis-content h3 { font-size: 1.8rem; color: #fff; margin: 40px 0 20px; border-left: 4px solid var(--neon-green); padding-left: 20px; }
+    
+    blockquote {
+        background: rgba(255,255,255,0.03);
+        border-left: 5px solid var(--neon-green);
+        padding: 30px;
+        font-style: italic;
+        font-size: 1.4rem;
+        color: #fff;
+        margin: 40px 0;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .data-box {
+        background: #000;
+        border: 1px solid var(--neon-green);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    .data-item { text-align: center; }
+    .data-item .label { display: block; color: #666; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; }
+    .data-item .value { font-size: 1.5rem; font-weight: 800; }
+    .text-up { color: #00ff41; }
+    .text-down { color: #ff3b3b; }
+    .text-neutral { color: #aaa; }
+
+    /* Sidebar Widgets */
+    .sidebar-widget {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 25px;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .sidebar-widget h3 { font-size: 1.3rem; color: #fff; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+    .sidebar-widget h3 i { color: var(--neon-green); }
+
+    .live-ticker { display: flex; flex-direction: column; gap: 15px; }
+    .ticker-item { display: flex; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .ticker-item span { color: #888; }
+
+    .code-snippet {
+        background: #000;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: monospace;
+        font-size: 0.8rem;
+        color: var(--neon-green);
+        margin: 20px 0;
+        word-break: break-all;
+    }
+
+    @media (max-width: 992px) {
+        .analysis-grid { grid-template-columns: 1fr; margin-top: 20px; }
+        .analysis-card { padding: 30px; }
+        .analysis-card h2 { font-size: 1.8rem; }
+        blockquote { font-size: 1.1rem; }
+    }
 
 .expertise-note {
     margin-top: 2.5rem;
@@ -1626,6 +1735,41 @@ html {
 [data-aos] {
     pointer-events: none;
 }
-.aos-animate {
-    pointer-events: auto;
-}
+    /* MARKET SUMMARY SNIPPET STYLES (V23) */
+    .market-summary-snippet { padding: 40px 0; background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
+    .summary-box { 
+        background: linear-gradient(90deg, #111, #050505); 
+        border: 1px solid var(--glass-border); 
+        border-radius: 25px; 
+        padding: 40px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 30px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .summary-content { flex: 1; }
+    .live-badge { 
+        background: #00ff41; 
+        color: #000; 
+        padding: 4px 12px; 
+        border-radius: 4px; 
+        font-size: 0.75rem; 
+        font-weight: 800; 
+        margin-bottom: 15px; 
+        display: inline-block;
+        animation: pulse-badge 2s infinite;
+    }
+    .summary-content h3 { color: #fff; font-size: 1.6rem; margin-bottom: 10px; }
+    .summary-content p { color: #888; line-height: 1.6; max-width: 800px; }
+    
+    @keyframes pulse-badge {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.8; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+        .summary-box { flex-direction: column; text-align: center; padding: 30px; }
+        .summary-content h3 { font-size: 1.3rem; }
+    }

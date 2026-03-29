@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Dynamic Borsa Engine (V22) - MASTER SYNC MODE
     const priceData = {
-        'dkp-demir': 12.50,
-        'insaat-demiri': 11.20,
+        'dkp-demir': 15.20,
+        'insaat-demiri': 14.40,
         'soyma-bakir': 285.00,
         'lama-bakir': 275.00,
         'kablo': 95.00,
