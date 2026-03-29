@@ -251,6 +251,53 @@
         </div>
     </section>
 
+    <!-- INTERACTIVE SCRAP CALCULATOR (V21) -->
+    <section class="calculator-section" id="calculate">
+        <div class="container" data-aos="fade-up">
+            <div class="calc-wrapper">
+                <div class="calc-header">
+                    <i class="fas fa-calculator"></i>
+                    <h2>Akıllı Hurda Hesaplayıcı</h2>
+                    <p>Elinizdeki hurdanın türünü ve miktarını girin, borsa değerini anında görün!</p>
+                </div>
+                
+                <div class="calc-grid">
+                    <!-- Inputs -->
+                    <div class="calc-inputs">
+                        <div class="input-group">
+                            <label><i class="fas fa-microchip"></i> Metal Türü</label>
+                            <select id="calc-category" class="premium-select">
+                                <option value="dkp-demir">Dkp Demir</option>
+                                <option value="insaat-demiri">İnşaat Demiri (1. Grup)</option>
+                                <option value="soyma-bakir">Soyma Bakır</option>
+                                <option value="lama-bakir">Lama Bakır</option>
+                                <option value="kablo">Kablo Hurdası</option>
+                                <option value="aluminyum">Alüminyum</option>
+                                <option value="pirinc-sari">Sarı (Pirinç)</option>
+                                <option value="krom">Krom (Paslanmaz)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label><i class="fas fa-weight"></i> Hurda Miktarı (KG)</label>
+                            <input type="number" id="calc-weight" class="premium-input" placeholder="Örn: 500" min="1">
+                        </div>
+                    </div>
+
+                    <!-- Result Card -->
+                    <div class="calc-result-card">
+                        <div class="result-label">Tahmini Kazancınız</div>
+                        <div class="result-value" id="calc-total">₺0,00</div>
+                        <p class="result-note">** Borsa verileri saniyeler içinde güncellenir. Kesin fiyat için fotoğraf gönderin.</p>
+                        <a href="https://wa.me/905364863466" id="calc-whatsapp" class="btn btn-whatsapp-calc">
+                            <i class="fab fa-whatsapp"></i> BU FİYATA HEMEN SAT
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Get Quote Section (High Conversion SEO) -->
     <section id="quote" class="quote-section">
         <div class="container" data-aos="zoom-in">
