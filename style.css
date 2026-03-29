@@ -1731,6 +1731,47 @@ html {
     .footer-grid { gap: 2rem; }
 }
 
+/* AUTHORITY INDEX STYLES (V24) */
+.authority-index { padding: 100px 0; background: #050505; border-top: 1px solid rgba(255,255,255,0.05); }
+.index-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+    margin-top: 60px; 
+}
+.index-column h4 { 
+    color: var(--neon-green); 
+    font-size: 1.4rem; 
+    margin-bottom: 30px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    border-bottom: 2px solid rgba(0, 255, 65, 0.1); 
+    padding-bottom: 15px; 
+}
+.index-column ul { list-style: none; }
+.index-column li { margin-bottom: 15px; }
+.index-column a { 
+    color: #888; 
+    text-decoration: none; 
+    font-size: 1.05rem; 
+    transition: 0.3s; 
+    display: block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border-left: 2px solid transparent;
+}
+.index-column a:hover { 
+    color: #fff; 
+    background: rgba(255,255,255,0.03); 
+    border-left-color: var(--neon-green);
+    transform: translateX(10px);
+}
+
+@media (max-width: 992px) {
+    .index-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+
 /* Fix for AOS potential overflow */
 [data-aos] {
     /* pointer-events: none; REMOVED AS IT BLOCKS CLICKS */
