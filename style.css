@@ -616,35 +616,67 @@ footer {
     line-height: 1.6;
 }
 
-/* Detailed Categories Section */
-.categories {
+/* Technical Expertise Table - E-E-A-T / SEO Booster */
+.technical-expertise {
     padding: 8rem 0;
-    background: var(--dark-bg);
+    background: #050505;
+    border-top: 1px solid rgba(0, 255, 65, 0.1);
 }
 
-.cat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.cat-item {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 1.2rem;
-    text-align: center;
-    border-radius: 10px;
+.expertise-table-wrapper {
+    margin-top: 4rem;
+    overflow-x: auto;
+    border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: var(--transition);
-    color: #ccc;
+    background: rgba(255, 255, 255, 0.02);
 }
 
-.cat-item:hover {
-    background: var(--primary-color);
-    color: #000;
-    transform: scale(1.05);
+.expertise-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    text-align: left;
+}
+
+.expertise-table th {
+    background: rgba(0, 255, 65, 0.05);
+    padding: 2rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.expertise-table td {
+    padding: 1.8rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    color: #bbb;
+    font-size: 1rem;
+}
+
+.expertise-table tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+}
+
+.expertise-note {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.expertise-table strong {
+    color: var(--primary-color);
+}
+
+/* Mobile Adjustments for V5 */
+@media (max-width: 768px) {
+    .expertise-table th, .expertise-table td {
+        padding: 1.5rem 1rem;
+        font-size: 0.85rem;
+    }
 }
 
 /* Regional Marquee - Back to Original 'Ghost Text' Look */
