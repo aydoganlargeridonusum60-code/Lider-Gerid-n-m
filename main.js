@@ -105,7 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     segTitle.innerText = data.title;
                     segDesc.innerText = data.desc;
-                    segRegions.innerText = data.regions;
+                    
+                    // Render regions as chips
+                    const regionList = data.regions.split(',');
+                    segRegions.innerHTML = `<div class="chip-container">${regionList.map(r => `<span class="bg-chip">${r.trim()}</span>`).join('')}</div>`;
+                    
                     segIcon.className = `fas ${data.icon}`;
                     segmentDisplay.style.opacity = '1';
                 }, 200);
