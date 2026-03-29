@@ -127,52 +127,86 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Dynamic Borsa Engine (V10) - SYNC MODE (V13.1)
-    const updatePrices = () => {
-        const batchSize = Math.floor(Math.random() * 2) + 1;
-        const allPriceSpans = document.querySelectorAll('.price-val');
-        
-        // Get unique categories present on page
-        const categories = [...new Set(Array.from(allPriceSpans).map(el => el.getAttribute('data-cat')).filter(cat => cat))];
-        
-        for(let i = 0; i < batchSize; i++) {
-            const randomCat = categories[Math.floor(Math.random() * categories.length)];
-            const targets = document.querySelectorAll(`.price-val[data-cat="${randomCat}"]`);
-            
-            if(targets.length > 0) {
-                // Read current value from the first one
-                let text = targets[0].innerText.trim();
-                let currentVal = parseFloat(text.replace('.', '').replace(',', '.'));
-                
-                if(text.includes(',') && !text.includes('.')) {
-                    currentVal = parseFloat(text.replace(',', '.'));
-                } else if (!text.includes(',') && text.includes('.')) {
-                    currentVal = parseFloat(text);
-                }
-
-                const jitter = (Math.random() * 0.4 - 0.2); 
-                const newVal = currentVal + jitter;
-                
-                // Update ALL instances on page
-                targets.forEach(el => {
-                    if(jitter > 0) {
-                        el.classList.add('price-up');
-                        setTimeout(() => el.classList.remove('price-up'), 2000);
-                    } else {
-                        el.classList.add('price-down');
-                        setTimeout(() => el.classList.remove('price-down'), 2000);
-                    }
-
-                    if(newVal > 1000) {
-                        el.innerText = Math.floor(newVal).toLocaleString('tr-TR');
-                    } else {
-                        el.innerText = newVal.toFixed(2).replace('.', ',');
-                    }
-                });
-            }
-        }
+    // 7. Dynamic Borsa Engine (V22) - MASTER SYNC MODE
+    const priceData = {
+        'dkp-demir': 12.50,
+        'insaat-demiri': 11.20,
+        'soyma-bakir': 285.00,
+        'lama-bakir': 275.00,
+        'kablo': 95.00,
+        'aluminyum': 55.00,
+        'pirinc-sari': 165.00,
+        'krom': 45.00
     };
 
+    const updatePricesUI = () => {
+        Object.keys(priceData).forEach(cat => {
+            const targets = document.querySelectorAll(`.price-val[data-cat="${cat}"]`);
+            targets.forEach(el => {
+                const val = priceData[cat];
+                if(val > 1000) {
+                    el.innerText = Math.floor(val).toLocaleString('tr-TR');
+                } else {
+                    el.innerText = val.toFixed(2).replace('.', ',');
+                }
+            });
+        });
+        calculateScrapValue(); // Keep calculator synced
+    };
+
+    const jitterPrices = () => {
+        const categories = Object.keys(priceData);
+        const randomCat = categories[Math.floor(Math.random() * categories.length)];
+        const jitter = (Math.random() * 0.4 - 0.2); 
+        priceData[randomCat] = Math.max(1, priceData[randomCat] + jitter);
+        
+        // Visual indicator for jitter
+        const targets = document.querySelectorAll(`.price-val[data-cat="${randomCat}"]`);
+        targets.forEach(el => {
+            el.classList.add(jitter > 0 ? 'price-up' : 'price-down');
+            setTimeout(() => el.classList.remove('price-up', 'price-down'), 2000);
+        });
+
+        updatePricesUI();
+    };
+
+    // --- CALCULATOR ENGINE (V22) ---
+    const calcCategory = document.getElementById('calc-category');
+    const calcWeight = document.getElementById('calc-weight');
+    const calcTotal = document.getElementById('calc-total');
+    const calcWhatsapp = document.getElementById('calc-whatsapp');
+
+    function calculateScrapValue() {
+        if (!calcCategory || !calcWeight || !calcTotal) return;
+
+        const category = calcCategory.value;
+        const weight = parseFloat(calcWeight.value) || 0;
+        const unitPrice = priceData[category] || 0;
+        const total = weight * unitPrice;
+
+        const formatter = new Intl.NumberFormat('tr-TR', {
+            style: 'currency',
+            currency: 'TRY',
+            minimumFractionDigits: 2
+        });
+
+        calcTotal.textContent = formatter.format(total);
+
+        // Update WhatsApp Message
+        if(calcWhatsapp) {
+            const selectedText = calcCategory.options[calcCategory.selectedIndex].text;
+            const waMessage = `Merhaba, Akıllı Hesaplayıcı ile bir analiz yaptım.%0A*Ürün:* ${selectedText}%0A*Miktar:* ${weight} KG%0A*Tahmini Değer:* ${formatter.format(total)}%0A%0ABu fiyattan satış yapmak için ekspertiz randevusu istiyorum.`;
+            calcWhatsapp.href = `https://wa.me/905364863466?text=${waMessage}`;
+        }
+    }
+
+    if(calcCategory) calcCategory.addEventListener('change', calculateScrapValue);
+    if(calcWeight) {
+        calcWeight.addEventListener('input', calculateScrapValue);
+        calcWeight.addEventListener('keyup', calculateScrapValue);
+    }
+    
     // Ignition
-    setInterval(updatePrices, 4000);
+    updatePricesUI();
+    setInterval(jitterPrices, 4000);
 });
