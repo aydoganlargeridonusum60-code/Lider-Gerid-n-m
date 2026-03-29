@@ -194,4 +194,35 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
             }
         });
     });
+
+    // Dynamic Borsa Engine (V10)
+    const updatePrices = () => {
+        // Randomly pick 1-3 products to update
+        const batchSize = Math.floor(Math.random() * 3) + 1;
+        const priceElements = document.querySelectorAll('.price-val');
+        
+        for(let i = 0; i < batchSize; i++) {
+            const randomEl = priceElements[Math.floor(Math.random() * priceElements.length)];
+            
+            if(randomEl) {
+                let currentVal = parseFloat(randomEl.innerText.replace(',', '.'));
+                const jitter = (Math.random() * 0.4 - 0.2); // +/- 0.2
+                const newVal = currentVal + jitter;
+                
+                // Visual indicators
+                if(jitter > 0) {
+                    randomEl.classList.add('price-up');
+                    setTimeout(() => randomEl.classList.remove('price-up'), 2000);
+                } else {
+                    randomEl.classList.add('price-down');
+                    setTimeout(() => randomEl.classList.remove('price-down'), 2000);
+                }
+                
+                randomEl.innerText = newVal.toFixed(2).replace('.', ',');
+            }
+        }
+    };
+
+    // Start the Borsa ticker
+    setInterval(updatePrices, 5000);
 });

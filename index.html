@@ -55,6 +55,7 @@
       }
     }
     </script>
+    <!-- Organization & Service Area Schema (Ulusal Hakimiyet V11) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -77,16 +78,27 @@
         "latitude": 41.0082,
         "longitude": 28.9784
       },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Turkey"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "81 İl Hurda Alım Hizmetleri",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tüm Türkiye Geneli Hurda Alımı"
+            }
+          }
+        ]
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
         ],
         "opens": "00:00",
         "closes": "23:59"
@@ -310,89 +322,106 @@
             </div>
             
             <div class="index-container">
-                <!-- Left: Professional Table -->
+                <!-- Left: Professional Borsa Table -->
                 <div class="table-wrapper">
-                    <table class="corporate-table">
+                    <div class="table-live-header">
+                        <span class="live-dot"></span> CANLI BORSA VERİSİ - GÜNCEL HURDA FİYATLARI
+                    </div>
+                    <table class="corporate-table borsa-table">
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Ürün Adı</th>
-                                <th>Alım Bölgeleri</th>
-                                <th>İşlem</th>
+                                <th>Güncel Fiyat (KG)</th>
+                                <th>Bölge</th>
+                                <th>Analiz</th>
                             </tr>
                         </thead>
                         <tbody id="product-rows">
+                            <!-- JS will populate prices dynamically -->
                             <tr class="active-row" data-category="dkp-demir">
                                 <td>01</td>
                                 <td><strong>DKP Demir</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td class="price-cell"><span class="price-val" id="price-dkp-demir">12.45</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="insaat-demiri">
                                 <td>02</td>
                                 <td><strong>İnşaat Demiri</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td class="price-cell"><span class="price-val" id="price-insaat-demiri">11.80</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="soyma-bakir">
                                 <td>03</td>
                                 <td><strong>Soyma Bakır</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td class="price-cell"><span class="price-val" id="price-soyma-bakir">285.50</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="lama-bakir">
                                 <td>04</td>
                                 <td><strong>Lama Bakır</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td class="price-cell"><span class="price-val" id="price-lama-bakir">274.20</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="kablo">
                                 <td>05</td>
-                                <td><strong>Kablo (Pvc/Altı)</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>Kablo Hurdası</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-kablo">85.30</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="aluminyum">
                                 <td>06</td>
-                                <td><strong>Profil Alüminyum</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>Alüminyum</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-aluminyum">52.40</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="pirinc-sari">
                                 <td>07</td>
-                                <td><strong>Sarı (Pirinç)</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>Sarı Pirinç</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-pirinc-sari">165.20</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="krom">
                                 <td>08</td>
-                                <td><strong>Krom 304/316</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>Krom 304</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-krom">38.40</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="kursun">
                                 <td>09</td>
-                                <td><strong>Kurşun Levha</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>Kurşun</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-kursun">46.50</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="motor">
                                 <td>10</td>
-                                <td><strong>Elektrik Motoru</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>E. Motoru</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-motor">28.40</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="klima">
                                 <td>11</td>
-                                <td><strong>Kombi & Klima</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>Klima</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-klima">1.450</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="elektronik">
                                 <td>12</td>
-                                <td><strong>Elektronik Atık</strong></td>
-                                <td><span class="region-badge">81 İL / TÜRKİYE GENELİ</span></td>
-                                <td><i class="fas fa-search-plus"></i> İncele</td>
+                                <td><strong>E-Atık</strong></td>
+                                <td class="price-cell"><span class="price-val" id="price-elektronik">18.50</span> TL</td>
+                                <td><span class="region-chip">81 İL</span></td>
+                                <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                         </tbody>
                     </table>
