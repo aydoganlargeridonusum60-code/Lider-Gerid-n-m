@@ -1768,6 +1768,23 @@ html {
     transform: translateX(10px);
 }
 
+.faq-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--neon-green);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.faq-link:hover {
+    color: #fff;
+    border-bottom-color: var(--neon-green);
+    letter-spacing: 0.5px;
+}
+
 @media (max-width: 992px) {
     .index-grid { grid-template-columns: 1fr; gap: 30px; }
 }
