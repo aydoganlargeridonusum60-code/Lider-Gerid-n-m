@@ -35,7 +35,27 @@ document.addEventListener('DOMContentLoaded', () => {
         'jant': { title: 'Jant Alüminyum', icon: 'fa-car', desc: 'Otomotiv sektöründen çıkan saf alüminyum alaşımları.', regions: 'İstanbul, Sakarya, Bursa' },
         'krom-430': { title: 'Krom 430 Hurdası', icon: 'fa-utensils', desc: 'Mutfak ekipmanları ve beyaz eşya üretim atıkları.', regions: 'Tekirdağ, Çorlu, İstanbul' },
         'petek': { title: 'Bakır/Alüminyum Petek', icon: 'fa-snowflake', desc: 'Klima ve radyatörlerden çıkan petek hurdaları.', regions: 'Adana, Mersin, Antalya, İstanbul' },
-        'aku': { title: 'Akü Hurdası (Sulu/Kuru)', icon: 'fa-car-battery', desc: 'Kurşun ağırlıklı, tehlikeli atık sınıfında geri dönüşüm.', regions: 'Konya, Ankara, İstanbul Lojistik Ağı' }
+        'aku': { title: 'Akü Hurdası (Sulu/Kuru)', icon: 'fa-car-battery', desc: 'Kurşun ağırlıklı, tehlikeli atık sınıfında geri dönüşüm.', regions: 'Konya, Ankara, İstanbul Lojistik Ağı' },
+        'antigron-kablo': { title: 'Antigron Kablo', icon: 'fa-microchip', desc: 'Tesisat ve yer altı kabloları, yüksek bakır verimi.', regions: 'Marmara, Ege, Akdeniz Bölgeleri' },
+        'pano-bakir': { title: 'Pano Bakırı', icon: 'fa-bolt', desc: 'Elektrik panolarından çıkan temiz, işlenmiş bakır raylar.', regions: 'Tüm Sanayi Siteleri, OSB Merkezleri' },
+        'bronz-kizil': { title: 'Bronz (Kızıl) Hurda', icon: 'fa-coins', desc: 'Yüksek sürtünme dayanımlı, kıymetli alaşımlı maden.', regions: 'Tersaneler, Gemi Söküm Alanları' },
+        'bakir-talasi': { title: 'Bakır Talaşı', icon: 'fa-spray-can', desc: 'İmalat sürecinde CNC tezgahlarından çıkan bakır artıkları.', regions: 'Gebze, Tuzla, İkitelli Fabrikaları' },
+        'pik-demir': { title: 'Pik Demir Hurdası', icon: 'fa-industry', desc: 'Döküm sanayisinin temel hammaddesi olan ağır metal.', regions: 'Kocaeli, Bursa, İzmir Sanayi Aksı' },
+        'teneke-hurda': { title: 'Teneke Hurdası', icon: 'fa-box', desc: 'İnce sac ve ambalaj atıklarından oluşan hafif metal.', regions: 'Tüm Şehir Merkezleri, Gıda Tesisleri' },
+        'aluminyum-tel': { title: 'Alüminyum Tel', icon: 'fa-wave-square', desc: 'Enerji nakil hatlarından çıkan saf alüminyum teller.', regions: 'Anadolu Yakası, Nilüfer, Aliağa' },
+        'aluminyum-sert': { title: 'Sert Alüminyum', icon: 'fa-cubes', desc: 'Otomotiv ve makine sanayi parçalarından çıkan alaşım.', regions: 'Konya, Ankara, Gaziantep' },
+        'aluminyum-kutu': { title: 'Kutu Alüminyum', icon: 'fa-wine-bottle', desc: 'İçecek kutuları ve folyo ambalaj atıkları.', regions: 'Oteller, Tatil Köyleri, Lojistik Merkezler' },
+        'aluminyum-radyator': { title: 'Araç Radyatörü', icon: 'fa-car-side', desc: 'Otomobil soğutma sistemlerinden çıkan değerli petekler.', regions: 'Oto Sanayi Siteleri, Çıkmacılar' },
+        'sari-cubuk': { title: 'Çubuk Sarı (Araiş)', icon: 'fa-grip-lines', desc: 'Tornadan çıkmış temiz, işlenmemiş pirinç parçalar.', regions: 'Marmara Bölgesi, Endüstriyel Üretim' },
+        'sari-su-saati': { title: 'Su Saati Hurdası', icon: 'fa-tint', desc: 'Eski tip mekanik su sayaçları ve vana gövdeleri.', regions: 'Belediye Atık Sahaları, Şantiye Alanları' },
+        'sari-talas': { title: 'Sarı Talaşı', icon: 'fa-magic', desc: 'Üretim bandı artığı, saf sarı talaş formunda maden.', regions: 'Gebze, Bursa, İzmir OSB' },
+        'krom-316': { title: '316 Krom (Paslanmaz)', icon: 'fa-shield-alt', desc: 'Asit ve korozyon direnci en yüksek paslanmaz türü.', regions: 'Kimya Tesisleri, İlaç Fabrikaları' },
+        'krom-201': { title: '201 Krom (Paslanmaz)', icon: 'fa-utensil-spoon', desc: 'Dekoratif amaçlı kullanılan, düşük nikel içerikli metal.', regions: 'Çorlu, Ergene, Kıraç Bölgeleri' },
+        'nikel-hurda': { title: 'Nikel Hurdası', icon: 'fa-gem', desc: 'Havacılık ve savunma sanayisinin kıymetli madeni.', regions: 'Tüm Türkiye, Stratejik Üretim Hatları' },
+        'cinko-hurda': { title: 'Çinko Hurdası', icon: 'fa-cube', desc: 'Kaplama sanayi ve levha üretiminden çıkan maden.', regions: 'Tuzla, Dilovası Sanayi Hattı' },
+        'kalay-hurda': { title: 'Kalay Hurdası', icon: 'fa-ring', desc: 'Lehim ve kaplama işlerinden çıkan, nadir ve değerli.', regions: 'Teknoloji Merkezleri, Elektronik Üretim' },
+        'titanyum-hurda': { title: 'Titanyum Hurdası', icon: 'fa-space-shuttle', desc: 'Uzay, havacılık ve medikal sektörün en dayanıklı metali.', regions: 'Stratejik Fabrikalar, Savunma Sanayi' },
+        'kursun-boru': { title: 'Kurşun Boru Hurdası', icon: 'fa-database', desc: 'Eski tesisat ve yalıtım sistemlerinden çıkan ağır metal.', regions: 'Kentsel Dönüşüm, Eski Şehir Merkezleri' }
     };
 
     document.querySelectorAll('.borsa-table tr').forEach(row => {
@@ -156,7 +176,27 @@ document.addEventListener('DOMContentLoaded', () => {
         'jant': 160.00,
         'krom-430': 35.00,
         'petek': 185.00,
-        'aku': 32.00
+        'aku': 32.00,
+        'antigron-kablo': 225.00,
+        'pano-bakir': 545.00,
+        'bronz-kizil': 320.00,
+        'bakir-talasi': 480.00,
+        'pik-demir': 12.50,
+        'teneke-hurda': 9.80,
+        'aluminyum-tel': 155.00,
+        'aluminyum-sert': 130.00,
+        'aluminyum-kutu': 115.00,
+        'aluminyum-radyator': 110.00,
+        'sari-cubuk': 275.00,
+        'sari-su-saati': 245.00,
+        'sari-talas': 235.00,
+        'krom-316': 95.00,
+        'krom-201': 32.00,
+        'nikel-hurda': 1150.00,
+        'cinko-hurda': 145.00,
+        'kalay-hurda': 1850.00,
+        'titanyum-hurda': 1250.00,
+        'kursun-boru': 82.00
     };
 
     const updatePricesUI = () => {

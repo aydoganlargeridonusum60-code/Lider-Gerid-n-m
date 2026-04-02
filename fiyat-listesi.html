@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güncel Hurda Fiyatları Listesi | 40+ Ürün Canlı Borsa | Lider Hurda</title>
+    <meta name="description" content="Tüm hurda türlerinin (Bakır, Demir, Alüminyum, Sarı, Krom) güncel KG fiyatları. 40+ ürünlük canlı borsa listesi ve detaylı analiz rehberi.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .price-list-container { padding: 60px 0; background: #050505; }
+        .category-group { margin-bottom: 60px; }
+        .category-title { 
+            color: var(--neon-green); 
+            font-size: 2rem; 
+            margin-bottom: 30px; 
+            border-left: 5px solid var(--neon-green); 
+            padding-left: 20px;
+            font-weight: 800;
+        }
+        .full-price-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        .full-price-table tr {
+            background: rgba(255,255,255,0.02);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .full-price-table tr:hover {
+            background: rgba(0,255,65,0.05);
+            transform: scale(1.01);
+        }
+        .full-price-table td, .full-price-table th {
+            padding: 20px;
+            color: #fff;
+            border: none;
+        }
+        .full-price-table th {
+            background: transparent;
+            color: #555;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-align: left;
+        }
+        .item-name { font-weight: 600; font-size: 1.1rem; }
+        .item-price { color: var(--neon-green); font-weight: 800; font-size: 1.2rem; }
+        .item-link { color: #555; font-size: 0.9rem; transition: color 0.3s; }
+        .full-price-table tr:hover .item-link { color: var(--neon-green); }
+        
+        @media (max-width: 768px) {
+            .full-price-table th:nth-child(3), .full-price-table td:nth-child(3) { display: none; }
+        }
+    </style>
+</head>
+<body class="fiyat-listesi-page">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 5L5 15V35L25 45L45 35V15L25 5Z" stroke="#00FF41" stroke-width="2" fill="rgba(0,255,65,0.1)"/>
+                    <path d="M15 20L25 25L35 20" stroke="#00FF41" stroke-width="2"/>
+                    <path d="M25 25V38" stroke="#00FF41" stroke-width="2"/>
+                </svg>
+                <span>LİDER <small>HURDA</small></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="analiz.html">Piyasa Analizi</a></li>
+                <li><a href="rehber.html">Bilgi Bankası</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="analysis-hero">
+        <div class="container text-center">
+            <span class="sub-title" data-aos="fade-down">ŞEFFAF BORSA TERMİNALİ</span>
+            <h1 class="premium-title" data-aos="fade-up">Güncel Hurda Fiyatları <br><span>Tam Liste (2026)</span></h1>
+            <p class="premium-p" data-aos="fade-up" data-aos-delay="100">40+ farklı ürün grubu için saniye bazlı canlı borsa verileri ve kalite analizi.</p>
+        </div>
+    </header>
+
+    <section class="price-list-container">
+        <div class="container">
+            
+            <!-- Category: Bakır -->
+            <div class="category-group" data-aos="fade-up">
+                <h2 class="category-title">Bakır Grubu Hurdaları</h2>
+                <table class="full-price-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Birim Fiyat</th>
+                            <th>Birim</th>
+                            <th>Detaylı Analiz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="location.href='soyma-bakir.html'">
+                            <td><span class="item-name">Soyma Bakır (Parlak)</span></td>
+                            <td><span class="item-price price-val" data-cat="soyma-bakir">550,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='lama-bakir.html'">
+                            <td><span class="item-name">Lama Bakır (İşlenmiş)</span></td>
+                            <td><span class="item-price price-val" data-cat="lama-bakir">540,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='kirkambar-bakir.html'">
+                            <td><span class="item-name">Kırkambar Bakır</span></td>
+                            <td><span class="item-price price-val" data-cat="kirkambar-bakir">490,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='main-kablo.html'">
+                            <td><span class="item-name">TTR & Karışık Kablo</span></td>
+                            <td><span class="item-price price-val" data-cat="kablo">210,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Antigron Kablo</span></td>
+                            <td><span class="item-price price-val" data-cat="antigron-kablo">225,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Pano Bakırı</span></td>
+                            <td><span class="item-price price-val" data-cat="pano-bakir">545,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Bronz (Kızıl) Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="bronz-kizil">320,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Bakır Talaşı</span></td>
+                            <td><span class="item-price price-val" data-cat="bakir-talasi">480,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category: Demir -->
+            <div class="category-group" data-aos="fade-up">
+                <h2 class="category-title">Demir & Çelik Grubu</h2>
+                <table class="full-price-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Birim Fiyat</th>
+                            <th>Birim</th>
+                            <th>Detaylı Analiz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="location.href='dkp-demir.html'">
+                            <td><span class="item-name">DKP Demir (Eksantrik)</span></td>
+                            <td><span class="item-price price-val" data-cat="dkp-demir">15,20</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='insaat-demiri.html'">
+                            <td><span class="item-name">İnşaat Demiri</span></td>
+                            <td><span class="item-price price-val" data-cat="insaat-demiri">14,40</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">1. Grup Demir</span></td>
+                            <td><span class="item-price price-val" data-cat="demir-1">14,80</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='ekstra-demir.html'">
+                            <td><span class="item-name">Ekstra Hurda Demir</span></td>
+                            <td><span class="item-price price-val" data-cat="demir-ekstra">14,20</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Pik Demir Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="pik-demir">12,50</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='talas-alimi.html'">
+                            <td><span class="item-name">Demir Talaşı</span></td>
+                            <td><span class="item-price price-val" data-cat="talas">12,50</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Teneke Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="teneke-hurda">9,80</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category: Alüminyum -->
+            <div class="category-group" data-aos="fade-up">
+                <h2 class="category-title">Alüminyum Grubu</h2>
+                <table class="full-price-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Birim Fiyat</th>
+                            <th>Birim</th>
+                            <th>Detaylı Analiz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="location.href='aluminyum-hurda.html'">
+                            <td><span class="item-name">Profil Alüminyum</span></td>
+                            <td><span class="item-price price-val" data-cat="aluminyum">145,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Jant Alüminyum</span></td>
+                            <td><span class="item-price price-val" data-cat="jant">160,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Alüminyum Tel (Saf)</span></td>
+                            <td><span class="item-price price-val" data-cat="aluminyum-tel">155,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Sert Alüminyum</span></td>
+                            <td><span class="item-price price-val" data-cat="aluminyum-sert">130,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Kutu Alüminyum</span></td>
+                            <td><span class="item-price price-val" data-cat="aluminyum-kutu">115,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Araç Radyatörü (Petek)</span></td>
+                            <td><span class="item-price price-val" data-cat="aluminyum-radyator">110,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category: Sarı (Pirinç) -->
+            <div class="category-group" data-aos="fade-up">
+                <h2 class="category-title">Sarı (Pirinç) Grubu</h2>
+                <table class="full-price-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Birim Fiyat</th>
+                            <th>Birim</th>
+                            <th>Detaylı Analiz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="location.href='sari-hurda.html'">
+                            <td><span class="item-name">Kırkambar Sarı</span></td>
+                            <td><span class="item-price price-val" data-cat="pirinc-sari">265,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Çubuk Sarı (Araiş)</span></td>
+                            <td><span class="item-price price-val" data-cat="sari-cubuk">275,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Su Saati Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="sari-su-saati">245,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Sarı Talaşı</span></td>
+                            <td><span class="item-price price-val" data-cat="sari-talas">235,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category: Paslanmaz -->
+            <div class="category-group" data-aos="fade-up">
+                <h2 class="category-title">Paslanmaz Krom Grubu</h2>
+                <table class="full-price-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Birim Fiyat</th>
+                            <th>Birim</th>
+                            <th>Detaylı Analiz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="location.href='krom-paslanmaz.html'">
+                            <td><span class="item-name">304 Krom Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="krom">75,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">316 Krom Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="krom-316">95,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">430 Krom Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="krom-430">35,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">201 Krom Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="krom-201">32,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Category: Diğer -->
+            <div class="category-group" data-aos="fade-up">
+                <h2 class="category-title">Değerli Metaller & Diğerleri</h2>
+                <table class="full-price-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün Adı</th>
+                            <th>Birim Fiyat</th>
+                            <th>Birim</th>
+                            <th>Detaylı Analiz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="location.href='kursun-hurdasi.html'">
+                            <td><span class="item-name">Kurşun Levha</span></td>
+                            <td><span class="item-price price-val" data-cat="kursun">85,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Kurşun Boru</span></td>
+                            <td><span class="item-price price-val" data-cat="kursun-boru">82,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='aku-hurdasi.html'">
+                            <td><span class="item-name">Akü (Sulu/Kuru)</span></td>
+                            <td><span class="item-price price-val" data-cat="aku">32,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Elektrik Motoru</span></td>
+                            <td><span class="item-price price-val" data-cat="motor">65,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Nikel Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="nikel-hurda">1150,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Kalay Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="kalay-hurda">1850,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="item-name">Titanyum Hurdası</span></td>
+                            <td><span class="item-price price-val" data-cat="titanyum-hurda">1250,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                        <tr onclick="location.href='e-atik.html'">
+                            <td><span class="item-name">Elektronik & Bilgisayar Atığı</span></td>
+                            <td><span class="item-price price-val" data-cat="elektronik">45,00</span> TL</td>
+                            <td>KG</td>
+                            <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align:center; padding: 40px 0; border-top: 1px solid #333;">
+                <p>&copy; 2026 Lider Hurda Geri Dönüşüm Terminali f</p>
+                <a href="index.html" style="color: var(--neon-green); text-decoration: none;">← Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>
