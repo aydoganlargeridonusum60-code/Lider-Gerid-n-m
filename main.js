@@ -27,7 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
         'kursun': { title: 'Kurşun Levha Hurdası', icon: 'fa-weight-hanging', desc: 'Çatı kaplamaları ve radyasyon kalkanı hurdalarıdır.', regions: 'Balıkesir, Çanakkale, Marmara Kıyı Hattı' },
         'motor': { title: 'Elektrik Motoru', icon: 'fa-cogs', desc: 'İçindeki yoğun bakır sargı nedeniyle kıymetli çıkma motorlar.', regions: 'Ege ve İç Anadolu Üretim Merkezleri' },
         'klima': { title: 'Kombi & Klima Atığı', icon: 'fa-fan', desc: 'Bakır boru ve kompresör içeren değerli üniteler.', regions: 'İstanbul Geneli, Kentsel Dönüşüm Alanları' },
-        'elektronik': { title: 'Elektronik & Bilgisayar Atığı', icon: 'fa-microchip', desc: 'Nadir metaller içeren teknolojik atıklar.', regions: 'Tüm Türkiye Geneli Bilgi Kaynağı' }
+        'elektronik': { title: 'Elektronik & Bilgisayar Atığı', icon: 'fa-microchip', desc: 'Nadir metaller içeren teknolojik atıklar.', regions: 'Tüm Türkiye Geneli Bilgi Kaynağı' },
+        'demir-1': { title: '1. Grup Hurda Demir', icon: 'fa-shredder', desc: 'Dökümhaneler için ideal, kalın ve temiz sanayi demiri.', regions: 'Gebze, Tuzla, İkitelli Sanayi Bölgeleri' },
+        'demir-ekstra': { title: 'Ekstra Hurda Demir', icon: 'fa-truck-loading', desc: 'Standart sanayi demiri, her türlü imalat artığı.', regions: 'Marmara Bölgesi, Ankara, İzmir' },
+        'kirkambar-bakir': { title: 'Kırkambar Bakır', icon: 'fa-coins', desc: 'Karışık, lehimli veya boyalı geri dönüşüm bakırı.', regions: 'İstanbul, Anadolu Yakası, Kocaeli' },
+        'talas': { title: 'Metal Talaşı', icon: 'fa-spray-can', desc: 'CNC ve torna tezgahlarından çıkan metal artıkları.', regions: 'Çayırova, Gebze, Dudullu OSB' },
+        'jant': { title: 'Jant Alüminyum', icon: 'fa-car', desc: 'Otomotiv sektöründen çıkan saf alüminyum alaşımları.', regions: 'İstanbul, Sakarya, Bursa' },
+        'krom-430': { title: 'Krom 430 Hurdası', icon: 'fa-utensils', desc: 'Mutfak ekipmanları ve beyaz eşya üretim atıkları.', regions: 'Tekirdağ, Çorlu, İstanbul' },
+        'petek': { title: 'Bakır/Alüminyum Petek', icon: 'fa-snowflake', desc: 'Klima ve radyatörlerden çıkan petek hurdaları.', regions: 'Adana, Mersin, Antalya, İstanbul' },
+        'aku': { title: 'Akü Hurdası (Sulu/Kuru)', icon: 'fa-car-battery', desc: 'Kurşun ağırlıklı, tehlikeli atık sınıfında geri dönüşüm.', regions: 'Konya, Ankara, İstanbul Lojistik Ağı' }
     };
 
     document.querySelectorAll('.borsa-table tr').forEach(row => {
@@ -131,12 +139,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceData = {
         'dkp-demir': 15.20,
         'insaat-demiri': 14.40,
-        'soyma-bakir': 285.00,
-        'lama-bakir': 275.00,
-        'kablo': 95.00,
-        'aluminyum': 55.00,
-        'pirinc-sari': 165.00,
-        'krom': 45.00
+        'soyma-bakir': 550.00,
+        'lama-bakir': 540.00,
+        'kablo': 210.00,
+        'aluminyum': 145.00,
+        'pirinc-sari': 265.00,
+        'krom': 75.00,
+        'kursun': 85.00,
+        'motor': 65.00,
+        'klima': 2850.00,
+        'elektronik': 45.00,
+        'demir-1': 14.80,
+        'demir-ekstra': 14.20,
+        'kirkambar-bakir': 490.00,
+        'talas': 12.50,
+        'jant': 160.00,
+        'krom-430': 35.00,
+        'petek': 185.00,
+        'aku': 32.00
     };
 
     const updatePricesUI = () => {

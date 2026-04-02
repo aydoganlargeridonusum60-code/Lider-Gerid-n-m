@@ -1834,3 +1834,36 @@ html {
         .summary-box { flex-direction: column; text-align: center; padding: 30px; }
         .summary-content h3 { font-size: 1.3rem; }
     }
+
+    /* V29 Mobile Overdrive Fixes */
+    @media (max-width: 992px) {
+        .index-container { flex-direction: column; }
+        .table-wrapper { width: 100%; order: 1; }
+        .analysis-segment { width: 100%; order: 2; margin-top: 30px; }
+        .services-grid { grid-template-columns: 1fr; }
+        .about-grid { grid-template-columns: 1fr; text-align: center; }
+        .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        .premium-title { font-size: 2.5rem; }
+        .navbar .container { flex-direction: column; gap: 15px; }
+        .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; padding: 0; }
+        .nav-links li a { margin-left: 0; padding: 5px 10px; font-size: 0.8rem; }
+    }
+
+    @media (max-width: 768px) {
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .borsa-table {
+            min-width: 600px; /* Ensure columns don't crush too much */
+        }
+        .container { padding: 0 1.5rem; }
+        .premium-title { font-size: 2.2rem; }
+        .section-header h2 { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 480px) {
+        .emergency-text h3 { font-size: 1.4rem; }
+        .btn-emergency { padding: 1.2rem 2rem; font-size: 1rem; }
+        .price-val { font-size: 1rem; }
+    }
