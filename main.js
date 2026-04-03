@@ -230,6 +230,55 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePricesUI();
     };
 
+    // 8. Interactive Table Rows (V33)
+    const categoryToPage = {
+        'dkp-demir': 'dkp-demir.html',
+        'insaat-demiri': 'insaat-demiri.html',
+        'soyma-bakir': 'soyma-bakir.html',
+        'lama-bakir': 'lama-bakir.html',
+        'kablo': 'kablo-hurdasi.html',
+        'kablo-hurdasi': 'kablo-hurdasi.html',
+        'aluminyum': 'aluminyum-hurda.html',
+        'aluminyum-hurda': 'aluminyum-hurda.html',
+        'pirinc-sari': 'sari-hurda.html',
+        'sari-hurda': 'sari-hurda.html',
+        'krom-paslanmaz': 'krom-paslanmaz.html',
+        'krom': 'krom-paslanmaz.html',
+        'kursun': 'kursun-hurdasi.html',
+        'motor': 'elektrik-motoru.html',
+        'elektrik-motoru': 'elektrik-motoru.html',
+        'klima': 'klima-hurdasi.html',
+        'elektronik': 'e-atik.html',
+        'demir-1': 'bir-grup-demir.html',
+        'demir-ekstra': 'ekstra-demir.html',
+        'kirkambar-bakir': 'kirkambar-bakir.html',
+        'talas-alimi': 'talas-alimi.html',
+        'talas': 'talas-alimi.html',
+        'jant': 'jant-aluminyum.html',
+        'petek': 'arac-radyatoru.html',
+        'aku': 'aku-hurdasi.html',
+        'tel-aluminyum': 'aluminyum-tel.html',
+        'sert-aluminyum': 'aluminyum-sert.html',
+        'kutualu': 'aluminyum-kutu.html',
+        'antigron-kablo': 'kablo-hurdasi.html',
+        'pano-bakir': 'soyma-bakir.html',
+        'bakir-talasi': 'bakir-fiyat-analizi.html',
+        'sari-analiz': 'sari-hurda-analizi.html',
+        'krom-analiz': 'krom-analiz-rehberi.html'
+    };
+
+    const tableRows = document.querySelectorAll('tbody tr[data-category]');
+    tableRows.forEach(row => {
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', () => {
+            const cat = row.getAttribute('data-category');
+            const targetPage = categoryToPage[cat] || (cat + '.html');
+            window.location.href = targetPage;
+        });
+        row.addEventListener('mouseenter', () => row.style.backgroundColor = 'rgba(0, 255, 65, 0.05)');
+        row.addEventListener('mouseleave', () => row.style.backgroundColor = 'transparent');
+    });
+
     // --- CALCULATOR ENGINE (V22) ---
     const calcCategory = document.getElementById('calc-category');
     const calcWeight = document.getElementById('calc-weight');
