@@ -288,7 +288,6 @@ h1, h2, h3 {
     border-collapse: separate;
     border-spacing: 0 0.8rem;
     text-align: left;
-    min-width: 700px;
 }
 
 .premium-price-table th {
@@ -669,8 +668,8 @@ footer {
 @media (max-width: 992px) {
     .index-container { flex-direction: column; }
     .analysis-segment { position: relative; top: 0; order: -1; }
-    .corporate-table th:nth-child(3), 
-    .corporate-table td:nth-child(3) { display: none; }
+    .corporate-table th:nth-child(1), 
+    .corporate-table td:nth-child(1) { display: none; } /* Hide ID instead of Price */
 }
 
 /* Regional Badges & Chips V7 */
@@ -1054,7 +1053,8 @@ footer {
         .premium-p { font-size: 1rem !important; }
         
         .pricing-table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        .premium-price-table { min-width: 600px; }
+        .premium-price-table { width: 100%; }
+        .premium-price-table th, .premium-price-table td { padding: 1rem 12px; font-size: 0.85rem; }
         
         .calc-wrapper { padding: 30px 20px; }
         .calc-header h2 { font-size: 2rem; }
@@ -1088,7 +1088,7 @@ footer {
     .emergency-flex { flex-direction: column; text-align: center; gap: 1.5rem; }
     
     .pricing { padding: 4rem 0; }
-    .premium-price-table { min-width: 500px; }
+    .premium-price-table { min-width: auto; width: 100%; }
     .price-table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
