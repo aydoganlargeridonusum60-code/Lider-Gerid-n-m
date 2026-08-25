@@ -1867,3 +1867,51 @@ html {
         .btn-emergency { padding: 1.2rem 2rem; font-size: 1rem; }
         .price-val { font-size: 1rem; }
     }
+
+    /* Sticky Mobile Call & WhatsApp Action Bar */
+    .sticky-action-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        display: flex;
+        background: rgba(5, 5, 5, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-top: 1px solid rgba(0, 255, 65, 0.3);
+        box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
+        padding: 10px 15px;
+        gap: 12px;
+    }
+    .sticky-action-bar a {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 15px;
+        border-radius: 50px;
+        font-weight: 800;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .sticky-btn-call {
+        background: var(--neon-green);
+        color: #000;
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+    }
+    .sticky-btn-whatsapp {
+        background: #25D366;
+        color: #fff;
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+    }
+    .sticky-action-bar a:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+    }
+    body {
+        padding-bottom: 70px;
+    }
+

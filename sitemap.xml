@@ -1,106 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.liderhurda.com/index.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <loc>https://www.liderhurda.com/</loc>
+      <lastmod>2026-08-25</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/fiyat-listesi.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <lastmod>2026-08-25</lastmod>
       <changefreq>daily</changefreq>
-      <priority>0.9</priority>
-   </url>
-    <url>
-      <loc>https://www.liderhurda.com/2026-hurda-piyasasi-beklentileri.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
-   </url>
-   <url>
-      <loc>https://www.liderhurda.com/hurda-aliminda-guven-rehberi.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/istanbul-hurdaci-rehberi-2026.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <changefreq>weekly</changefreq>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://www.liderhurda.com/soyma-bakir.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <changefreq>weekly</changefreq>
+      <loc>https://www.liderhurda.com/anadolu-yakasi-hurdaci.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.liderhurda.com/lama-bakir.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.liderhurda.com/dkp-demir.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.liderhurda.com/aluminyum-hurda.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <loc>https://www.liderhurda.com/avrupa-yakasi-hurdaci.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/ikitelli-osb-hurdaci.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <priority>0.7</priority>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/gebze-osb-hurdaci.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <priority>0.7</priority>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.liderhurda.com/anadolu-yakasi-hurdaci.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <priority>0.7</priority>
+      <loc>https://www.liderhurda.com/dudullu-osb-hurdaci.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.liderhurda.com/avrupa-yakasi-hurdaci.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <priority>0.7</priority>
+      <loc>https://www.liderhurda.com/soyma-bakir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.liderhurda.com/aku-hurdasi.html</loc>
-      <lastmod>2026-07-05</lastmod>
-      <priority>0.7</priority>
+      <loc>https://www.liderhurda.com/bakir-hurda-fiyatlari-bugun.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/lama-bakir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/kirkambar-bakir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-fiyat-analizi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-anlama-rehberi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-nasil-anlasilir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-satis-rehberi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/kablo-hurdasi.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/aluminyum-hurda.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/aluminyum-hurda-fiyatlari.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/aluminyum-boya-farki.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.liderhurda.com/krom-paslanmaz.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <loc>https://www.liderhurda.com/aluminyum-kutu.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/aluminyum-sert.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/aluminyum-tel.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/jant-aluminyum.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/demir-hurda-fiyatlari.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/dkp-demir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/ekstra-demir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/insaat-demiri.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bir-grup-demir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/demir-fiyat-neden-degisir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/demir-fiyatlari-nasil-belirlenir.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/sari-hurda.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/sari-hurda-analizi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/krom-paslanmaz.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/krom-analiz-rehberi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/aku-hurdasi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/kursun-hurdasi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/plastik-hurda.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/e-atik.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/e-atik-imha-proseduru.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/klima-hurdasi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/arac-radyatoru.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/elektrik-motoru.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/fabrika-sokumu.html</loc>
-      <lastmod>2026-07-05</lastmod>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/fabrika-yikimi-sokumu-hizmeti.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/hurda-karsiligi-yikim.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/yikim-hizmetleri.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/yikim-maliyet-analizi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/is-makinesi-parcalama.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/kurumsal-atik-yonetimi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/santiye-atik-yonetimi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/arsiv-imha.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/talas-alimi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/osb-periyodik-alim.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/osb-periyodik-alim-rehberi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/en-yakin-hurdaci-sure.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/tonajli-hurda-satis-rehberi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/hurda-aliminda-guven-rehberi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/hurda-odeme-yontemleri.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/2026-hurda-piyasasi-beklentileri.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/borsa-terimleri.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/karbon-ayak-izi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/geri-donusum-sureci.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/metal-tanima-rehberi.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/analiz.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/rehber.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bolge.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/hakkimizda.html</loc>
+      <lastmod>2026-08-25</lastmod>
+      <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>
 </urlset>
