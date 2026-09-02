@@ -10,6 +10,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mobile Navigation Drawer Toggle
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileBtn.querySelector('i');
+            if (icon) {
+                if (navLinks.classList.contains('active')) {
+                    icon.className = 'fas fa-times';
+                } else {
+                    icon.className = 'fas fa-bars';
+                }
+            }
+        });
+
+        // Close menu when clicking outside or link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) icon.className = 'fas fa-bars';
+            });
+        });
+    }
+
     // 2. Corporate Index & Detail Segment (V6)
     const segmentDisplay = document.getElementById('info-display-segment');
     const segTitle = document.getElementById('segment-title');
