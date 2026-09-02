@@ -61,26 +61,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .price-list-container { padding: 60px 0; background: #050505; }
+        .price-list-container { padding: 60px 0; background: #f8fafc; }
         .live-status-bar {
-            background: rgba(0, 255, 65, 0.08);
-            border: 1px solid var(--neon-green);
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
             padding: 15px 25px;
             border-radius: 50px;
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            color: #fff;
-            font-weight: 600;
+            color: #047857;
+            font-weight: 700;
             font-size: 0.95rem;
             margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.08);
         }
         .live-pulse {
             width: 12px;
             height: 12px;
-            background: #00ff41;
+            background: #059669;
             border-radius: 50%;
-            box-shadow: 0 0 12px #00ff41;
+            box-shadow: 0 0 12px #059669;
             animation: pulse-green 1.5s infinite;
         }
         @keyframes pulse-green {
@@ -105,30 +106,31 @@
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: var(--neon-green);
+            color: #059669;
             font-size: 1.2rem;
         }
         .search-input-wrapper input {
             width: 100%;
-            background: #111;
-            border: 2px solid #222;
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
             padding: 16px 20px 16px 55px;
             border-radius: 50px;
-            color: #fff;
+            color: #0f172a;
             font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             transition: all 0.3s ease;
         }
         .search-input-wrapper input:focus {
-            border-color: var(--neon-green);
+            border-color: #059669;
             outline: none;
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 20px rgba(5, 150, 105, 0.15);
         }
         .category-group { margin-bottom: 60px; }
         .category-title { 
-            color: var(--neon-green); 
-            font-size: 2rem; 
+            color: #059669; 
+            font-size: 1.8rem; 
             margin-bottom: 25px; 
-            border-left: 5px solid var(--neon-green); 
+            border-left: 5px solid #059669; 
             padding-left: 20px;
             font-weight: 800;
             display: flex;
@@ -141,49 +143,53 @@
             border-spacing: 0 10px;
         }
         .full-price-table tr {
-            background: rgba(255,255,255,0.02);
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
             transition: all 0.3s ease;
             cursor: pointer;
         }
         .full-price-table tr:hover {
-            background: rgba(0,255,65,0.08);
+            background: #ecfdf5;
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.08);
         }
         .full-price-table td, .full-price-table th {
             padding: 20px 25px;
-            color: #fff;
+            color: #0f172a;
             border: none;
         }
         .full-price-table th {
-            background: transparent;
-            color: #777;
+            background: #f1f5f9;
+            color: #475569;
             text-transform: uppercase;
             font-size: 0.85rem;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-align: left;
+            font-weight: 700;
         }
-        .item-name { font-weight: 700; font-size: 1.15rem; color: #fff; }
-        .item-price { color: var(--neon-green); font-weight: 800; font-size: 1.3rem; font-family: var(--font-display); }
-        .item-link { color: #888; font-size: 0.9rem; font-weight: 600; transition: color 0.3s; }
-        .full-price-table tr:hover .item-link { color: var(--neon-green); }
+        .item-name { font-weight: 700; font-size: 1.15rem; color: #0f172a; }
+        .item-price { color: #059669; font-weight: 800; font-size: 1.3rem; font-family: var(--font-display); }
+        .item-link { color: #64748b; font-size: 0.9rem; font-weight: 600; transition: color 0.3s; }
+        .full-price-table tr:hover .item-link { color: #059669; }
         
         .quick-call-cta {
-            background: linear-gradient(135deg, #111 0%, #050505 100%);
-            border: 2px solid var(--neon-green);
+            background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%);
+            border: 2px solid #a7f3d0;
             border-radius: 30px;
-            padding: 40px;
+            padding: 45px;
             text-align: center;
             margin-top: 60px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(5, 150, 105, 0.08);
         }
         .quick-call-cta h3 {
-            color: #fff;
+            color: #0f172a;
             font-size: 2.2rem;
             margin-bottom: 15px;
             font-weight: 800;
         }
         .quick-call-cta p {
-            color: #aaa;
+            color: #475569;
             font-size: 1.1rem;
             margin-bottom: 30px;
         }
