@@ -228,28 +228,45 @@
                         </tr>
                         <tr>
                             <td><strong>Ekstra Hurda Demir</strong></td>
-                            <td>Ton</td>
-                            <td class="price-cell"><span class="price-val" data-cat="ekstra-demir">14.80</span> TL</td>
+                            <td><span class="badge-cat badge-steel"><i class="fas fa-hammer"></i> Demir</span></td>
+                            <td>KG (14.600 ₺/Ton)</td>
+                            <td class="price-cell"><span class="price-val" data-cat="demir-ekstra">14,60</span> TL</td>
                         </tr>
                         <tr>
-                            <td><strong>1. Grup Hurda Demir</strong></td>
-                            <td>Ton</td>
-                            <td class="price-cell"><span class="price-val" data-cat="insaat-demiri">14.44</span> TL</td>
+                            <td><strong>İnşaat Demiri (1. Grup)</strong></td>
+                            <td><span class="badge-cat badge-steel"><i class="fas fa-building"></i> Demir</span></td>
+                            <td>KG (14.600 ₺/Ton)</td>
+                            <td class="price-cell"><span class="price-val" data-cat="insaat-demiri">14,60</span> TL</td>
                         </tr>
                         <tr>
-                            <td><strong>Bakır Hurdası (Soyma)</strong></td>
-                            <td>kg</td>
-                            <td class="price-cell"><span class="price-val" data-cat="soyma-bakir">550.00</span> TL</td>
+                            <td><strong>Bakır Hurdası (Soyma Saf)</strong></td>
+                            <td><span class="badge-cat badge-copper"><i class="fas fa-bolt"></i> Bakır</span></td>
+                            <td>KG</td>
+                            <td class="price-cell"><span class="price-val" data-cat="soyma-bakir">560,00</span> TL</td>
                         </tr>
                         <tr>
-                            <td><strong>Alüminyum Hurdası</strong></td>
-                            <td>kg</td>
-                            <td class="price-cell"><span class="price-val" data-cat="aluminyum">140.00</span> TL</td>
+                            <td><strong>Alüminyum Hurdası (Profil)</strong></td>
+                            <td><span class="badge-cat badge-cyan"><i class="fas fa-window-maximize"></i> Alüminyum</span></td>
+                            <td>KG</td>
+                            <td class="price-cell"><span class="price-val" data-cat="aluminyum">148,00</span> TL</td>
                         </tr>
                         <tr>
-                            <td><strong>Kablo Hurdası (Karışık)</strong></td>
-                            <td>kg</td>
-                            <td class="price-cell"><span class="price-val" data-cat="kablo">185.00</span> TL</td>
+                            <td><strong>Kablo Hurdası (Karışık TTR)</strong></td>
+                            <td><span class="badge-cat badge-purple"><i class="fas fa-plug"></i> Kablo</span></td>
+                            <td>KG</td>
+                            <td class="price-cell"><span class="price-val" data-cat="kablo">215,00</span> TL</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sarı (Pirinç) Hurdası</strong></td>
+                            <td><span class="badge-cat badge-amber"><i class="fas fa-faucet"></i> Sarı</span></td>
+                            <td>KG</td>
+                            <td class="price-cell"><span class="price-val" data-cat="pirinc-sari">270,00</span> TL</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Krom 304 Paslanmaz</strong></td>
+                            <td><span class="badge-cat badge-rose"><i class="fas fa-shield-alt"></i> Krom</span></td>
+                            <td>KG</td>
+                            <td class="price-cell"><span class="price-val" data-cat="krom">78,00</span> TL</td>
                         </tr>
                     </tbody>
                 </table>
@@ -902,16 +919,80 @@
             </div>
             <div class="region-grid">
                 <div class="region-col">
-                    <h4>Marmara & Ege (En Popüler)</h4>
-                    <p>İstanbul (Arnavutköy, Başakşehir, Tuzla, Gebze, Ümraniye, Pendik, Bağcılar, Esenyurt), Kocaeli, Bursa, Tekirdağ, Sakarya, Yalova, Edirne, Kırklareli, Çanakkale, Balıkesir, İzmir (Aliağa, Bornova), Manisa, Aydın, Denizli, Muğla.</p>
+                    <h4>MARMARA & EGE (EN POPÜLER)</h4>
+                    <p>
+                        <a href="bolge.html?city=istanbul" class="city-link">İstanbul</a> (
+                        <a href="bolge.html?city=arnavutkoy" class="city-link">Arnavutköy</a>, 
+                        <a href="bolge.html?city=basaksehir" class="city-link">Başakşehir</a>, 
+                        <a href="bolge.html?city=tuzla" class="city-link">Tuzla</a>, 
+                        <a href="bolge.html?city=gebze" class="city-link">Gebze</a>, 
+                        <a href="bolge.html?city=umraniye" class="city-link">Ümraniye</a>, 
+                        <a href="bolge.html?city=pendik" class="city-link">Pendik</a>, 
+                        <a href="bolge.html?city=bagcilar" class="city-link">Bağcılar</a>, 
+                        <a href="bolge.html?city=esenyurt" class="city-link">Esenyurt</a>), 
+                        <a href="bolge.html?city=kocaeli" class="city-link">Kocaeli</a>, 
+                        <a href="bolge.html?city=bursa" class="city-link">Bursa</a>, 
+                        <a href="bolge.html?city=tekirdag" class="city-link">Tekirdağ</a>, 
+                        <a href="bolge.html?city=sakarya" class="city-link">Sakarya</a>, 
+                        <a href="bolge.html?city=yalova" class="city-link">Yalova</a>, 
+                        <a href="bolge.html?city=edirne" class="city-link">Edirne</a>, 
+                        <a href="bolge.html?city=kirklareli" class="city-link">Kırklareli</a>, 
+                        <a href="bolge.html?city=canakkale" class="city-link">Çanakkale</a>, 
+                        <a href="bolge.html?city=balikesir" class="city-link">Balıkesir</a>, 
+                        <a href="bolge.html?city=izmir" class="city-link">İzmir</a> (
+                        <a href="bolge.html?city=aliaga" class="city-link">Aliağa</a>, 
+                        <a href="bolge.html?city=bornova" class="city-link">Bornova</a>), 
+                        <a href="bolge.html?city=manisa" class="city-link">Manisa</a>, 
+                        <a href="bolge.html?city=aydin" class="city-link">Aydın</a>, 
+                        <a href="bolge.html?city=denizli" class="city-link">Denizli</a>, 
+                        <a href="bolge.html?city=mugla" class="city-link">Muğla</a>.
+                    </p>
                 </div>
                 <div class="region-col">
-                    <h4>İç Anadolu & Akdeniz</h4>
-                    <p>Ankara (Ostim, İvedik), Eskişehir, Kayseri, Konya, Sivas, Aksaray, Çankırı, Kırşehir, Kırıkkale, Nevşehir, Niğde, Yozgat, Antalya, Mersin, Adana, Hatay, Isparta, Burdur, Kahramanmaraş.</p>
+                    <h4>İÇ ANADOLU & AKDENİZ</h4>
+                    <p>
+                        <a href="bolge.html?city=ankara" class="city-link">Ankara</a> (
+                        <a href="bolge.html?city=ostim" class="city-link">Ostim</a>, 
+                        <a href="bolge.html?city=ivedik" class="city-link">İvedik</a>), 
+                        <a href="bolge.html?city=eskisehir" class="city-link">Eskişehir</a>, 
+                        <a href="bolge.html?city=kayseri" class="city-link">Kayseri</a>, 
+                        <a href="bolge.html?city=konya" class="city-link">Konya</a>, 
+                        <a href="bolge.html?city=sivas" class="city-link">Sivas</a>, 
+                        <a href="bolge.html?city=aksaray" class="city-link">Aksaray</a>, 
+                        <a href="bolge.html?city=cankiri" class="city-link">Çankırı</a>, 
+                        <a href="bolge.html?city=kirsehir" class="city-link">Kırşehir</a>, 
+                        <a href="bolge.html?city=kirikkale" class="city-link">Kırıkkale</a>, 
+                        <a href="bolge.html?city=nevsehir" class="city-link">Nevşehir</a>, 
+                        <a href="bolge.html?city=nigde" class="city-link">Niğde</a>, 
+                        <a href="bolge.html?city=yozgat" class="city-link">Yozgat</a>, 
+                        <a href="bolge.html?city=antalya" class="city-link">Antalya</a>, 
+                        <a href="bolge.html?city=mersin" class="city-link">Mersin</a>, 
+                        <a href="bolge.html?city=adana" class="city-link">Adana</a>, 
+                        <a href="bolge.html?city=hatay" class="city-link">Hatay</a>, 
+                        <a href="bolge.html?city=isparta" class="city-link">Isparta</a>, 
+                        <a href="bolge.html?city=burdur" class="city-link">Burdur</a>, 
+                        <a href="bolge.html?city=kahramanmaras" class="city-link">Kahramanmaraş</a>.
+                    </p>
                 </div>
                 <div class="region-col">
-                    <h4>Karadeniz & Anadolu Genel</h4>
-                    <p>Samsun, Trabzon, Ordu, Giresun, Rize, Amasya, Erzurum, Van, Diyarbakır, Gaziantep, Şanlıurfa, Mardin, Batman, Siirt, Şırnak ve Türkiye'nin 81 ilinin her mahallesine nakliye hizmetimiz vardır.</p>
+                    <h4>KARADENİZ & ANADOLU GENEL</h4>
+                    <p>
+                        <a href="bolge.html?city=samsun" class="city-link">Samsun</a>, 
+                        <a href="bolge.html?city=trabzon" class="city-link">Trabzon</a>, 
+                        <a href="bolge.html?city=ordu" class="city-link">Ordu</a>, 
+                        <a href="bolge.html?city=giresun" class="city-link">Giresun</a>, 
+                        <a href="bolge.html?city=rize" class="city-link">Rize</a>, 
+                        <a href="bolge.html?city=amasya" class="city-link">Amasya</a>, 
+                        <a href="bolge.html?city=erzurum" class="city-link">Erzurum</a>, 
+                        <a href="bolge.html?city=van" class="city-link">Van</a>, 
+                        <a href="bolge.html?city=diyarbakir" class="city-link">Diyarbakır</a>, 
+                        <a href="bolge.html?city=gaziantep" class="city-link">Gaziantep</a>, 
+                        <a href="bolge.html?city=sanliurfa" class="city-link">Şanlıurfa</a>, 
+                        <a href="bolge.html?city=mardin" class="city-link">Mardin</a>, 
+                        <a href="bolge.html?city=batman" class="city-link">Batman</a>, 
+                        <a href="bolge.html?city=siirt" class="city-link">Siirt</a>, 
+                        <a href="bolge.html?city=sirnak" class="city-link">Şırnak</a> ve Türkiye'nin 81 ilinin her mahallesine nakliye hizmetimiz vardır.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1153,6 +1234,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="sticky-action-bar">
+        <a href="tel:+905364863466" class="sticky-btn-call"><i class="fas fa-phone-alt"></i> Hemen Ara</a>
+        <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
