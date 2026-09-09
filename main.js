@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     if (mobileBtn && navLinks) {
-        mobileBtn.addEventListener('click', () => {
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             navLinks.classList.toggle('active');
             const icon = mobileBtn.querySelector('i');
             if (icon) {
@@ -26,13 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking outside or link
+        // Close menu when clicking link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 const icon = mobileBtn.querySelector('i');
                 if (icon) icon.className = 'fas fa-bars';
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) icon.className = 'fas fa-bars';
+            }
         });
     }
 

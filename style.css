@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800;900&family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Anton&display=swap');
+
 /* Breadcrumbs - Visual SEO */
 .breadcrumb-nav {
     padding: 1rem 0;
@@ -25,8 +27,6 @@
     color: #fff;
     font-weight: 600;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800;900&family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Anton&display=swap');
 
 :root {
     /* Ultra Modern Dark Glassmorphism & Neon Emerald Palette */
@@ -60,13 +60,13 @@
     --accent-color: #f59e0b;
     
     /* Ink / Text */
-    --black: #ffffff;
-    --ink-900: #ffffff;
-    --ink-800: #f3f4f6;
-    --ink-700: #e5e7eb;
-    --ink-500: #d1d5db;
-    --ink-400: #9ca3af;
-    --ink-300: #94a3b8;
+    --black: #080c16;
+    --ink-900: #0f172a;
+    --ink-800: #1e293b;
+    --ink-700: #334155;
+    --ink-500: #64748b;
+    --ink-400: #94a3b8;
+    --ink-300: #cbd5e1;
     
     /* Surfaces */
     --white: #ffffff;
@@ -278,11 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a:hover {
-    color: #10b981;
-}
-
-.nav-links a:hover {
-    color: var(--gold-500);
+    color: var(--emerald-500);
 }
 
 /* Hero Section */
@@ -1196,16 +1192,17 @@ footer {
 
 /* CALCULATOR SECTION STYLES - ULTRA LUXURY V22 */
 .calculator-section {
-    padding: 80px 0;
-    background: var(--paper);
-    border-top: 1px solid var(--line-soft);
+    padding: 90px 0;
+    background: #060910;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .calc-wrapper {
-    background: var(--black);
-    border: 1px solid rgba(227, 179, 65, 0.2);
-    border-radius: 30px;
-    padding: 60px;
-    box-shadow: var(--shadow-lg);
+    background: linear-gradient(145deg, #0d1322 0%, #080c16 100%);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 28px;
+    padding: 50px 60px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     position: relative;
     overflow: hidden;
 }
@@ -1216,53 +1213,137 @@ footer {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(227, 179, 65, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
     pointer-events: none;
 }
-.calc-header { text-align: center; margin-bottom: 50px; position: relative; }
-.calc-header i { font-size: 4rem; color: var(--gold-500); margin-bottom: 25px; }
-.calc-header h2 { font-size: 3rem; color: var(--white); font-weight: 800; letter-spacing: -1px; margin-bottom: 15px; }
-.calc-header p { color: var(--ink-400); font-size: 1.2rem; font-weight: 300; }
+.calc-header { 
+    text-align: center; 
+    margin-bottom: 45px; 
+    position: relative; 
+    z-index: 2;
+}
+.calc-header i { 
+    font-size: 3.5rem; 
+    color: var(--gold-500); 
+    margin-bottom: 18px; 
+    display: inline-block;
+    filter: drop-shadow(0 4px 15px rgba(245, 158, 11, 0.4));
+}
+.calc-header h2 { 
+    font-size: 2.6rem; 
+    color: #ffffff !important; 
+    font-weight: 800; 
+    letter-spacing: -0.5px; 
+    margin-bottom: 12px; 
+    text-transform: uppercase;
+}
+.calc-header p { 
+    color: #94a3b8; 
+    font-size: 1.15rem; 
+    font-weight: 400; 
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 .calc-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
-    align-items: center;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 45px;
+    align-items: stretch;
     position: relative;
+    z-index: 2;
 }
-.input-group { margin-bottom: 30px; }
-.input-group label { display: block; color: var(--white); font-weight: 600; margin-bottom: 12px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
-.input-group label i { color: var(--gold-500); margin-right: 12px; }
+.calc-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-group { margin-bottom: 25px; }
+.input-group:last-child { margin-bottom: 0; }
+.input-group label { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    color: #f1f5f9 !important; 
+    font-weight: 700; 
+    margin-bottom: 10px; 
+    font-size: 0.95rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+.input-group label i { 
+    color: var(--gold-500); 
+    font-size: 1.1rem; 
+}
 
 .premium-select, .premium-input {
     width: 100%;
-    background: var(--ink-900) !important;
-    border: 2px solid var(--ink-800) !important;
-    padding: 20px;
+    background: #111827 !important;
+    border: 1.5px solid #1f2937 !important;
+    padding: 16px 20px;
     border-radius: 14px;
-    color: var(--white) !important;
-    font-size: 1.2rem;
+    color: #ffffff !important;
+    font-size: 1.05rem;
     font-weight: 600;
-    transition: var(--transition);
+    transition: all 0.25s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.premium-select option {
+    background: #111827;
+    color: #ffffff;
+    padding: 10px;
+}
+.premium-input::placeholder {
+    color: #64748b;
+    font-weight: 400;
 }
 .premium-select:focus, .premium-input:focus {
     border-color: var(--gold-500) !important;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .calc-result-card {
-    background: var(--ink-900);
-    border: 2px solid rgba(227, 179, 65, 0.2);
+    background: linear-gradient(160deg, #111827 0%, #0d1322 100%);
+    border: 1.5px solid rgba(245, 158, 11, 0.3);
     border-radius: 20px;
-    padding: 40px;
+    padding: 35px 30px;
     text-align: center;
-    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
-.calc-result-card:hover { border-color: var(--gold-500); }
-.result-label { color: var(--ink-400); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 15px; font-weight: 600; }
-.result-value { color: var(--gold-500); font-size: 4rem; font-weight: 900; margin-bottom: 25px; font-family: var(--font-display); }
-.result-note { color: var(--ink-500); font-size: 0.85rem; line-height: 1.6; margin-bottom: 30px; }
+.calc-result-card:hover { 
+    border-color: var(--gold-500); 
+    box-shadow: 0 20px 45px rgba(245, 158, 11, 0.15);
+}
+.result-label { 
+    color: #94a3b8; 
+    text-transform: uppercase; 
+    letter-spacing: 2.5px; 
+    font-size: 0.85rem; 
+    margin-bottom: 12px; 
+    font-weight: 700; 
+}
+.result-value { 
+    color: var(--gold-500); 
+    font-size: 3.5rem; 
+    font-weight: 900; 
+    margin-bottom: 15px; 
+    font-family: var(--font-heading, 'Montserrat', sans-serif); 
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+}
+.result-note { 
+    color: #64748b; 
+    font-size: 0.8rem; 
+    line-height: 1.5; 
+    margin-bottom: 25px; 
+    max-width: 280px;
+}
 
 /* MOBILE PRECISION (Responsive Overdrive) */
 @media (max-width: 992px) {
@@ -1300,14 +1381,16 @@ footer {
     font-size: 22px;
 }
 
-    .market-summary-snippet {
-        background: rgba(0, 255, 65, 0.05);
-        border: 1px solid var(--neon-green);
-        padding: 20px;
-        border-radius: 15px;
-        margin: 20px 0;
-    }
+/* Market Summary Snippet - Global Styles */
+.market-summary-snippet {
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid var(--neon-green);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
 
+@media (max-width: 768px) {
     .emergency-flex { flex-direction: column; text-align: center; gap: 1.5rem; }
     
     .pricing { padding: 4rem 0; }
@@ -2145,58 +2228,140 @@ html {
         .stat-pill { width: 100%; justify-content: center; }
     }
 
-    /* Sticky Mobile Call & WhatsApp Action Bar */
-    .sticky-action-bar {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-        display: flex;
-        background: rgba(11, 15, 25, 0.94);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
-        padding: 10px 15px;
-        gap: 12px;
+/* Sticky Mobile Call & WhatsApp Action Bar */
+.sticky-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    background: rgba(11, 15, 25, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    gap: 12px;
+}
+.sticky-action-bar a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.sticky-btn-call {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+}
+.sticky-btn-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+.sticky-action-bar a:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+body {
+    padding-bottom: 80px;
+}
+
+/* ============================================
+   EKSİK / TANIMSIZ CSS SINIFLARI DÜZELTMELERİ
+   ============================================ */
+
+/* WhatsApp Hesaplayıcı Butonu */
+.btn-whatsapp-calc {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff !important;
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    transition: var(--transition);
+    width: 100%;
+    margin-top: 10px;
+}
+.btn-whatsapp-calc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.45);
+}
+
+/* Hero Buttons Wrapper */
+.hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Basic Row / Col Grid Helper (Bootstrap-benzeri) */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: flex-start;
+}
+.col-lg-7 { flex: 0 0 58.333%; max-width: 58.333%; }
+.col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+.col-lg-5 { flex: 0 0 41.667%; max-width: 41.667%; }
+
+@media (max-width: 992px) {
+    .col-lg-7, .col-lg-6, .col-lg-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-    .sticky-action-bar a {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 12px 15px;
-        border-radius: 50px;
-        font-weight: 800;
-        font-size: 0.95rem;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-    .sticky-btn-call {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        color: #ffffff;
-        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
-    }
-    .sticky-btn-whatsapp {
-        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-        color: #ffffff;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
-    }
-    .sticky-action-bar a:hover {
-        transform: translateY(-2px);
-        filter: brightness(1.1);
-    }
-    body {
-        padding-bottom: 80px;
-    }
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-    }
-    .sticky-action-bar a:hover {
-        transform: translateY(-2px);
-        filter: brightness(1.08);
-    }
-    body {
-        padding-bottom: 70px;
-    }
+    .row { gap: 2rem; }
+}
+
+/* Expertise Grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Section-header align-left fix */
+.section-header.align-left,
+.section-header.text-center {
+    text-align: left;
+}
+.section-header.text-center {
+    text-align: center;
+}
+.section-header.align-left .header-line {
+    margin: 1.5rem 0;
+}
+
+/* Badge (generic span badge) */
+span.badge {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--emerald-500);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
