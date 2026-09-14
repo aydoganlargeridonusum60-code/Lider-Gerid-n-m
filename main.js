@@ -240,7 +240,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'cinko-hurda': 148.00,
         'kalay-hurda': 1880.00,
         'titanyum-hurda': 1280.00,
-        'kursun-boru': 85.00
+        'kursun-boru': 85.00,
+        'ekstra-demir': 14.60,
+        'bir-grup-demir': 14.90,
+        'kablo-hurdasi': 215.00,
+        'aluminyum-hurda': 148.00,
+        'sari-hurda': 270.00,
+        'krom-paslanmaz': 78.00
     };
 
     const updatePricesUI = () => {
@@ -364,16 +370,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Quick Category Filter Search on fiyat-listesi.html
     const searchInput = document.getElementById('price-search-input');
     if (searchInput) {
-        searchInput.addEventListener('keyup', function() {
-            const filter = this.value.toLowerCase();
-            const rows = document.querySelectorAll('.full-price-table tbody tr');
-            rows.forEach(row => {
-                const text = row.innerText.toLowerCase();
-                if (text.includes(filter)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
+        searchInput.addEventListener('input', function() {
+            const filter = this.value.trim().toLowerCase();
+            const groups = document.querySelectorAll('.category-group');
+            
+            groups.forEach(group => {
+                const rows = group.querySelectorAll('.full-price-table tbody tr');
+                let hasVisible = false;
+                
+                rows.forEach(row => {
+                    const text = row.innerText.toLowerCase();
+                    if (!filter || text.includes(filter)) {
+                        row.style.display = '';
+                        hasVisible = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                
+                // Hide or show the whole category block if no items match
+                group.style.display = hasVisible ? '' : 'none';
             });
         });
     }

@@ -1,4 +1,4 @@
-?<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -136,7 +136,7 @@
     <!-- AOS Library for Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.2">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -145,7 +145,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logo-title logo-desc">
                     <title id="logo-title">Lider Hurda | İstanbul ve Gebze En Yakın Hurdacı - 7/24 Adresten Alım</title>
                     <desc id="logo-desc">Lider Hurda Geri Dönüşüm: Bakır, Demir, Alüminyum ve Sarı Hurdalarınızı En Yüksek Borsa Fiyatıyla Alıyoruz.</desc>
@@ -156,10 +156,12 @@
                 </svg>
                 LİDER<span>HURDA</span>
             </a>
-            <button class="mobile-menu-btn" aria-label="Menü"><i class="fas fa-bars"></i></button>
+            <button class="mobile-menu-btn" aria-label="Menüyü Aç/Kapat">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="index.html#prices">Canlı Borsa</a></li>
+                <li><a href="fiyat-listesi.html">Canlı Borsa</a></li>
                 <li><a href="analiz.html">Piyasa Analizi</a></li>
                 <li><a href="rehber.html">Bilgi Bankası</a></li>
                 <li><a href="hakkimizda.html" class="nav-btn-highlight">Hakkımızda Detay</a></li>
@@ -174,13 +176,8 @@
         <div class="container hero-content" data-aos="fade-up">
             <h1 class="premium-title">DEMİR VE METALDE TÜRKİYE'NİN <br><span> LİDER HURDACI MERKEZİ</span></h1>
             <p class="premium-p">Lider Hurda olarak, 15 dakikada adresteyiz! Yarım asırlık tecrübemizle tüm Türkiye'de, özellikle her türlü demir hurdalarınızı en yüksek değerden alıyoruz.</p>
-            <div class="stat-pills-row">
-                <span class="stat-pill"><i class="fas fa-bolt"></i> 15 Dk Adresten Alım</span>
-                <span class="stat-pill"><i class="fas fa-money-bill-wave"></i> Anında Nakit Ödeme</span>
-                <span class="stat-pill"><i class="fas fa-chart-line"></i> Canlı LME Borsa</span>
-            </div>
             <div class="hero-btns">
-                <a href="tel: 0536 486 34 66" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen Ara</a>
+                <a href="tel:+905364863466" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen Ara</a>
                 <a href="https://wa.me/905364863466" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
@@ -195,7 +192,7 @@
                     <p>81 İlde 973 İlçede Hazır Ekibimiz Var. <strong>15 Dakikada Kapınızdayız!</strong></p>
                 </div>
                 <div class="emergency-btn">
-                    <a href="tel: 0536 486 34 66" class="btn btn-emergency"><i class="fas fa-phone-volume"></i> �?İMDİ ARA: 0536 486 34 66</a>
+                    <a href="tel:+905364863466" class="btn btn-emergency"><i class="fas fa-phone-volume"></i> ŞİMDİ ARA: 0536 486 34 66</a>
                 </div>
             </div>
         </div>
@@ -220,56 +217,61 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr data-category="dkp-demir">
                             <td><strong>DKP Hurda Demir</strong></td>
-                            <td><span class="badge-cat badge-steel"><i class="fas fa-hammer"></i> Demir</span></td>
+                            <td><span class="badge-cat badge-steel"><i class="fas fa-hammer"></i> DEMİR</span></td>
                             <td>KG (15.500 ₺/Ton)</td>
-                            <td class="price-cell"><span class="price-val" data-cat="dkp-demir">15,50</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="dkp-demir">15,50</span> <span class="price-currency">TL</span></td>
                         </tr>
-                        <tr>
+                        <tr data-category="demir-ekstra">
                             <td><strong>Ekstra Hurda Demir</strong></td>
-                            <td><span class="badge-cat badge-steel"><i class="fas fa-hammer"></i> Demir</span></td>
+                            <td><span class="badge-cat badge-steel"><i class="fas fa-hammer"></i> DEMİR</span></td>
                             <td>KG (14.600 ₺/Ton)</td>
-                            <td class="price-cell"><span class="price-val" data-cat="demir-ekstra">14,60</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="demir-ekstra">14,60</span> <span class="price-currency">TL</span></td>
                         </tr>
-                        <tr>
+                        <tr data-category="insaat-demiri">
                             <td><strong>İnşaat Demiri (1. Grup)</strong></td>
-                            <td><span class="badge-cat badge-steel"><i class="fas fa-building"></i> Demir</span></td>
+                            <td><span class="badge-cat badge-steel"><i class="fas fa-building"></i> DEMİR</span></td>
                             <td>KG (14.600 ₺/Ton)</td>
-                            <td class="price-cell"><span class="price-val" data-cat="insaat-demiri">14,60</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="insaat-demiri">14,60</span> <span class="price-currency">TL</span></td>
                         </tr>
-                        <tr>
+                        <tr data-category="soyma-bakir">
                             <td><strong>Bakır Hurdası (Soyma Saf)</strong></td>
-                            <td><span class="badge-cat badge-copper"><i class="fas fa-bolt"></i> Bakır</span></td>
+                            <td><span class="badge-cat badge-copper"><i class="fas fa-bolt"></i> BAKIR</span></td>
                             <td>KG</td>
-                            <td class="price-cell"><span class="price-val" data-cat="soyma-bakir">560,00</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="soyma-bakir">560,00</span> <span class="price-currency">TL</span></td>
                         </tr>
-                        <tr>
+                        <tr data-category="aluminyum">
                             <td><strong>Alüminyum Hurdası (Profil)</strong></td>
-                            <td><span class="badge-cat badge-cyan"><i class="fas fa-window-maximize"></i> Alüminyum</span></td>
+                            <td><span class="badge-cat badge-cyan"><i class="fas fa-window-maximize"></i> ALÜMİNYUM</span></td>
                             <td>KG</td>
-                            <td class="price-cell"><span class="price-val" data-cat="aluminyum">148,00</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="aluminyum">148,00</span> <span class="price-currency">TL</span></td>
                         </tr>
-                        <tr>
+                        <tr data-category="kablo">
                             <td><strong>Kablo Hurdası (Karışık TTR)</strong></td>
-                            <td><span class="badge-cat badge-purple"><i class="fas fa-plug"></i> Kablo</span></td>
+                            <td><span class="badge-cat badge-purple"><i class="fas fa-plug"></i> KABLO</span></td>
                             <td>KG</td>
-                            <td class="price-cell"><span class="price-val" data-cat="kablo">215,00</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="kablo">215,00</span> <span class="price-currency">TL</span></td>
                         </tr>
-                        <tr>
+                        <tr data-category="pirinc-sari">
                             <td><strong>Sarı (Pirinç) Hurdası</strong></td>
-                            <td><span class="badge-cat badge-amber"><i class="fas fa-faucet"></i> Sarı</span></td>
+                            <td><span class="badge-cat badge-amber"><i class="fas fa-faucet"></i> SARI</span></td>
                             <td>KG</td>
-                            <td class="price-cell"><span class="price-val" data-cat="pirinc-sari">270,00</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="pirinc-sari">270,00</span> <span class="price-currency">TL</span></td>
                         </tr>
-                        <tr>
+                        <tr data-category="krom">
                             <td><strong>Krom 304 Paslanmaz</strong></td>
-                            <td><span class="badge-cat badge-rose"><i class="fas fa-shield-alt"></i> Krom</span></td>
+                            <td><span class="badge-cat badge-rose"><i class="fas fa-shield-alt"></i> KROM</span></td>
                             <td>KG</td>
-                            <td class="price-cell"><span class="price-val" data-cat="krom">78,00</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="krom">78,00</span> <span class="price-currency">TL</span></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="price-footer-cta" style="text-align: center; margin-top: 2.5rem;">
+                    <a href="fiyat-listesi.html" class="btn btn-primary" style="padding: 16px 32px; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; font-size: 1.05rem; border-radius: 50px; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);">
+                        <i class="fas fa-chart-line"></i> TÜM GÜNCEL BORSA FİYAT LİSTESİNİ GÖR
+                    </a>
+                </div>
             </div>
             <div class="price-footer-note">
                 <p><i class="fas fa-info-circle"></i> Fiyatlar tonaj ve konuma göre yukarı doğru esneyebilir. Net teklif için foto gönderin.</p>
@@ -325,13 +327,12 @@
     </section>
 
     <!-- WEEKLY MARKET SUMMARY (V23) -->
-    <!-- WEEKLY MARKET SUMMARY (V23) -->
     <section class="market-summary-snippet">
         <div class="container">
             <div class="summary-box" data-aos="zoom-in">
                 <div class="summary-content">
                     <span class="live-badge">YENİ ANALİZ</span>
-                    <h3>Nisan 2026 Bakır & Demir Piyasası Öngörüleri Yayınlandı!</h3>
+                    <h3>2026 Bakır & Demir Piyasası Öngörüleri Yayınlandı!</h3>
                     <p>LME borsa verileri ve küresel arz krizinin önümüzdeki ay hurda fiyatlarına etkisi teknik analizle masaya yatırıldı. Haberciler ve ekonomistler için kritik veriler burada.</p>
                 </div>
                 <div class="summary-action">
@@ -345,7 +346,7 @@
     <section class="organic-insights" style="padding: 100px 0; background: #080808;">
         <div class="container" data-aos="fade-up">
             <div class="section-header text-center">
-                <span class="badge">TEMMUZ 2026 GÜNCELLEMESİ</span>
+                <span class="badge">2026 GÜNCELLEMESİ</span>
                 <h2>Sektörel Gelişim & Stratejik Rehberler</h2>
                 <div class="header-line"></div>
             </div>
@@ -372,7 +373,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- MEGA AUTHORITY INDEX (V24) -->
     <section class="authority-index" id="index">
@@ -443,9 +443,9 @@
         <div class="container" data-aos="zoom-in">
             <div class="quote-content">
                 <h2>EN YAKIN HURDACI: EN YÜKSEK FİYAT GARANTİSİ</h2>
-                <p>Hurdalarınızın değerini anlık borsa verilerine göre belirliyoruz. �?effaf tartım ve anında nakit ödeme ile en iyi teklifi bizden alın.</p>
+                <p>Hurdalarınızın değerini anlık borsa verilerine göre belirliyoruz. Şeffaf tartım ve anında nakit ödeme ile en iyi teklifi bizden alın.</p>
                 <div class="quote-actions">
-                    <a href="tel: 0536 486 34 66" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen Fiyat Al</a>
+                    <a href="tel:+905364863466" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen Fiyat Al</a>
                     <a href="https://wa.me/905364863466" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Fotoğraf Gönder</a>
                 </div>
             </div>
@@ -689,12 +689,14 @@
                             <p id="segment-regions">İstanbul (Esenyurt, Gebze, Tuzla), Ankara (Ostim), Kocaeli ve Tekirdağ sanayi bölgeleri başta olmak üzere tüm Türkiye geneli adresten alım yapmaktayız.</p>
                         </div>
                         <div class="segment-footer">
-                            <a href="tel: 0536 486 34 66" class="btn btn-primary btn-block">TEKLİF AL</a>
+                            <a href="tel:+905364863466" class="btn btn-primary btn-block">TEKLİF AL</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
     <!-- Detailed Price Guide Section (SEO Authority & CTA) -->
     <section class="price-guide-authority" style="background: #050505; padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <div class="container" data-aos="fade-up">
@@ -706,7 +708,7 @@
                         <div class="header-line"></div>
                     </div>
                     <div class="guide-text" style="color: #888; font-size: 1.1rem; line-height: 1.8;">
-                        <p>Bugünün küresel ekonomisinde metal hurdası, basit bir atık değil; Londra Metal Borsası (LME) ve döviz kurlarıyla doğrudan bağlantılı, değeri anlık olarak değişen stratejik bir emtiadır. Lider Hurda olarak biz, Türkiye'deki sanayicilerimize ve bireysel tedarikçilerimize sadece bir alım fiyatı değil, aynı zamanda veriye dayalı profesyonel bir <strong>borsa analizi</strong> sunuyoruz.</p>
+                        <p>Bugünün küresel ekonomisinde metal hurdası, basit bir atık değil; London Metal Exchange (LME) ve döviz kurlarıyla doğrudan bağlantılı, değeri anlık olarak değişen stratejik bir emtiadır. Lider Hurda olarak biz, Türkiye'deki sanayicilerimize ve bireysel tedarikçilerimize sadece bir alım fiyatı değil, aynı zamanda veriye dayalı profesyonel bir <strong>borsa analizi</strong> sunuyoruz.</p>
                         <p style="margin-top: 20px;">Bakırın iletkenliğinden demirin yapısal gücüne kadar her metalin kendi içinde onlarca farklı kalite sınıfı bulunmaktadır. Örneğin, bir kablodan soyulmuş <em>parlak bakır</em> ile lehimli veya yanık olan <em>kırkambar bakır</em> arasındaki fiyat farkı, yüksek tonajlı işlemlerde işletmeniz için ciddi kazanç farkları yaratabilir. Bu rehberimizde, 40'tan fazla hurda türünün anlık fiyatlarını, kalite analizlerini ve piyasa tahminlerini tek bir noktada topladık.</p>
                         <p style="margin-top: 20px;">Hurdalarınızı satmadan önce borsa grafiklerimizi incelemeniz, doğru zamanlama ile maksimum kazanç sağlamanız için hayati öneme sahiptir. Lider Hurda; şeffaf tartım, güncel borsa fiyatları ve adresten nakit alım prensipleriyle metal ticaretinde güvenin adresidir.</p>
                     </div>
@@ -718,7 +720,6 @@
                     <!-- Dashboard Visual Meta -->
                     <div class="price-dashboard-mockup" style="background: linear-gradient(135deg, #111, #000); border: 1px solid var(--neon-green); border-radius: 30px; padding: 40px; position: relative; overflow: hidden; box-shadow: 0 0 50px rgba(0,255,65,0.1);">
                         <div class="dash-line" style="opacity: 0.1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
-                            <!-- SVG Grid Pattern -->
                             <svg width="100%" height="100%"><defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M 30 0 L 0 0 0 30" fill="none" stroke="#fff" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)" /></svg>
                         </div>
                         <div class="dash-content">
@@ -801,9 +802,6 @@
                                     <h4>Yüksek Değerli Bakır</h4>
                                     <p>Soyma bakır, lama ve kablo hurdalarınızı en yüksek borsa kuruyla, hassas tartım yaparak adresten alıyoruz. <span class="read-more">Detaylı Rehber →</span></p>
                                 </div>
-                                <div class="snippet-image">
-                                    <!-- Görsel Kaldırıldı -->
-                                </div>
                             </a>
                         </div>
                         <!-- Card 2 -->
@@ -812,9 +810,6 @@
                                 <div class="snippet-content">
                                     <h4>Ağır Sanayi Demiri</h4>
                                     <p>Yıkım, söküm ve imalattan çıkan DKP, ekstra ve toplama demir hurdalarınızı dev araç filomuzla yerinden alıyoruz. <span class="read-more">Detaylı Rehber →</span></p>
-                                </div>
-                                <div class="snippet-image">
-                                    <!-- Görsel Kaldırıldı -->
                                 </div>
                             </a>
                         </div>
@@ -825,9 +820,6 @@
                                     <h4>Saf Alüminyum</h4>
                                     <p>Profil, levha, jant ve sert alüminyum hurdalarınızı geri dönüşüm zincirimize en yüksek fiyattan kazandırıyoruz. <span class="read-more">Detaylı Rehber →</span></p>
                                 </div>
-                                <div class="snippet-image">
-                                    <!-- Görsel Kaldırıldı -->
-                                </div>
                             </a>
                         </div>
                         <!-- Card 4 -->
@@ -836,9 +828,6 @@
                                 <div class="snippet-content">
                                     <h4>Sarı (Pirinç) Hurdası</h4>
                                     <p>Tesisat, vana ve makina parçalarından çıkan sarı hurdalarınızı saflık derecesine göre yerinde nakit ödeme ile alıyoruz. <span class="read-more">Detaylı Rehber →</span></p>
-                                </div>
-                                <div class="snippet-image">
-                                    <!-- Görsel Kaldırıldı -->
                                 </div>
                             </a>
                         </div>
@@ -879,7 +868,7 @@
                 <span class="region-chip" data-city="İZMİR" data-districts="Aliağa, Bornova, Çiğli, Kemalpaşa, Menemen, Torbalı, Gaziemir">İZMİR</span>
                 <span class="region-chip" data-city="BURSA" data-districts="Nilüfer, Osmangazi, Yıldırım, İnegöl, Gürsu, Kestel">BURSA</span>
                 <span class="region-chip" data-city="KOCAELİ" data-districts="Gebze, Dilovası, Çayırova, Darıca, İzmit, Körfez, Kartepe">KOCAELİ</span>
-                <span class="region-chip" data-city="TEKİRDA�?" data-districts="Çorlu, Çerkezköy, Kapaklı, Ergene, Muratlı">TEKİRDA�?</span>
+                <span class="region-chip" data-city="TEKİRDAĞ" data-districts="Çorlu, Çerkezköy, Kapaklı, Ergene, Muratlı">TEKİRDAĞ</span>
                 <span class="region-chip" data-city="SAKARYA" data-districts="Adapazarı, Erenler, Arifiye, Serdivan, Hendek, Akyazı">SAKARYA</span>
             </div>
             <!-- Duplicate for loop -->
@@ -889,7 +878,7 @@
                 <span class="region-chip" data-city="İZMİR" data-districts="Aliağa, Bornova, Çiğli, Kemalpaşa, Menemen, Torbalı, Gaziemir">İZMİR</span>
                 <span class="region-chip" data-city="BURSA" data-districts="Nilüfer, Osmangazi, Yıldırım, İnegöl, Gürsu, Kestel">BURSA</span>
                 <span class="region-chip" data-city="KOCAELİ" data-districts="Gebze, Dilovası, Çayırova, Darıca, İzmit, Körfez, Kartepe">KOCAELİ</span>
-                <span class="region-chip" data-city="TEKİRDA�?" data-districts="Çorlu, Çerkezköy, Kapaklı, Ergene, Muratlı">TEKİRDA�?</span>
+                <span class="region-chip" data-city="TEKİRDAĞ" data-districts="Çorlu, Çerkezköy, Kapaklı, Ergene, Muratlı">TEKİRDAĞ</span>
                 <span class="region-chip" data-city="SAKARYA" data-districts="Adapazarı, Erenler, Arifiye, Serdivan, Hendek, Akyazı">SAKARYA</span>
             </div>
         </div>
@@ -905,7 +894,7 @@
             </div>
             <p id="modal-districts"></p>
             <div class="modal-footer">
-                <a href="tel: 0536 486 34 66" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen Ara</a>
+                <a href="tel:+905364863466" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen Ara</a>
             </div>
         </div>
     </div>
@@ -919,80 +908,16 @@
             </div>
             <div class="region-grid">
                 <div class="region-col">
-                    <h4>MARMARA & EGE (EN POPÜLER)</h4>
-                    <p>
-                        <a href="bolge.html?city=istanbul" class="city-link">İstanbul</a> (
-                        <a href="bolge.html?city=arnavutkoy" class="city-link">Arnavutköy</a>, 
-                        <a href="bolge.html?city=basaksehir" class="city-link">Başakşehir</a>, 
-                        <a href="bolge.html?city=tuzla" class="city-link">Tuzla</a>, 
-                        <a href="bolge.html?city=gebze" class="city-link">Gebze</a>, 
-                        <a href="bolge.html?city=umraniye" class="city-link">Ümraniye</a>, 
-                        <a href="bolge.html?city=pendik" class="city-link">Pendik</a>, 
-                        <a href="bolge.html?city=bagcilar" class="city-link">Bağcılar</a>, 
-                        <a href="bolge.html?city=esenyurt" class="city-link">Esenyurt</a>), 
-                        <a href="bolge.html?city=kocaeli" class="city-link">Kocaeli</a>, 
-                        <a href="bolge.html?city=bursa" class="city-link">Bursa</a>, 
-                        <a href="bolge.html?city=tekirdag" class="city-link">Tekirdağ</a>, 
-                        <a href="bolge.html?city=sakarya" class="city-link">Sakarya</a>, 
-                        <a href="bolge.html?city=yalova" class="city-link">Yalova</a>, 
-                        <a href="bolge.html?city=edirne" class="city-link">Edirne</a>, 
-                        <a href="bolge.html?city=kirklareli" class="city-link">Kırklareli</a>, 
-                        <a href="bolge.html?city=canakkale" class="city-link">Çanakkale</a>, 
-                        <a href="bolge.html?city=balikesir" class="city-link">Balıkesir</a>, 
-                        <a href="bolge.html?city=izmir" class="city-link">İzmir</a> (
-                        <a href="bolge.html?city=aliaga" class="city-link">Aliağa</a>, 
-                        <a href="bolge.html?city=bornova" class="city-link">Bornova</a>), 
-                        <a href="bolge.html?city=manisa" class="city-link">Manisa</a>, 
-                        <a href="bolge.html?city=aydin" class="city-link">Aydın</a>, 
-                        <a href="bolge.html?city=denizli" class="city-link">Denizli</a>, 
-                        <a href="bolge.html?city=mugla" class="city-link">Muğla</a>.
-                    </p>
+                    <h4>Marmara & Ege (En Popüler)</h4>
+                    <p>İstanbul (Arnavutköy, Başakşehir, Tuzla, Gebze, Ümraniye, Pendik, Bağcılar, Esenyurt), Kocaeli, Bursa, Tekirdağ, Sakarya, Yalova, Edirne, Kırklareli, Çanakkale, Balıkesir, İzmir (Aliağa, Bornova), Manisa, Aydın, Denizli, Muğla.</p>
                 </div>
                 <div class="region-col">
-                    <h4>İÇ ANADOLU & AKDENİZ</h4>
-                    <p>
-                        <a href="bolge.html?city=ankara" class="city-link">Ankara</a> (
-                        <a href="bolge.html?city=ostim" class="city-link">Ostim</a>, 
-                        <a href="bolge.html?city=ivedik" class="city-link">İvedik</a>), 
-                        <a href="bolge.html?city=eskisehir" class="city-link">Eskişehir</a>, 
-                        <a href="bolge.html?city=kayseri" class="city-link">Kayseri</a>, 
-                        <a href="bolge.html?city=konya" class="city-link">Konya</a>, 
-                        <a href="bolge.html?city=sivas" class="city-link">Sivas</a>, 
-                        <a href="bolge.html?city=aksaray" class="city-link">Aksaray</a>, 
-                        <a href="bolge.html?city=cankiri" class="city-link">Çankırı</a>, 
-                        <a href="bolge.html?city=kirsehir" class="city-link">Kırşehir</a>, 
-                        <a href="bolge.html?city=kirikkale" class="city-link">Kırıkkale</a>, 
-                        <a href="bolge.html?city=nevsehir" class="city-link">Nevşehir</a>, 
-                        <a href="bolge.html?city=nigde" class="city-link">Niğde</a>, 
-                        <a href="bolge.html?city=yozgat" class="city-link">Yozgat</a>, 
-                        <a href="bolge.html?city=antalya" class="city-link">Antalya</a>, 
-                        <a href="bolge.html?city=mersin" class="city-link">Mersin</a>, 
-                        <a href="bolge.html?city=adana" class="city-link">Adana</a>, 
-                        <a href="bolge.html?city=hatay" class="city-link">Hatay</a>, 
-                        <a href="bolge.html?city=isparta" class="city-link">Isparta</a>, 
-                        <a href="bolge.html?city=burdur" class="city-link">Burdur</a>, 
-                        <a href="bolge.html?city=kahramanmaras" class="city-link">Kahramanmaraş</a>.
-                    </p>
+                    <h4>İç Anadolu & Akdeniz</h4>
+                    <p>Ankara (Ostim, İvedik), Eskişehir, Kayseri, Konya, Sivas, Aksaray, Çankırı, Kırşehir, Kırıkkale, Nevşehir, Niğde, Yozgat, Antalya, Mersin, Adana, Hatay, Isparta, Burdur, Kahramanmaraş.</p>
                 </div>
                 <div class="region-col">
-                    <h4>KARADENİZ & ANADOLU GENEL</h4>
-                    <p>
-                        <a href="bolge.html?city=samsun" class="city-link">Samsun</a>, 
-                        <a href="bolge.html?city=trabzon" class="city-link">Trabzon</a>, 
-                        <a href="bolge.html?city=ordu" class="city-link">Ordu</a>, 
-                        <a href="bolge.html?city=giresun" class="city-link">Giresun</a>, 
-                        <a href="bolge.html?city=rize" class="city-link">Rize</a>, 
-                        <a href="bolge.html?city=amasya" class="city-link">Amasya</a>, 
-                        <a href="bolge.html?city=erzurum" class="city-link">Erzurum</a>, 
-                        <a href="bolge.html?city=van" class="city-link">Van</a>, 
-                        <a href="bolge.html?city=diyarbakir" class="city-link">Diyarbakır</a>, 
-                        <a href="bolge.html?city=gaziantep" class="city-link">Gaziantep</a>, 
-                        <a href="bolge.html?city=sanliurfa" class="city-link">�?anlıurfa</a>, 
-                        <a href="bolge.html?city=mardin" class="city-link">Mardin</a>, 
-                        <a href="bolge.html?city=batman" class="city-link">Batman</a>, 
-                        <a href="bolge.html?city=siirt" class="city-link">Siirt</a>, 
-                        <a href="bolge.html?city=sirnak" class="city-link">�?ırnak</a> ve Türkiye'nin 81 ilinin her mahallesine nakliye hizmetimiz vardır.
-                    </p>
+                    <h4>Karadeniz & Anadolu Genel</h4>
+                    <p>Samsun, Trabzon, Ordu, Giresun, Rize, Amasya, Erzurum, Van, Diyarbakır, Gaziantep, Şanlıurfa, Mardin, Batman, Siirt, Şırnak ve Türkiye'nin 81 ilinin her mahallesine nakliye hizmetimiz vardır.</p>
                 </div>
             </div>
         </div>
@@ -1063,7 +988,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="expertise-note">**Google SEO Notu:** Lider Hurda, tüm metal türlerini uluslararası DIN ve ISO standartlarına göre analiz ederek en adil fiyatlandırmayı yapar.</p>
+            <p class="expertise-note">**Google SEO Notu:** Lider Hurda, tüm metal türlerini uluslararası DIN ve ISO standartlarına göre analiz ederek en adil fiyatlandırmayı yaparlar.</p>
         </div>
     </section>
 
@@ -1133,7 +1058,13 @@
     <!-- Floating Contact Buttons -->
     <div class="floating-contact">
         <a href="https://wa.me/905364863466" class="float-btn float-wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="tel: 0536 486 34 66" class="float-btn float-call" title="Ara"><i class="fas fa-phone"></i></a>
+        <a href="tel:+905364863466" class="float-btn float-call" title="Ara"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <!-- Sticky Mobile & Desktop Action Bar -->
+    <div class="sticky-action-bar">
+        <a href="tel:+905364863466" class="sticky-btn-call"><i class="fas fa-phone-alt"></i> HEMEN ARA: 0536 486 34 66</a>
+        <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP İLE FİYAT AL</a>
     </div>
 
     <!-- REGIONAL SEO NETWORK (Sitemap Matrix) -->
@@ -1191,7 +1122,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 30px;">
-                <p style="color: #666; font-size: 0.8rem;">* 81 ilin tamamında kurumsal lojistik altyapımız ile hizmet vermekteyiz. Diğer tüm iller için <a href="tel: 0536 486 34 66" style="color: var(--neon-green);">merkezi hattımızı</a> arayabilirsiniz.</p>
+                <p style="color: #666; font-size: 0.8rem;">* 81 ilin tamamında kurumsal lojistik altyapımız ile hizmet vermekteyiz. Tüm iller için <a href="tel:+905364863466" style="color: var(--neon-green);">merkezi hattımızı (0536 486 34 66)</a> arayabilirsiniz.</p>
             </div>
         </div>
     </section>
@@ -1217,7 +1148,7 @@
                 <div class="footer-contact">
                     <h3>İletişim</h3>
                     <p><i class="fas fa-map-marker-alt"></i> İstanbul ve Çevresi Tüm Bölgeler</p>
-                    <p><i class="fas fa-phone"></i> 0536 486 34 66</p>
+                    <p><i class="fas fa-phone"></i> +90 536 486 34 66</p>
                     <p><i class="fas fa-envelope"></i> info@liderhurda.com</p>
                 </div>
                 <div class="footer-links-col">
@@ -1235,15 +1166,8 @@
         </div>
     </footer>
 
-    <!-- Sticky Mobile Action Bar -->
-    <div class="sticky-action-bar">
-        <a href="tel: 0536 486 34 66" class="sticky-btn-call"><i class="fas fa-phone-alt"></i> Hemen Ara</a>
-        <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </div>
-
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.2"></script>
 </body>
 </html>
-

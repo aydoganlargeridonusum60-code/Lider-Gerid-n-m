@@ -1,4 +1,4 @@
-?<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -56,32 +56,31 @@
       }]
     }
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .price-list-container { padding: 60px 0; background: #f8fafc; }
+        .price-list-container { padding: 60px 0; background: #050505; }
         .live-status-bar {
-            background: #ecfdf5;
-            border: 1px solid #a7f3d0;
+            background: rgba(0, 255, 65, 0.08);
+            border: 1px solid var(--neon-green);
             padding: 15px 25px;
             border-radius: 50px;
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            color: #047857;
-            font-weight: 700;
+            color: #fff;
+            font-weight: 600;
             font-size: 0.95rem;
             margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.08);
         }
         .live-pulse {
             width: 12px;
             height: 12px;
-            background: #059669;
+            background: #00ff41;
             border-radius: 50%;
-            box-shadow: 0 0 12px #059669;
+            box-shadow: 0 0 12px #00ff41;
             animation: pulse-green 1.5s infinite;
         }
         @keyframes pulse-green {
@@ -106,31 +105,30 @@
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #059669;
+            color: var(--neon-green);
             font-size: 1.2rem;
         }
         .search-input-wrapper input {
             width: 100%;
-            background: #ffffff;
-            border: 2px solid #e2e8f0;
+            background: #111;
+            border: 2px solid #222;
             padding: 16px 20px 16px 55px;
             border-radius: 50px;
-            color: #0f172a;
+            color: #fff;
             font-size: 1.05rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             transition: all 0.3s ease;
         }
         .search-input-wrapper input:focus {
-            border-color: #059669;
+            border-color: var(--neon-green);
             outline: none;
-            box-shadow: 0 0 20px rgba(5, 150, 105, 0.15);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
         }
         .category-group { margin-bottom: 60px; }
         .category-title { 
-            color: #059669; 
-            font-size: 1.8rem; 
+            color: var(--neon-green); 
+            font-size: 2rem; 
             margin-bottom: 25px; 
-            border-left: 5px solid #059669; 
+            border-left: 5px solid var(--neon-green); 
             padding-left: 20px;
             font-weight: 800;
             display: flex;
@@ -143,62 +141,67 @@
             border-spacing: 0 10px;
         }
         .full-price-table tr {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+            background: rgba(255,255,255,0.02);
             transition: all 0.3s ease;
             cursor: pointer;
         }
         .full-price-table tr:hover {
-            background: #ecfdf5;
+            background: rgba(0,255,65,0.08);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.08);
         }
         .full-price-table td, .full-price-table th {
             padding: 20px 25px;
-            color: #0f172a;
+            color: #fff;
             border: none;
         }
         .full-price-table th {
-            background: #f1f5f9;
-            color: #475569;
+            background: transparent;
+            color: #777;
             text-transform: uppercase;
             font-size: 0.85rem;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             text-align: left;
-            font-weight: 700;
         }
-        .item-name { font-weight: 700; font-size: 1.15rem; color: #0f172a; }
-        .item-price { color: #059669; font-weight: 800; font-size: 1.3rem; font-family: var(--font-display); }
-        .item-link { color: #64748b; font-size: 0.9rem; font-weight: 600; transition: color 0.3s; }
-        .full-price-table tr:hover .item-link { color: #059669; }
+        .item-name { font-weight: 700; font-size: 1.15rem; color: #fff; }
+        .item-price { color: var(--neon-green); font-weight: 800; font-size: 1.3rem; font-family: var(--font-display); }
+        .item-link { color: #888; font-size: 0.9rem; font-weight: 600; transition: color 0.3s; }
+        .full-price-table tr:hover .item-link { color: var(--neon-green); }
         
         .quick-call-cta {
-            background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%);
-            border: 2px solid #a7f3d0;
+            background: linear-gradient(135deg, #111 0%, #050505 100%);
+            border: 2px solid var(--neon-green);
             border-radius: 30px;
-            padding: 45px;
+            padding: 40px;
             text-align: center;
             margin-top: 60px;
-            box-shadow: 0 15px 35px rgba(5, 150, 105, 0.08);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
         .quick-call-cta h3 {
-            color: #0f172a;
+            color: #fff;
             font-size: 2.2rem;
             margin-bottom: 15px;
             font-weight: 800;
         }
         .quick-call-cta p {
-            color: #475569;
+            color: #aaa;
             font-size: 1.1rem;
             margin-bottom: 30px;
         }
 
         @media (max-width: 768px) {
-            .full-price-table th:nth-child(3), .full-price-table td:nth-child(3) { display: none; }
-            .category-title { font-size: 1.5rem; }
+            .full-price-table th:nth-child(3), .full-price-table td:nth-child(3),
+            .full-price-table th:nth-child(4), .full-price-table td:nth-child(4) { display: none; }
+            .full-price-table td, .full-price-table th { padding: 14px 16px; }
+            .category-title { font-size: 1.4rem; margin-bottom: 18px; }
             .item-name { font-size: 1rem; }
-            .item-price { font-size: 1.1rem; }
+            .item-price { font-size: 1.2rem; }
+            .search-input-wrapper input { padding: 14px 18px 14px 48px; font-size: 0.95rem; }
+            .live-status-bar { font-size: 0.82rem; padding: 12px 18px; }
+            .quick-call-cta { padding: 30px 20px; }
+            .quick-call-cta h3 { font-size: 1.6rem; }
+            .quick-call-cta p { font-size: 0.95rem; }
+            .hero-btns { flex-direction: column; gap: 12px; }
+            .hero-btns .btn { width: 100% !important; padding: 14px 20px !important; font-size: 1rem !important; }
         }
     </style>
 </head>
@@ -215,6 +218,9 @@
                 </svg>
                 LİDER<span>HURDA</span>
             </a>
+            <button class="mobile-menu-btn" aria-label="Menüyü Aç/Kapat">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Anasayfa</a></li>
                 <li><a href="fiyat-listesi.html" class="nav-btn-highlight">Canlı Borsa</a></li>
@@ -337,7 +343,7 @@
                             <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
                         </tr>
                         <tr data-category="insaat-demiri">
-                            <td><span class="item-name">İnşaat Demiri (�?antiye Atığı)</span></td>
+                            <td><span class="item-name">İnşaat Demiri (Şantiye Atığı)</span></td>
                             <td><span class="item-price price-val" data-cat="insaat-demiri">14,60</span> TL</td>
                             <td>KG</td>
                             <td><span class="item-link">Analize Git <i class="fas fa-chevron-right"></i></span></td>
@@ -581,7 +587,7 @@
                 <h3>Yüksek Tonajlı Hurdanız mı Var?</h3>
                 <p>Tonajlı fabrika atıkları, şantiye demiri ve bakır satışlarında borsanın üzerinde **ÖZEL FİYAT TEKLİFİ** veriyoruz.</p>
                 <div class="hero-btns" style="justify-content: center;">
-                    <a href="tel: 0536 486 34 66" class="btn btn-primary" style="padding: 1.5rem 3rem; font-size: 1.2rem;"><i class="fas fa-phone"></i> HEMEN ARA: 0536 486 34 66</a>
+                    <a href="tel:+905364863466" class="btn btn-primary" style="padding: 1.5rem 3rem; font-size: 1.2rem;"><i class="fas fa-phone"></i> HEMEN ARA: 0536 486 34 66</a>
                     <a href="https://wa.me/905364863466" class="btn btn-secondary" style="padding: 1.5rem 3rem; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i> FOTO GÖNDER FİYAT AL</a>
                 </div>
             </div>
@@ -601,13 +607,12 @@
 
     <!-- Sticky Mobile & Desktop Action Bar -->
     <div class="sticky-action-bar">
-        <a href="tel: 0536 486 34 66" class="sticky-btn-call"><i class="fas fa-phone-alt"></i> HEMEN ARA: 0536 486 34 66</a>
+        <a href="tel:+905364863466" class="sticky-btn-call"><i class="fas fa-phone-alt"></i> HEMEN ARA: 0536 486 34 66</a>
         <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP İLE FİYAT AL</a>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.2"></script>
     <script>if (typeof AOS !== 'undefined') AOS.init({duration: 1000, once: true});</script>
 </body>
 </html>
-
