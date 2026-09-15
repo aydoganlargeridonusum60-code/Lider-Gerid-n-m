@@ -50,57 +50,63 @@
    </url>
    <url>
       <loc>https://www.liderhurda.com/soyma-bakir.html</loc>
-      <lastmod>2026-09-02</lastmod>
+      <lastmod>2026-09-16</lastmod>
       <changefreq>daily</changefreq>
-      <priority>0.8</priority>
+      <priority>0.95</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/bakir-hurda-fiyatlari-bugun.html</loc>
-      <lastmod>2026-09-02</lastmod>
+      <lastmod>2026-09-16</lastmod>
       <changefreq>daily</changefreq>
-      <priority>0.8</priority>
+      <priority>0.95</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/lama-bakir.html</loc>
-      <lastmod>2026-09-02</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
+      <lastmod>2026-09-16</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.90</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/kirkambar-bakir.html</loc>
-      <lastmod>2026-09-02</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.liderhurda.com/bakir-fiyat-analizi.html</loc>
-      <lastmod>2026-09-02</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.liderhurda.com/bakir-anlama-rehberi.html</loc>
-      <lastmod>2026-09-02</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.liderhurda.com/bakir-nasil-anlasilir.html</loc>
-      <lastmod>2026-09-02</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.liderhurda.com/bakir-satis-rehberi.html</loc>
-      <lastmod>2026-09-02</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
+      <lastmod>2026-09-16</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.90</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/kablo-hurdasi.html</loc>
-      <lastmod>2026-09-02</lastmod>
+      <lastmod>2026-09-16</lastmod>
       <changefreq>daily</changefreq>
-      <priority>0.8</priority>
+      <priority>0.90</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-fiyat-analizi.html</loc>
+      <lastmod>2026-09-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-nasil-anlasilir.html</loc>
+      <lastmod>2026-09-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-anlama-rehberi.html</loc>
+      <lastmod>2026-09-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/bakir-satis-rehberi.html</loc>
+      <lastmod>2026-09-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://www.liderhurda.com/motor-bakir-verimi.html</loc>
+      <lastmod>2026-09-16</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
    </url>
    <url>
       <loc>https://www.liderhurda.com/aluminyum-hurda.html</loc>

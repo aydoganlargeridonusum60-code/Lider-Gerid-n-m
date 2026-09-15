@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'sert-aluminyum': 'aluminyum-sert.html',
         'kutualu': 'aluminyum-kutu.html',
         'antigron-kablo': 'kablo-hurdasi.html',
-        'pano-bakir': 'soyma-bakir.html',
+        'pano-bakir': 'lama-bakir.html',
         'bakir-talasi': 'bakir-fiyat-analizi.html',
         'sari-analiz': 'sari-hurda-analizi.html',
         'krom-analiz': 'krom-analiz-rehberi.html'
