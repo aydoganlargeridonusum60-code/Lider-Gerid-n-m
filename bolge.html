@@ -4,62 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://www.liderhurda.com/bolge.html">
-    <title id="region-title">Lider Hurda | Bölgesel Alım Merkezi</title>
-    <meta name="description" id="region-meta" content="Türkiye genelinde profesyonel hurda alımı.">
+    <title id="region-title">Lider Hurda | Bölgesel Hurda Alım Merkezi</title>
+    <meta name="description" id="region-meta" content="İstanbul ve Türkiye genelinde profesyonel hurda alımı, anında nakit ödeme.">
     
     <!-- Design & Styles -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         .region-hero {
-            padding: 100px 0 60px;
-            background: linear-gradient(135deg, #0a0a0a 0%, #151515 100%);
-            border-bottom: 2px solid var(--neon-green);
+            padding: 80px 0 40px;
+            background: linear-gradient(135deg, #0b0f19 0%, #111827 100%);
+            border-bottom: 2px solid #10b981;
         }
         .region-content-section {
-            padding: 80px 0;
-            background: #0d0d0d;
+            padding: 50px 0;
+            background: #0b0f19;
         }
         .region-badge {
             display: inline-block;
-            padding: 8px 20px;
-            background: rgba(0, 255, 102, 0.1);
-            color: var(--neon-green);
+            padding: 6px 18px;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
             border-radius: 30px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            border: 1px solid var(--neon-green);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
-        .region-h1 { font-size: 3.5rem; color: #fff; margin-bottom: 30px; line-height: 1.2; }
-        .region-text { font-size: 1.2rem; color: #aaa; max-width: 800px; margin-bottom: 40px; }
+        .region-h1 { font-size: 2.5rem; color: #fff; margin-bottom: 20px; line-height: 1.2; font-weight: 800; }
+        .region-text { font-size: 1.1rem; color: #d1d5db; max-width: 800px; margin-bottom: 30px; line-height: 1.7; }
         
         @media (max-width: 768px) {
-            .region-h1 { font-size: 2.2rem; }
+            .region-h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header (Same as Index) -->
+    <!-- Header -->
     <header class="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo" title="Lider Hurda | Türkiye Geneli Bölgesel Hurda Alım ve Geri Dönüşüm Ağı">
-                <i class="fas fa-recycle" title="Sürdürülebilir Metal Geri Dönüşümü"></i>
-                LİDER<span title="81 İl Lisanslı Hurdacı">HURDA</span>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i> LİDER HURDA
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="index.html#prices">Canlı Borsa</a></li>
-                <li><a href="analiz.html">Piyasa Analizi</a></li>
-                <li><a href="rehber.html">Bilgi Bankası</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="index.html" class="btn btn-secondary">Geri Dön</a>
-                <a href="hakkimizda.html" class="btn btn-primary">HAKKIMIZDA DETAY</a>
+            <nav class="nav">
+                <a href="index.html">Anasayfa</a>
+                <a href="hurda-fiyatlari.html">Fiyatlar</a>
+                <a href="hurda-bakir.html">Bakır</a>
+                <a href="hurda-demir.html">Demir</a>
+                <a href="hurda-kablo.html">Kablo</a>
+                <a href="istanbul-hurdaci.html">İstanbul Hurdacı</a>
+                <a href="bilgi-bankasi.html">Bilgi Bankası</a>
+            </nav>
+            <div class="header-cta">
+                <a href="tel:+905364863466" class="btn btn-phone">
+                    <i class="fas fa-phone-alt"></i> 0536 486 34 66
+                </a>
             </div>
         </div>
     </header>
@@ -68,12 +70,15 @@
         <!-- Region Hero -->
         <section class="region-hero">
             <div class="container">
-                <div class="region-badge" id="region-badge-text">SEKTÖREL DOMİNASYON</div>
-                <h1 class="region-h1" id="dynamic-h1">Bölgesel Hurda Alım Terminali</h1>
-                <p class="region-text" id="dynamic-content">Yükleniyor...</p>
-                <div class="hero-actions">
-                    <a href="#" id="region-whatsapp" class="btn-primary">
-                        <i class="fab fa-whatsapp"></i> ŞİMDİ KONUM AT
+                <div class="region-badge" id="region-badge-text">BÖLGESEL HURDA ALIM TERMİNALİ</div>
+                <h1 class="region-h1" id="dynamic-h1">İstanbul Hurda Alımı ve Geri Dönüşüm Merkezi</h1>
+                <p class="region-text" id="dynamic-content">İstanbul'un tüm ilçelerinde, sanayi sitelerinde ve kentsel dönüşüm alanlarında Lider Hurda güvencesiyle 7/24 hizmetinizdeyiz. Profesyonel araç filomuz ve hassas dijital tartımımızla en yüksek fiyattan adresten alım yapıyoruz.</p>
+                <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                    <a href="tel:+905364863466" class="btn-primary-action">
+                        <i class="fas fa-phone-alt"></i> Hemen Ara: 0536 486 34 66
+                    </a>
+                    <a href="#" id="region-whatsapp" class="btn-whatsapp-action" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Şimdi Konum & Fotoğraf Gönder
                     </a>
                 </div>
             </div>
@@ -81,63 +86,135 @@
 
         <!-- Pricing (Synced) -->
         <section class="region-content-section">
-            <div class="container">
-                <h2 class="section-title">Anlık Borsa Fiyatları (Synced)</h2>
-                <div id="borsa-module" class="borsa-terminal">
-                   <!-- Fiyat tablosu buraya gelecek (main.js veya script ile) -->
-                   <div style="color: #fff; text-align: center; padding: 40px; border: 1px dashed var(--neon-green);">
-                      <i class="fas fa-sync fa-spin"></i> Canlı Veriler Sayfaya Aktarılıyor...
-                   </div>
+            <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 15px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px; flex-wrap:wrap; gap:10px;">
+                    <div>
+                        <h2 style="color: #fff; margin:0; font-size:1.6rem;">Güncel Canlı Hurda Fiyatları (Borsa Senkronize)</h2>
+                        <p style="color:#9ca3af; margin:5px 0 0 0; font-size:0.9rem;">LME ve Türkiye Demir Çelik Fabrikaları anlık alım tarifesi</p>
+                    </div>
+                    <div style="color:#10b981; font-weight:700; font-size:0.9rem;">
+                        <i class="fas fa-clock"></i> <span id="priceDateLabel">Bugün Güncellendi</span>
+                    </div>
+                </div>
+
+                <div id="borsa-module" style="background:#111827; border-radius:12px; border:1px solid rgba(255,255,255,0.08); overflow:hidden;">
+                    <!-- Price Table populated dynamically from prices.js -->
+                </div>
+
+                <div style="margin-top: 30px; text-align:center;">
+                    <a href="hurda-fiyatlari.html" style="color:#10b981; font-weight:700; text-decoration:none; font-size:1.05rem;">
+                        Tüm Detaylı Hurda Fiyat Listesi ve Hesaplama Motoru İçin Tıklayın &rarr;
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer (Matrix Matrix Logic) -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" style="background:#0b0f19; border-top:1px solid rgba(255,255,255,0.08); padding:50px 20px 80px 20px; text-align:center;">
         <div class="container">
-           <div style="text-align:center; padding-top:40px; border-top: 1px solid #333;">
-              <a href="index.html" style="color: var(--neon-green);">← Ana Sayfaya Dön</a>
-           </div>
+            <p style="color:#9ca3af; font-size:0.95rem;">&copy; 2026 Lider Hurda Geri Dönüşüm A.Ş. | Telefon: 0536 486 34 66</p>
+            <div style="margin-top:15px;">
+                <a href="index.html" style="color:#10b981; text-decoration:none; margin:0 10px;">Anasayfa</a>
+                <a href="hurda-fiyatlari.html" style="color:#10b981; text-decoration:none; margin:0 10px;">Fiyatlar</a>
+                <a href="istanbul-hurdaci.html" style="color:#10b981; text-decoration:none; margin:0 10px;">İstanbul Hurdacı</a>
+                <a href="hurda-bakir.html" style="color:#10b981; text-decoration:none; margin:0 10px;">Bakır</a>
+                <a href="hurda-demir.html" style="color:#10b981; text-decoration:none; margin:0 10px;">Demir</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Regions Logic -->
+    <!-- Floating Mobile Bottom Bar -->
+    <div class="floating-cta-bar">
+        <a href="tel:+905364863466" style="flex:1; background:#10b981; color:#0b0f19; text-align:center; padding:12px; border-radius:10px; font-weight:800; text-decoration:none; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:8px;">
+            <i class="fas fa-phone-alt"></i> Hemen Ara
+        </a>
+        <a href="https://wa.me/905364863466?text=Merhaba,%20bölgesel%20hurda%20fiyatı%20almak%20istiyorum." target="_blank" rel="noopener" style="flex:1; background:#25d366; color:#fff; text-align:center; padding:12px; border-radius:10px; font-weight:800; text-decoration:none; font-size:0.95rem; display:flex; align-items:center; justify-content:center; gap:8px;">
+            <i class="fab fa-whatsapp"></i> WhatsApp Fiyat
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/prices.js"></script>
     <script src="assets/js/regions.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Render Live Price Table from prices.js
+            const borsaContainer = document.getElementById('borsa-module');
+            if (typeof HURDA_PRICES !== 'undefined' && borsaContainer) {
+                let tableHtml = `
+                <table class="price-table-pro" style="margin:0;">
+                    <thead>
+                        <tr>
+                            <th>Hurda Cinsi</th>
+                            <th>Birim</th>
+                            <th>Canlı Piyasa Fiyatı</th>
+                            <th>Tonaj Primi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                `;
+                
+                const featuredItems = [
+                    HURDA_PRICES.bakir.soyma,
+                    HURDA_PRICES.bakir.lama,
+                    HURDA_PRICES.bakir.kirkambar,
+                    HURDA_PRICES.demir.dkp,
+                    HURDA_PRICES.demir.ekstra,
+                    HURDA_PRICES.demir.insaat,
+                    HURDA_PRICES.kablo.nyy,
+                    HURDA_PRICES.kablo.ttr,
+                    HURDA_PRICES.aluminyum.profil,
+                    HURDA_PRICES.sari.ms58
+                ];
+
+                featuredItems.forEach(item => {
+                    if (item) {
+                        tableHtml += `
+                        <tr>
+                            <td><strong>${item.name}</strong></td>
+                            <td>${item.unit}</td>
+                            <td style="color:#10b981; font-weight:800; font-size:1.05rem;">${item.priceMin.toFixed(2)} - ${item.priceMax.toFixed(2)} TL</td>
+                            <td><span style="color:#38bdf8; font-size:0.85rem; font-weight:600;">+ ${item.tonnageBonus.toFixed(2)} TL / Ton</span></td>
+                        </tr>
+                        `;
+                    }
+                });
+
+                tableHtml += `</tbody></table>`;
+                borsaContainer.innerHTML = tableHtml;
+            }
+
+            // Region url parameters
             const urlParams = new URLSearchParams(window.location.search);
             const cityKey = urlParams.get('city');
             
-            if (cityKey && REGIONS_DATA[cityKey]) {
-                const data = REGIONS_DATA[cityKey];
-                document.getElementById('region-title').innerText = data.title;
-                document.getElementById('region-meta').setAttribute('content', data.meta);
-                document.getElementById('dynamic-h1').innerText = data.h1;
-                document.getElementById('dynamic-content').innerText = data.content;
-                document.getElementById('region-badge-text').innerText = cityKey.toUpperCase() + " BÖLGESEL TERMİNALİ";
-                
-                // WhatsApp Link
-                const waLink = `https://wa.me/905364863466?text=${encodeURIComponent(data.whatsapp)}`;
-                document.getElementById('region-whatsapp').setAttribute('href', waLink);
-            } else if (cityKey) {
-                // Default handling for other cities
-                const defaultData = REGIONS_DATA['default'];
-                const cityName = cityKey.charAt(0).toUpperCase() + cityKey.slice(1);
-                
-                document.getElementById('region-title').innerText = defaultData.title.replace('[ŞEHİR]', cityName);
-                document.getElementById('region-meta').setAttribute('content', defaultData.meta.replace('[ŞEHİR]', cityName));
-                document.getElementById('dynamic-h1').innerText = defaultData.h1.replace('[ŞEHİR]', cityName);
-                document.getElementById('dynamic-content').innerText = defaultData.content.replace('[ŞEHİR]', cityName);
-                document.getElementById('region-badge-text').innerText = cityName.toUpperCase() + " BÖLGESEL TERMİNALİ";
-                
-                const waLink = `https://wa.me/905364863466?text=${encodeURIComponent(defaultData.whatsapp.replace('[ŞEHİR]', cityName))}`;
-                document.getElementById('region-whatsapp').setAttribute('href', waLink);
+            if (typeof REGIONS_DATA !== 'undefined') {
+                if (cityKey && REGIONS_DATA[cityKey]) {
+                    const data = REGIONS_DATA[cityKey];
+                    document.getElementById('region-title').innerText = data.title;
+                    document.getElementById('region-meta').setAttribute('content', data.meta);
+                    document.getElementById('dynamic-h1').innerText = data.h1;
+                    document.getElementById('dynamic-content').innerText = data.content;
+                    document.getElementById('region-badge-text').innerText = cityKey.toUpperCase() + " BÖLGESEL TERMİNALİ";
+                    
+                    const waLink = `https://wa.me/905364863466?text=${encodeURIComponent(data.whatsapp)}`;
+                    document.getElementById('region-whatsapp').setAttribute('href', waLink);
+                } else if (cityKey) {
+                    const defaultData = REGIONS_DATA['default'];
+                    const cityName = cityKey.charAt(0).toUpperCase() + cityKey.slice(1);
+                    
+                    document.getElementById('region-title').innerText = defaultData.title.replace('[ŞEHİR]', cityName);
+                    document.getElementById('region-meta').setAttribute('content', defaultData.meta.replace('[ŞEHİR]', cityName));
+                    document.getElementById('dynamic-h1').innerText = defaultData.h1.replace('[ŞEHİR]', cityName);
+                    document.getElementById('dynamic-content').innerText = defaultData.content.replace('[ŞEHİR]', cityName);
+                    document.getElementById('region-badge-text').innerText = cityName.toUpperCase() + " BÖLGESEL TERMİNALİ";
+                    
+                    const waLink = `https://wa.me/905364863466?text=${encodeURIComponent(defaultData.whatsapp.replace('[ŞEHİR]', cityName))}`;
+                    document.getElementById('region-whatsapp').setAttribute('href', waLink);
+                }
             }
-            
-            AOS.init({ duration: 1000, once: true });
         });
     </script>
 </body>
 </html>
-
