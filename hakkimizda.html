@@ -1,131 +1,695 @@
-?<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurumsal Hakkimizda | Lider Hurda Geri D�n�s�m Merkezi</title>
-    <meta name="description" content="Lider Hurda: Yarim asirlik tecr�be, 81 ilde lojistik g�� ve d�r�st ticaret ilkeleriyle T�rkiye'nin lider geri d�n�s�m firmasi. Hikayemizi ve vizyonumuzu kesfedin.">
+    <title>Kurumsal Hakkımızda | Lider Hurda Geri Dönüşüm & Metal Terminali</title>
+    <meta name="description" content="Lider Hurda Kurumsal: 30 yılı aşkın tecrübe, 81 il lojistik ağı, anlık LME borsa fiyatlandırması, XRF spektrometre alaşım analizi ve lisanslı geri dönüşüm hizmetleri.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         .about-hero {
-            padding: 140px 0 100px;
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=1200');
+            padding: 140px 0 90px;
+            background: linear-gradient(rgba(5, 5, 5, 0.90), rgba(5, 5, 5, 0.95)), url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=1400');
             background-size: cover;
             background-position: center;
-            border-bottom: 3px solid var(--neon-green);
+            border-bottom: 2px solid rgba(0, 255, 65, 0.3);
+            text-align: center;
         }
-        .corporate-section { padding: 100px 0; background: #0a0a0a; }
-        .corp-card {
-            background: #111;
-            padding: 60px;
-            border-radius: 30px;
-            border-bottom: 4px solid var(--neon-green);
-            margin-bottom: 60px;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+        .about-hero .card-tag {
+            background: rgba(0, 255, 65, 0.12);
+            color: var(--neon-green, #00ff41);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
         }
-        .corp-card h2 { color: #fff; font-size: 3rem; margin-bottom: 40px; letter-spacing: -1.5px; }
-        .corp-card p { color: #ccc; font-size: 1.3rem; line-height: 2; margin-bottom: 35px; font-weight: 300; }
-        .corp-highlight { color: var(--neon-green); font-weight: 600; }
+        .about-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .about-hero h1 span {
+            color: var(--neon-green, #00ff41);
+        }
+        .about-hero p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            max-width: 860px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: #0d1117;
+            border-top: 1px solid #1f2937;
+            border-bottom: 1px solid #1f2937;
+            padding: 40px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-box h3 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--neon-green, #00ff41);
+            margin-bottom: 5px;
+            font-family: 'Outfit', sans-serif;
+        }
+        .stat-box p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .corporate-section {
+            padding: 90px 0;
+            background: #070707;
+        }
         
+        .corp-card {
+            background: #11141a;
+            padding: 50px;
+            border-radius: 24px;
+            border: 1px solid #1f2937;
+            border-left: 5px solid var(--neon-green, #00ff41);
+            margin-bottom: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+        }
+        .corp-card h2 {
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .corp-card h2 i {
+            color: var(--neon-green, #00ff41);
+            font-size: 1.8rem;
+        }
+        .corp-card p {
+            color: #c9d1d9;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 22px;
+            font-weight: 300;
+        }
+        .corp-card p strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Pillars Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+        .pillar-card {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s ease;
+        }
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 65, 0.4);
+            box-shadow: 0 15px 30px rgba(0, 255, 65, 0.1);
+        }
+        .pillar-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 14px;
+            background: rgba(0, 255, 65, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--neon-green, #00ff41);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        .pillar-card h3 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .pillar-card p {
+            color: #8b949e;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .step-item {
+            background: #161b22;
+            padding: 30px 25px;
+            border-radius: 16px;
+            border-top: 3px solid var(--neon-green, #00ff41);
+            position: relative;
+        }
+        .step-num {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(0, 255, 65, 0.2);
+            font-family: 'Outfit', sans-serif;
+        }
+        .step-item h4 {
+            color: #ffffff;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .step-item p {
+            color: #8b949e;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Timeline Grid */
         .timeline-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
         }
         .timeline-item {
-            padding: 40px;
-            background: #161616;
-            border-left: 4px solid var(--neon-green);
-            border-radius: 0 20px 20px 0;
+            padding: 30px;
+            background: #161b22;
+            border-left: 4px solid var(--neon-green, #00ff41);
+            border-radius: 0 16px 16px 0;
+            transition: 0.3s;
         }
-        .timeline-year { color: var(--neon-green); font-size: 2rem; font-weight: 800; margin-bottom: 15px; display: block; }
-        
+        .timeline-item:hover {
+            background: #1c2128;
+            transform: translateX(5px);
+        }
+        .timeline-year {
+            color: var(--neon-green, #00ff41);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: block;
+            font-family: 'Outfit', sans-serif;
+        }
+        .timeline-item h4 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .timeline-item p {
+            color: #8b949e;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Values Box */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .value-box {
+            background: rgba(0, 255, 65, 0.03);
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 255, 65, 0.15);
+        }
+        .value-box h3 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .value-box h3 i {
+            color: var(--neon-green, #00ff41);
+        }
+        .value-box p {
+            color: #a0aec0;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        .cta-box h2 {
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        .cta-box p {
+            color: #9ca3af;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-call {
+            background: var(--neon-green, #00ff41);
+            color: #000000;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn-call:hover {
+            background: #00e038;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 255, 65, 0.3);
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: #ffffff;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            background: #20ba59;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
         @media (max-width: 768px) {
-            .corp-card { padding: 30px; }
-            .corp-card h2 { font-size: 2rem; }
-            .corp-card p { font-size: 1.1rem; }
+            .about-hero { padding: 110px 0 60px; }
+            .corp-card { padding: 30px 20px; }
+            .corp-card h2 { font-size: 1.6rem; }
+            .corp-card p { font-size: 1rem; line-height: 1.7; }
+            .pillars-grid { grid-template-columns: 1fr; }
+            .timeline-grid { grid-template-columns: 1fr; }
+            .cta-box { padding: 35px 20px; }
+            .cta-box h2 { font-size: 1.6rem; }
+            .cta-buttons { flex-direction: column; }
+            .btn-call, .btn-whatsapp { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 <body class="analysis-page">
 
-    <header class="header scrolled">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">LIDER<span>HURDA</span></a>
+    <!-- Header / Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 5L5 15V35L25 45L45 35V15L25 5Z" stroke="#00FF41" stroke-width="2" fill="rgba(0,255,65,0.1)"/>
+                    <path d="M15 20L25 25L35 20" stroke="#00FF41" stroke-width="2"/>
+                    <path d="M25 25V38" stroke="#00FF41" stroke-width="2"/>
+                </svg>
+                <span>LİDER <small>HURDA</small></span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menüyü Aç/Kapat">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="fiyat-listesi.html">Fiyat Listesi</a></li>
+                <li><a href="fiyat-listesi.html">Canlı Borsa</a></li>
                 <li><a href="analiz.html">Piyasa Analizi</a></li>
+                <li><a href="rehber.html">Bilgi Bankası</a></li>
+                <li><a href="hakkimizda.html" class="nav-btn-highlight active">Hakkımızda Detay</a></li>
+                <li><a href="index.html#contact">İletişim</a></li>
             </ul>
         </div>
-    </header>
+    </nav>
 
     <main>
+        <!-- Hero Section -->
         <section class="about-hero">
-            <div class="container">
-                <span class="card-tag">KURUMSAL OTORITE</span>
-                <h1 class="premium-title">LIDER HURDA TERMINALI:<br><span>END�STRIYEL D�N�S�M�N MERKEZI</span></h1>
-                <p class="premium-p">Yarim asirlik tecr�be, sarsilmaz bir g�ven ve saniyeler i�inde kurumsal borsa ��z�mleri.</p>
+            <div class="container" data-aos="fade-up">
+                <span class="card-tag"><i class="fas fa-shield-alt"></i> KURUMSAL GERİ DÖNÜŞÜM OTORİTESİ</span>
+                <h1>LİDER HURDA KURUMSAL:<br><span>TÜRKİYE'NİN STRATEJİK METAL TERMİNALİ</span></h1>
+                <p>30 yılı aşkın köklü sanayi tecrübesi, 81 ilde kesintisiz kurumsal lojistik filosu, LME canlı borsa endeksli şeffaf fiyatlandırması ve XRF spektrometre destekli laboratuvar hassasiyetiyle Türkiye sanayisinin lider çözüm ortağıyız.</p>
             </div>
         </section>
 
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="50">
+                        <h3>30+</h3>
+                        <p>Yıllık Sektör Deneyimi</p>
+                    </div>
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+                        <h3>81 İl</h3>
+                        <p>Türkiye Geneli Lojistik Ağı</p>
+                    </div>
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="150">
+                        <h3>150.000+</h3>
+                        <p>Ton/Yıl Geri Kazanım Kapasitesi</p>
+                    </div>
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+                        <h3>5.000+</h3>
+                        <p>Kurumsal Çözüm Ortaklığı</p>
+                    </div>
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="250">
+                        <h3>%100</h3>
+                        <p>Şeffaf Kantar & Anında Ödeme</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
         <section class="corporate-section">
             <div class="container">
-                <article class="corp-card">
-                    <h2>Vizyonumuz ve Tarihsel Derinligimiz</h2>
-                    <p>Lider Hurda, 1990'li yillarin basinda Istanbul'un sanayi kalbi olan Ikitelli b�lgesinde k���k bir metal toplama merkezi olarak temellerini atmistir. Bug�n ise, sarsilmaz bir disiplin ve saniyeler i�inde reaksiyon veren devasa bir lojistik agiyla, T�rkiye'nin en b�y�k 500 sanayi kurulusuna ��z�m ortakligi sunan bir "Hurdacilik Terminali" konumuna y�kselmistir. Bizim i�in geri d�n�s�m, sadece bir ticaret degil; milli servetin sapsari bir titizlikle korunmasi ve gelecek nesillere aktarilmasidir.</p>
+                
+                <!-- Section 1: History and Profile -->
+                <article class="corp-card" data-aos="fade-up">
+                    <h2><i class="fas fa-building"></i> Şirket Profili ve Tarihsel Köklerimiz</h2>
+                    <p><strong>Lider Hurda Geri Dönüşüm & Metal Sanayi</strong>, temelleri 1990'lı yılların başında İstanbul'un sanayi kalbi İkitelli Organize Sanayi Bölgesi'nde atılmış, bugün modern tesisleri, özmal ağır nakliye filosu ve teknolojik borsa terminali ile Türkiye geneline hizmet sunan entegre bir geri dönüşüm kuruluşudur.</p>
                     
-                    <p>30 yili askin s�redir, bakirin iletkenliginden demirin mukavemetine, al�minyumun hafifliginden plastigin polimer yapisina kadar her bir hammaddeyi borsa disipliniyle analiz ediyoruz. Lider Hurda Terminali, g�n�m�zde sadece fiziksel hurdayi degil, bu hurdanin borsa verisini, karbon ayak izini ve s�rd�r�lebilirlik raporlamasini da y�netmektedir. Kurumsal m�sterilerimize sundugumuz seffaf kantar garantisi ve saniyeler i�inde ger�eklesen dijital �deme sistemimiz, sarsilmaz piyasa itibarimizin en b�y�k temelidir.</p>
+                    <p>Geçen 30 yılı aşkın sürede; demir-çelik sanayisinden enerji iletim hatlarına, otomotiv yan sanayisinden gemi söküm ve petrokimya tesislerine kadar yüzlerce ağır sanayi kuruluşunun üretim artığı, hurda ve tasfiye operasyonlarını başarıyla yönettik. Bizim için geri dönüşüm, yalnızca ticari bir hurda alım-satım faaliyeti değil; milli servet niteliğindeki stratejik hammaddelerin yüksek saflıkla ekonomiye kazandırılması ve doğal kaynakların korunmasıdır.</p>
+                    
+                    <p>Günümüzde Lider Hurda Terminali; Londra Metal Borsası (LME) ve yerel metal piyasalarını gerçek zamanlı analiz ederek sanayiciye, fabrikalara ve atık üreticilerine en doğru fiyatlama güvencesini sunar. Şeffaf elektronik kantar ölçümü, yerinde spektrometre alaşım analizi ve anında finansal mutabakat ilkelerimizle sektörde güvenin simgesi haline geldik.</p>
+                </article>
+
+                <!-- Section 2: Why Lider Hurda (6 Pillars) -->
+                <article class="corp-card" data-aos="fade-up">
+                    <h2><i class="fas fa-check-double"></i> Neden Lider Hurda? Kurumsal Ayrışma Noktalarımız</h2>
+                    <p>Lider Hurda, geleneksel hurdacılık anlayışını geride bırakarak kurumsal şirketlerin ihtiyaç duyduğu hız, güvenlik, yasal uygunluk ve şeffaflığı tek bir çatı altında birleştirmiştir:</p>
+                    
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-microscope"></i></div>
+                            <h3>XRF Spektrometre ile Alaşım Analizi</h3>
+                            <p>Karışık, paslanmaz, nikel, titanyum veya bronz alaşımları portatif XRF spektrometre cihazlarımızla sahada saniyeler içinde analiz ediyor; metal saflık oranını sıfır hata ile belirleyerek tam değerinde fiyatlandırıyoruz.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>LME Canlı Borsa Endeksli Fiyat</h3>
+                            <p>Londra Metal Borsası (LME) ve yurt içi serbest piyasa kurlarını anlık takip ediyoruz. Hurdanızın değerini aracı komisyonları olmadan, en güncel ve en yüksek tavan fiyattan hesaplıyoruz.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-weight"></i></div>
+                            <h3>Kalibrasyonlu Elektronik Kantar</h3>
+                            <p>T.C. Sanayi ve Teknoloji Bakanlığı onaylı ve periyodik mühürlü elektronik kantarlarımız ile mobil tartım sistemlerimiz sayesinde fire ve kilo kaybı olmadan %100 şeffaf tartım garantisi veriyoruz.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-money-bill-wave"></i></div>
+                            <h3>Anında Nakit & Banka Transferi</h3>
+                            <p>Tartım ve ekspertiz tamamlandığı anda şirket hesabınıza anında FAST/EFT veya yerinde nakit ödeme gerçekleştirilir. Vadeli, çekli veya gecikmeli ödeme riskine yer bırakmıyoruz.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-truck-moving"></i></div>
+                            <h3>81 İl Geneli Güçlü Araç Filosu</h3>
+                            <p>Vinçli (hiab) tırlar, kancalı konteyner araçları, hidrolik hurda makasları ve kepçelerden oluşan özmal ağır makine filomuzla Türkiye'nin her noktasından tonajlı alım gerçekleştiriyoruz.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-file-contract"></i></div>
+                            <h3>Bakanlık Lisansları & Yeşil Sertifika</h3>
+                            <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı onaylı Atık Toplama, Taşıma ve Ayrıştırma lisanslarımız ile resmi atık beyan formları (MoTAT/E-İzin) ve Karbon Salınım Azaltım Sertifikası düzenliyoruz.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Section 3: Core Service Categories -->
+                <article class="corp-card" data-aos="fade-up">
+                    <h2><i class="fas fa-cogs"></i> Kapsamlı Faaliyet ve Uzmanlık Alanlarımız</h2>
+                    <p>Sanayi tesislerinin, inşaat projelerinin ve kamu kurumlarının atık yönetim süreçlerini uçtan uca yönetiyoruz:</p>
+                    
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-cubes"></i></div>
+                            <h3>Endüstriyel Hurda Metal Alımı</h3>
+                            <p>DKP sac, ekstra ağır demir, imalat talaşı, boru, profil, pik demir ve inşaat demiri gibi tüm siyah metallerin yüksek tonajlı alımı ve düzenli fabrika konteyner hizmeti.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-bolt"></i></div>
+                            <h3>Bakır, Sarı Pirinç & Renkli Metaller</h3>
+                            <p>Soyma bakır, lama, kırkambar, radyatör, sarı pirinç vana/musluk ve külçe metallerin hassas laboratuvar saflık testleriyle değerinde alımı ve ayrıştırılması.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-plug"></i></div>
+                            <h3>Kablo & Alüminyum Geri Kazanımı</h3>
+                            <p>Yer altı enerji kabloları, çelik zırhlı kablolar, antigron, TTR ve fare yemez kabloların kırma/granül hatlarında plastik-bakır ayrımı; alüminyum profil, jant ve kutu geri dönüşümü.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-industry"></i></div>
+                            <h3>Fabrika, Tesis & Ağır Makine Sökümü</h3>
+                            <p>Kullanım ömrünü tamamlamış endüstriyel tesisler, silo, trafo, jeneratör ve çelik konstrüksiyon yapıların İSG uzmanları ve mühendis kontrolünde kontrollü sökümü.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-shield-virus"></i></div>
+                            <h3>Krom Paslanmaz & Özel Alaşımlar</h3>
+                            <p>304, 316, 310, 430 kalite paslanmaz çelikler, nikel alaşımları, titanyum, karbür elmas uçlar ve monel metallerin hassas kimyasal tasnifi.</p>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fas fa-recycle"></i></div>
+                            <h3>E-Atık, Akü & Arşiv İmha Hizmetleri</h3>
+                            <p>Elektronik atıklar, kurşun aküler ve kurumsal arşivlerin kamera kaydı eşliğinde endüstriyel parçalama makineleriyle tutanak karşılığı güvenli imhası.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Section 4: 4-Step Process -->
+                <article class="corp-card" data-aos="fade-up">
+                    <h2><i class="fas fa-tasks"></i> 4 Adımda Şeffaf Hurda Alım Süreci</h2>
+                    <p>Müşterilerimize zaman kaybettirmeyen, hızlı ve %100 güvenceli operasyonel iş akışımız:</p>
+                    
+                    <div class="process-steps">
+                        <div class="step-item">
+                            <span class="step-num">01</span>
+                            <h4>Talep & Hızlı Keşif</h4>
+                            <p>WhatsApp üzerinden hurda fotoğrafı veya adres bilgisi gönderin; uzman ekspertiz ekibimiz anında yerinde veya dijital keşif yapsın.</p>
+                        </div>
+
+                        <div class="step-item">
+                            <span class="step-num">02</span>
+                            <h4>Spektrometre & Tartım</h4>
+                            <p>Kalibrasyonlu elektronik kantar ve XRF spektrometre cihazımızla hurdanız gözünüzün önünde şeffafça tartılır ve alaşımı belirlenir.</p>
+                        </div>
+
+                        <div class="step-item">
+                            <span class="step-num">03</span>
+                            <h4>Borsa Fiyatı & Anında Ödeme</h4>
+                            <p>Güncel borsa tavan fiyatı üzerinden hesaplanan tutar, yükleme öncesinde anında banka hesabınıza veya nakit olarak ödenir.</p>
+                        </div>
+
+                        <div class="step-item">
+                            <span class="step-num">04</span>
+                            <h4>Lojistik & Lisanslı Teslimat</h4>
+                            <p>Kendi vinç ve araç filomuzla sahanız temizlenerek yüklenir; resmi atık beyan ve geri dönüşüm evraklarınız eksiksiz teslim edilir.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Section 5: Timeline -->
+                <article class="corp-card" data-aos="fade-up">
+                    <h2><i class="fas fa-history"></i> Tarihsel Gelişimimiz & Kilometre Taşları</h2>
+                    <p>Çeyrek asrı aşan istikrarlı büyüme ve teknolojik yatırım yolculuğumuz:</p>
                     
                     <div class="timeline-grid">
                         <div class="timeline-item">
                             <span class="timeline-year">1994</span>
-                            <p>Ilk metal tasnif tesisinin Istanbul'da sarsilmaz bir temel �zerine kurulusu.</p>
+                            <h4>Kuruluş ve İlk Tasnif Sahası</h4>
+                            <p>İstanbul İkitelli Organize Sanayi Bölgesi'nde demir ve bakır toplama sahasının kuruluşu.</p>
                         </div>
+
                         <div class="timeline-item">
                             <span class="timeline-year">2005</span>
-                            <p>Marmara b�lgesindeki ilk modern y�ksek tonajli kantar ve pres sistemlerinin entegrasyonu.</p>
+                            <h4>Lojistik Filosu & Ağır Presler</h4>
+                            <p>Marmara Bölgesi genelinde yüksek tonajlı elektronik kantarlar ve hidrolik hurda balyalama preslerinin devreye alınması.</p>
                         </div>
+
                         <div class="timeline-item">
-                            <span class="timeline-year">2016</span>
-                            <p>Tehlikeli atik tasima lisanslari ve �evre dostu lojistik filosunun saniyeler i�inde operasyona baslamasi.</p>
+                            <span class="timeline-year">2014</span>
+                            <h4>Fabrika Söküm Mühendisliği</h4>
+                            <p>Ağır sanayi tesisleri, fabrika yıkımı ve çelik konstrüksiyon söküm projeleri için uzman kadro ve mobil makas yatırımı.</p>
                         </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-year">2019</span>
+                            <h4>Bakanlık Lisansları & Yeşil Sertifika</h4>
+                            <p>Çevre ve Şehircilik Bakanlığı Entegre Atık Yönetim lisansları ile Yeşil Sanayi Mutabakatı süreçlerine tam entegrasyon.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-year">2023</span>
+                            <h4>XRF Spektrometre & Laboratuvar</h4>
+                            <p>Portatif spektrometre analiz cihazlarıyla sahada yerinde kimyasal alaşım tespit altyapısının kurulması.</p>
+                        </div>
+
                         <div class="timeline-item">
                             <span class="timeline-year">2026</span>
-                            <p>Dijital Borsa Terminali ile ger�ek zamanli fiyatlandirma ve %100 sapsari seffaflik vizyonu.</p>
+                            <h4>Dijital Borsa Terminali & 81 İl</h4>
+                            <p>81 ilde eş zamanlı lojistik erişimi sağlayan Dijital Hurda Borsası Terminali ve gerçek zamanlı fiyat takip platformu.</p>
                         </div>
                     </div>
                 </article>
 
-                <article class="corp-card">
-                    <h2>Neden Lider Hurda? Kurumsal Farklilasma</h2>
-                    <p>Sekt�rdeki binlerce hurdaci arasindan Lider Hurda isminin parlamasi sarsilmaz bir �alisma disiplininin sonucudur. Biz, m�sterilerimize sadece bir "alim" hizmeti degil, kapsamli bir "Varlik Y�netimi" sunuyoruz. Sahip oldugumuz spektrometre cihazlari sayesinde metalin alasimini saniyeler i�inde sapsari bir kesinlikle �l��yor, hakkiniz olan borsa degerini kurusu kurusuna hesabiniza yansitiyoruz.</p>
+                <!-- Section 6: Vision, Mission & Policy -->
+                <article class="corp-card" data-aos="fade-up">
+                    <h2><i class="fas fa-compass"></i> Vizyon, Misyon ve Kurumsal Politikalarımız</h2>
                     
-                    <p>Lojistik g�c�m�z, 50 tondan 500 tona kadar her t�rl� fabrika s�k�m� ve yapi yikimi projesini kendi sarsilmaz teknik ekipmanlarimizla y�netmemize imkan tanir. Vin�li tirlarimiz, mobil makaslarimiz ve profesyonel s�k�m ekiplerimizle, �retim sahanizi saniyeler i�inde temizliyor ve yeni projelerinize yer a�iyoruz. Lider Hurda i�in d�r�stl�k, tartinin �zerindeki rakamdan baslar ve banka dekontundaki hiza kadar sarsilmaz bir sekilde devam eder.</p>
-                    
-                    <p>Yesil Sanayi Mutabakati �er�evesinde, kurumsal partnerlerimize sundugumuz "Geri D�n�s�m Sertifikalari", sirketlerin karbon salinimi hedeflerine sapsari bir katki saglar. Bizimle �alisan her kurum, dogadan sarsilmaz bir sekilde saniyeler i�inde kurtarilan her kilogram metalin gururuna ortak olur. Teknolojik altyapimiz, her alimi dijital veri olarak saklar ve size yillik s�rd�r�lebilirlik raporlarinizda sarsilmaz kanitlar sunar.</p>
-                    
-                    <div style="background: rgba(0,255,65,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(0,255,65,0.2); margin-top: 50px;">
-                        <h3 style="color: #fff; margin-bottom: 25px;">Kurumsal Misyonumuz</h3>
-                        <p style="font-size: 1.1rem; color: #aaa;">T�rkiye'nin sanayi �retiminde ortaya �ikan metal ve polimer atiklari, borsa terminali standartlarinda analiz ederek ekonomiye en y�ksek katma degerle kazandirmak; bu s�re�te seffaflik, hiz ve sarsilmaz d�r�stl�k ilkelerinden asla taviz vermeden saniyeler i�inde sapsari ��z�mler �retmektir.</p>
+                    <div class="values-grid">
+                        <div class="value-box">
+                            <h3><i class="fas fa-eye"></i> Vizyonumuz</h3>
+                            <p>Türkiye'nin ve bölgenin teknolojik altyapısı en gelişmiş, en şeffaf ve güvenilir dijital hurda borsa terminali olarak; döngüsel ekonomiye liderlik etmek ve sürdürülebilir hammadde tedarikinde bir numaralı referans noktası olmak.</p>
+                        </div>
+
+                        <div class="value-box">
+                            <h3><i class="fas fa-bullseye"></i> Misyonumuz</h3>
+                            <p>Endüstriyel üretim sonucu ortaya çıkan tüm metal ve ikincil hammaddeleri en şeffaf tartım, güncel borsa fiyatı ve çevreye duyarlı lojistik yöntemlerle ekonomiye kazandırmak; müşterilerimize sıfır risk ve anında nakit güvencesi sunmak.</p>
+                        </div>
+
+                        <div class="value-box">
+                            <h3><i class="fas fa-hard-hat"></i> İSG & Çevre Politikamız</h3>
+                            <p>Sıfır İş Kazası prensibiyle tüm saha operasyonlarında en yüksek iş güvenliği standartlarını uygulamak, ISO 9001 ve ISO 14001 yönetim sistemleri rehberliğinde karbon ayak izini minimize ederek çevreye değer katmak.</p>
+                        </div>
                     </div>
                 </article>
+
+                <!-- CTA Banner -->
+                <div class="cta-box" data-aos="zoom-in">
+                    <h2>Kurumsal Çözüm Ortağınız Olmaya Hazırız</h2>
+                    <p>Fabrikanızın periyodik hurdaları, şantiye söküm projeleriniz veya tonajlı metal satışlarınız için hemen eksperimizle görüşün; güncel borsa fiyatlarıyla yerinde teklif alın.</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+905364863466" class="btn-call">
+                            <i class="fas fa-phone-alt"></i> 0536 486 34 66 - HEMEN ARA
+                        </a>
+                        <a href="https://wa.me/905364863466?text=Merhaba%2C%20hurda%20sat%C4%B1%C5%9F%C4%B1%20ve%20fiyat%20teklifi%20i%C3%A7in%20bilgi%20almak%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> WHATSAPP İLE TEKLİF AL
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container" style="text-align:center; padding: 40px 0; border-top: 1px solid #333;">
-            <p>&copy; 2026 Lider Hurda Kurumsal Terminal f</p>
-            <a href="index.html" style="color: var(--neon-green); text-decoration: none;">? Anasayfa</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 5L5 15V35L25 45L45 35V15L25 5Z" stroke="#00FF41" stroke-width="2" fill="rgba(0,255,65,0.1)"/>
+                            <path d="M15 20L25 25L35 20" stroke="#00FF41" stroke-width="2"/>
+                            <path d="M25 25V38" stroke="#00FF41" stroke-width="2"/>
+                        </svg>
+                        <span>LİDER <small>HURDA</small></span>
+                    </div>
+                    <p>Türkiye'nin 81 ilinde öncü hurda borsa terminali, lisanslı geri dönüşüm ve kurumsal fabrika söküm merkezi.</p>
+                    <div class="footer-contact-info" style="margin-top: 15px; color: #888; font-size: 0.95rem;">
+                        <p><i class="fas fa-phone" style="color: var(--neon-green);"></i> <a href="tel:+905364863466" style="color: #fff; text-decoration: none;">0536 486 34 66</a></p>
+                        <p><i class="fas fa-map-marker-alt" style="color: var(--neon-green);"></i> İkitelli OSB / İstanbul (81 İl Hizmet Ağı)</p>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h3>Hızlı Menü</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="fiyat-listesi.html">Canlı Borsa Fiyatları</a></li>
+                        <li><a href="analiz.html">Piyasa Analiz Masası</a></li>
+                        <li><a href="rehber.html">Bilgi Bankası</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h3>Kurumsal Hizmetler</h3>
+                    <ul class="footer-links">
+                        <li><a href="fabrika-sokumu.html">Fabrika & Tesis Sökümü</a></li>
+                        <li><a href="hurda-karsiligi-yikim.html">Hurda Karşılığı Yıkım</a></li>
+                        <li><a href="kablo-hurdasi.html">Kablo & Granül Geri Kazanım</a></li>
+                        <li><a href="e-atik.html">E-Atık & Elektronik İmha</a></li>
+                        <li><a href="arsiv-imha.html">Kurumsal Arşiv İmhası</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="text-align: center; padding-top: 30px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); color: #777;">
+                <p>&copy; 2026 Lider Hurda Geri Dönüşüm Terminali. Tüm hakları saklıdır.</p>
+            </div>
         </div>
     </footer>
 
-    <script>AOS.init();</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        
+        // Mobile Menu Toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileBtn && navLinks) {
+            mobileBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
 </body>
 </html>
-
