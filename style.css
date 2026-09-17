@@ -2092,3 +2092,363 @@ footer {
 .silo-card p {
     color: var(--steel-600) !important;
 }
+
+/* ==========================================================================
+   SUBPAGE & TABLE CONTRAST SYSTEM (100% VISIBILITY & ZAFER DESIGN)
+   ========================================================================== */
+main h1, main h2, main h3, main h4,
+main section h1, main section h2, main section h3, main section h4,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h1,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h2,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h3,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h4 {
+    color: var(--navy-900) !important;
+}
+
+/* Modern Clean Light Table Design (Copper Table, Borsa Tables, Spec Tables) */
+.copper-table,
+.price-table,
+.data-table,
+table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    margin: 24px 0 !important;
+    background: #ffffff !important;
+    border: 1px solid var(--steel-200) !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 14px rgba(13, 36, 64, 0.07) !important;
+}
+
+.copper-table thead,
+.price-table thead,
+table thead {
+    background: #0d2440 !important;
+}
+
+.copper-table th,
+.price-table th,
+table th {
+    background: #0d2440 !important;
+    color: #ffffff !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    padding: 16px 20px !important;
+    font-size: 0.95rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 2px solid var(--green-500) !important;
+    text-align: left !important;
+}
+
+.copper-table td,
+.price-table td,
+table td {
+    padding: 16px 20px !important;
+    color: #1a2433 !important;
+    font-size: 0.95rem !important;
+    border-bottom: 1px solid #ebeff4 !important;
+    background: #ffffff !important;
+}
+
+.copper-table tr:last-child td,
+.price-table tr:last-child td,
+table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.copper-table tr:hover td,
+.price-table tr:hover td,
+table tr:hover td {
+    background: #f1f4f8 !important;
+}
+
+.copper-table td strong,
+.price-table td strong,
+table td strong {
+    color: #0b1e33 !important;
+    font-weight: 700 !important;
+}
+
+.copper-table td.price-num,
+.copper-table .price-val,
+.copper-table td .price-num,
+table .price-val {
+    color: #2d7a3a !important;
+    font-family: var(--font-mono) !important;
+    font-weight: 800 !important;
+    font-size: 1.05rem !important;
+}
+
+/* Modern Silo Cards */
+.silo-card-link {
+    background: #ffffff !important;
+    border: 1px solid #e3e8ef !important;
+    border-left: 5px solid #2d7a3a !important;
+    border-radius: 12px !important;
+    padding: 22px !important;
+    text-decoration: none !important;
+    color: #1a2433 !important;
+    box-shadow: 0 1px 3px rgba(13, 36, 64, 0.05) !important;
+    transition: all 0.25s ease !important;
+    display: block !important;
+}
+
+.silo-card-link:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 30px rgba(13, 36, 64, 0.08) !important;
+    border-color: #2d7a3a !important;
+    background: #ffffff !important;
+}
+
+.silo-card-link strong {
+    display: block !important;
+    font-size: 1.15rem !important;
+    color: #0b1e33 !important;
+    margin-bottom: 6px !important;
+    font-weight: 700 !important;
+}
+
+.silo-card-link span {
+    font-size: 0.9rem !important;
+    color: #5d6b7e !important;
+    line-height: 1.5 !important;
+}
+
+/* Breadcrumb Safety */
+.breadcrumb li, .breadcrumb a {
+    color: #5d6b7e !important;
+}
+.breadcrumb li.active, .breadcrumb li:last-child {
+    color: #0b1e33 !important;
+    font-weight: 700 !important;
+}
+.breadcrumb a:hover {
+    color: #2d7a3a !important;
+}
+
+/* ==========================================================================
+   FULL PRICE TABLE & CATEGORY LIST (ZAFER DESIGN SYSTEM)
+   ========================================================================== */
+.price-list-container {
+    padding: 60px 0 90px;
+    background: var(--steel-50);
+}
+
+.category-group {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    color: var(--navy-900) !important;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--green-500);
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+}
+
+.full-price-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #ffffff !important;
+    border: 1px solid var(--steel-200) !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 14px rgba(13, 36, 64, 0.07) !important;
+    margin-bottom: 20px;
+}
+
+.full-price-table thead {
+    background: #0d2440 !important;
+}
+
+.full-price-table th {
+    background: #0d2440 !important;
+    color: #ffffff !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 700 !important;
+    padding: 16px 22px !important;
+    font-size: 0.88rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    border-bottom: 2px solid var(--green-500) !important;
+    text-align: left !important;
+}
+
+.full-price-table td {
+    padding: 18px 22px !important;
+    color: #1a2433 !important;
+    font-size: 0.98rem !important;
+    border-bottom: 1px solid #ebeff4 !important;
+    background: #ffffff !important;
+    vertical-align: middle;
+    transition: background 0.2s ease;
+}
+
+.full-price-table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.full-price-table tr:hover td {
+    background: #f1f4f8 !important;
+}
+
+.item-name {
+    font-weight: 700 !important;
+    color: #0b1e33 !important;
+    font-size: 1.05rem !important;
+    display: inline-block;
+}
+
+.item-price,
+.full-price-table .item-price {
+    color: #2d7a3a !important;
+    font-family: var(--font-mono) !important;
+    font-weight: 800 !important;
+    font-size: 1.25rem !important;
+    white-space: nowrap !important;
+}
+
+.item-link {
+    color: #5d6b7e !important;
+    font-weight: 600 !important;
+    font-size: 0.92rem !important;
+    transition: all 0.25s ease !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.item-link i {
+    font-size: 0.8rem;
+    transition: transform 0.25s ease;
+}
+
+.full-price-table tr:hover .item-link {
+    color: #2d7a3a !important;
+    font-weight: 700 !important;
+}
+
+.full-price-table tr:hover .item-link i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .full-price-table th:nth-child(3),
+    .full-price-table td:nth-child(3) {
+        display: none !important;
+    }
+    
+    .full-price-table th,
+    .full-price-table td {
+        padding: 14px 15px !important;
+    }
+    
+    .item-name {
+        font-size: 0.95rem !important;
+    }
+    
+    .item-price {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* ==========================================================================
+   UNIVERSAL RICH CONTENT & AUTHORITY SECTIONS (GOOGLEBOT OPTIMIZED)
+   ========================================================================== */
+.authority-box {
+    background: #ffffff;
+    border: 1px solid var(--steel-200);
+    border-radius: var(--radius-xl);
+    padding: 35px;
+    margin: 35px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.authority-box h2, .authority-box h3 {
+    color: var(--navy-900) !important;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.authority-box p {
+    color: var(--steel-600) !important;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 1.02rem;
+}
+
+.authority-box ul, .authority-box ol {
+    margin: 15px 0 20px 25px;
+    color: var(--steel-700);
+}
+
+.authority-box li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.pro-badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.pro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--steel-100);
+    border: 1px solid var(--steel-200);
+    border-radius: var(--radius-pill);
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-800);
+}
+
+.pro-badge i {
+    color: var(--green-600);
+}
+
+.faq-card {
+    background: #ffffff;
+    border: 1px solid var(--steel-200);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-xs);
+}
+
+.faq-card h4, .faq-card h3 {
+    color: var(--navy-900) !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-card h4 i, .faq-card h3 i {
+    color: var(--green-600);
+    font-size: 1rem;
+}
+
+.faq-card p {
+    color: var(--steel-600) !important;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+}
