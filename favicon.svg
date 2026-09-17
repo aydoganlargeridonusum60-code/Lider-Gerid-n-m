@@ -1,6 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M50 15L65 40H35L50 15Z" fill="#00FF41"/>
-  <path d="M85 55L70 80H100L85 55Z" fill="#00FF41" transform="rotate(120 85 55)"/>
-  <path d="M15 55L0 80H30L15 55Z" fill="#00FF41" transform="rotate(240 15 55)"/>
-  <circle cx="50" cy="55" r="10" fill="white" opacity="0.2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081726"/>
+      <stop offset="50%" stop-color="#0d2440"/>
+      <stop offset="100%" stop-color="#061409"/>
+    </linearGradient>
+
+    <!-- Green Gradients for Recycling Arrows -->
+    <linearGradient id="greenGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <linearGradient id="greenGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="60%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+
+    <linearGradient id="greenGrad3" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#6ee7b7"/>
+    </linearGradient>
+
+    <!-- Metallic Brass/Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <!-- Steel Metal Gradient -->
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container with Industrial Border -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect width="500" height="500" x="6" y="6" rx="122" fill="none" stroke="url(#greenGrad1)" stroke-width="4" stroke-opacity="0.4" />
+  
+  <!-- Outer Subtle Tech Ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="8 8" stroke-opacity="0.15" />
+  <circle cx="256" cy="256" r="195" fill="none" stroke="url(#greenGrad1)" stroke-width="2" stroke-opacity="0.25" />
+
+  <!-- Main Recycling Mobius Loop Arrows -->
+  <g filter="url(#dropShadow)">
+    <!-- Top Arrow Segment (Moving Right & Down) -->
+    <path d="M 210 95 L 302 95 L 325 145 L 235 145 Z" fill="url(#greenGrad1)"/>
+    <path d="M 290 65 L 375 120 L 290 175 L 305 145 L 210 145 L 225 95 L 305 95 Z" fill="url(#greenGrad1)" filter="url(#glow)"/>
+    
+    <!-- Right / Bottom Arrow Segment (Moving Left & Up) -->
+    <path d="M 370 260 L 324 340 L 280 315 L 326 235 Z" fill="url(#greenGrad2)"/>
+    <path d="M 345 375 L 260 425 L 260 325 L 280 345 L 326 265 L 370 290 L 324 370 Z" fill="url(#greenGrad2)"/>
+
+    <!-- Left Arrow Segment (Moving Up & Right) -->
+    <path d="M 142 260 L 188 180 L 232 205 L 186 285 Z" fill="url(#greenGrad3)"/>
+    <path d="M 167 145 L 252 95 L 252 195 L 232 175 L 186 255 L 142 230 L 188 150 Z" fill="url(#greenGrad3)"/>
+  </g>
+
+  <!-- Center Metallic Scrap & Magnet / Hook Core Emblem -->
+  <!-- Central Diamond / Industrial Core -->
+  <polygon points="256,170 330,256 256,342 182,256" fill="#0b1e33" stroke="url(#goldGrad)" stroke-width="6" filter="url(#dropShadow)" />
+  
+  <!-- Stylized "L" & Gear in Center -->
+  <!-- Bold Steel Letter 'L' (Lider) merged with scrap metal claw silhouette -->
+  <path d="M 230 205 L 254 205 L 254 282 L 288 282 L 288 305 L 230 305 Z" fill="url(#goldGrad)"/>
+  
+  <!-- Central Accent Spark / Purity Indicator -->
+  <polygon points="256,230 262,250 282,256 262,262 256,282 250,262 230,256 250,250" fill="#ffffff" opacity="0.9" />
+
+  <!-- Industrial Bolts/Rivets around Corner Accent -->
+  <circle cx="100" cy="100" r="7" fill="url(#steelGrad)"/>
+  <circle cx="412" cy="100" r="7" fill="url(#steelGrad)"/>
+  <circle cx="100" cy="412" r="7" fill="url(#steelGrad)"/>
+  <circle cx="412" cy="412" r="7" fill="url(#steelGrad)"/>
 </svg>
