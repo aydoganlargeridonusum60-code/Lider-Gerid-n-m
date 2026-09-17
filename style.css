@@ -282,6 +282,24 @@ img {
     letter-spacing: 0.5px;
 }
 
+.brand-logo-img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .brand-logo-img {
+    transform: scale(1.08);
+}
+
+.brand-accent {
+    color: var(--green-400);
+    font-weight: 900;
+}
+
 .logo svg {
     transition: transform 0.4s ease;
 }
