@@ -3180,3 +3180,44 @@ table {
         padding: 16px;
     }
 }
+
+/* Ultra High-Readability Typography & Content Polish */
+.page-content p, .content-card-pro p, .corp-card p, .analysis-content p {
+    color: #1e293b !important;
+    font-size: 1.05rem !important;
+    line-height: 1.85 !important;
+    font-weight: 400;
+}
+
+.content-card-pro h2, .corp-card h2, .analysis-card h2 {
+    color: #0b1e33 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+}
+
+.content-card-pro h3, .corp-card h3 {
+    color: #0f2942 !important;
+    font-weight: 700 !important;
+}
+
+.content-card-pro strong, .corp-card strong {
+    color: #081726 !important;
+    font-weight: 700;
+}
+
+.scrap-rich-section {
+    margin: 30px 0;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(11, 30, 51, 0.04);
+}
+
+.scrap-feature-box {
+    background: #f8fafc;
+    border-left: 4px solid #16a34a;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+}
