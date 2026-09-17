@@ -1994,3 +1994,83 @@ footer {
         width: 100%;
     }
 }
+
+
+/* ==========================================================================
+   KUSURSUZ METÄ°N KONTRASTI & GÃ–RÃœNÃœRLÃœK GARANTÄ°SÄ°
+   ========================================================================== */
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.about-features div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy-900) !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.about-features div i,
+.about-features i {
+    color: var(--green-600) !important;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.about-text p {
+    color: var(--steel-600) !important;
+    margin-bottom: 15px;
+}
+
+.about-text h2 {
+    color: var(--navy-900) !important;
+}
+
+.insight-card h3 {
+    color: var(--navy-900) !important;
+}
+
+.insight-card p {
+    color: var(--steel-600) !important;
+}
+
+.guide-text p {
+    color: var(--steel-600) !important;
+}
+
+/* Subpage Article & Card Color Safety */
+.calc-box-pro {
+    background: var(--white) !important;
+    border: 1px solid var(--steel-200) !important;
+    box-shadow: var(--shadow-md) !important;
+    color: var(--steel-800) !important;
+}
+
+.calc-box-pro h2, .calc-box-pro h3, .calc-box-pro label {
+    color: var(--navy-900) !important;
+}
+
+.calc-form-control {
+    background: var(--steel-50) !important;
+    border: 1px solid var(--steel-200) !important;
+    color: var(--steel-800) !important;
+}
+
+.silo-card {
+    background: var(--white) !important;
+    border: 1px solid var(--steel-200) !important;
+    color: var(--steel-800) !important;
+}
+
+.silo-card h3, .silo-card h4 {
+    color: var(--navy-900) !important;
+}
+
+.silo-card p {
+    color: var(--steel-600) !important;
+}
