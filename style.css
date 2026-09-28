@@ -445,6 +445,51 @@ img {
     color: var(--green-300);
 }
 
+.hero h1,
+.about-hero h1,
+.analysis-hero h1,
+.service-hero-box h1,
+.gallery-hero h1,
+.article-hero h1,
+header.analysis-hero h1,
+section.analysis-hero h1,
+header.service-hero-box h1,
+header.article-hero h1,
+section.about-hero h1 {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 span,
+.about-hero h1 span,
+.analysis-hero h1 span,
+.service-hero-box h1 span,
+.gallery-hero h1 span,
+.article-hero h1 span,
+header.analysis-hero h1 span,
+section.analysis-hero h1 span,
+header.service-hero-box h1 span {
+    color: #34d399 !important;
+}
+
+.hero p,
+.about-hero p,
+.analysis-hero p,
+.service-hero-box p,
+.gallery-hero p,
+.article-hero p,
+header.analysis-hero p,
+section.analysis-hero p,
+header.service-hero-box p,
+header.article-hero p,
+section.about-hero p {
+    color: #e2e8f0 !important;
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
 .premium-title {
     font-size: clamp(2.4rem, 5.5vw, 4rem);
     font-weight: 900;
@@ -456,7 +501,7 @@ img {
 }
 
 .premium-title span {
-    color: var(--green-300);
+    color: #34d399 !important;
     display: inline;
 }
 
@@ -464,7 +509,7 @@ img {
     font-size: clamp(1.05rem, 2vw, 1.25rem);
     font-weight: 400;
     margin-bottom: 2.2rem;
-    color: #d1d5db;
+    color: #e2e8f0 !important;
     max-width: 720px;
     line-height: 1.7;
 }
@@ -2096,13 +2141,63 @@ footer {
 /* ==========================================================================
    SUBPAGE & TABLE CONTRAST SYSTEM (100% VISIBILITY & ZAFER DESIGN)
    ========================================================================== */
-main h1, main h2, main h3, main h4,
-main section h1, main section h2, main section h3, main section h4,
-section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h1,
-section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h2,
-section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h3,
-section:not(.hero):not(.about-hero):not(.analysis-hero):not(footer):not(.emergency-call) h4 {
+main h2:not(.analysis-hero *):not(.hero *):not(.service-hero-box *):not(.about-hero *):not(.gallery-hero *):not(.article-hero *),
+main h3:not(.analysis-hero *):not(.hero *):not(.service-hero-box *):not(.about-hero *):not(.gallery-hero *):not(.article-hero *),
+main h4:not(.analysis-hero *):not(.hero *):not(.service-hero-box *):not(.about-hero *):not(.gallery-hero *):not(.article-hero *),
+main section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero) h1,
+main section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero) h2,
+main section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero) h3,
+main section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero) h4,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero):not(footer):not(.emergency-call) h1,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero):not(footer):not(.emergency-call) h2,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero):not(footer):not(.emergency-call) h3,
+section:not(.hero):not(.about-hero):not(.analysis-hero):not(.service-hero-box):not(.gallery-hero):not(.article-hero):not(footer):not(.emergency-call) h4 {
     color: var(--navy-900) !important;
+}
+
+/* Complete 100% High-Contrast Reading Mode for Article and Analysis Cards */
+.analysis-card,
+article.analysis-card,
+.content-card-pro,
+.corp-card {
+    background: #ffffff !important;
+    border: 1px solid var(--steel-200) !important;
+    border-radius: 16px !important;
+    padding: clamp(24px, 4vw, 40px) !important;
+    box-shadow: 0 4px 16px rgba(13, 36, 64, 0.05) !important;
+    color: #1e293b !important;
+}
+
+.analysis-card h1, .analysis-card h2,
+article.analysis-card h1, article.analysis-card h2,
+.content-card-pro h1, .content-card-pro h2 {
+    color: #0b1e33 !important;
+    font-weight: 800 !important;
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem) !important;
+    margin-bottom: 18px !important;
+}
+
+.analysis-card h3, article.analysis-card h3,
+.content-card-pro h3 {
+    color: #166534 !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+    margin-top: 24px !important;
+    margin-bottom: 12px !important;
+}
+
+.analysis-card p, article.analysis-card p,
+.analysis-card li, article.analysis-card li,
+.content-card-pro p, .content-card-pro li {
+    color: #334155 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.85 !important;
+}
+
+.analysis-card strong, article.analysis-card strong,
+.content-card-pro strong {
+    color: #0f172a !important;
+    font-weight: 700 !important;
 }
 
 /* Modern Clean Light Table Design (Copper Table, Borsa Tables, Spec Tables) */
@@ -3220,4 +3315,104 @@ table {
     border-radius: 8px;
     padding: 20px 24px;
     margin: 20px 0;
+}
+
+/* ==========================================================================
+   GENERATIVE ENGINE OPTIMIZATION (GEO) & AI DIRECT ANSWER CARDS
+   ========================================================================== */
+.geo-direct-answer {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+    border: 1.5px solid #86efac;
+    border-left: 5px solid #16a34a;
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 28px 0 36px 0;
+    box-shadow: 0 6px 20px rgba(22, 163, 74, 0.08);
+    position: relative;
+}
+
+.geo-direct-answer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.geo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #166534;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.geo-badge i {
+    color: #4ade80;
+    font-size: 0.85rem;
+}
+
+.geo-direct-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: #0f2942 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.geo-direct-answer p {
+    color: #1e293b !important;
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 12px !important;
+    font-weight: 500;
+}
+
+.geo-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed #bbf7d0;
+}
+
+.geo-fact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.92rem;
+    color: #0f3721;
+}
+
+.geo-fact-item i {
+    color: #16a34a;
+    margin-top: 3px;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.geo-fact-item strong {
+    color: #0b1e33;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .geo-direct-answer {
+        padding: 18px 16px;
+        margin: 20px 0;
+    }
+    .geo-facts-grid {
+        grid-template-columns: 1fr;
+    }
 }

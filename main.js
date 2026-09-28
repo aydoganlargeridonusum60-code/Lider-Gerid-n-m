@@ -203,11 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const priceData = {
         'dkp-demir': 15.50,
         'insaat-demiri': 14.60,
-        'soyma-bakir': 560.00,
-        'lama-bakir': 550.00,
-        'kablo': 215.00,
+        'soyma-bakir': 670.00,
+        'lama-bakir': 650.00,
+        'kablo': 280.00,
         'aluminyum': 148.00,
-        'pirinc-sari': 270.00,
+        'pirinc-sari': 340.00,
         'krom': 78.00,
         'kursun': 88.00,
         'motor': 68.00,
@@ -215,27 +215,28 @@ document.addEventListener('DOMContentLoaded', () => {
         'elektronik': 48.00,
         'demir-1': 14.90,
         'demir-ekstra': 14.60,
-        'kirkambar-bakir': 500.00,
+        'kirkambar-bakir': 600.00,
+        'yanik-bakir': 600.00,
         'talas': 12.80,
         'jant': 165.00,
         'krom-430': 36.00,
-        'petek': 190.00,
+        'petek': 570.00,
         'aku': 34.00,
-        'antigron-kablo': 230.00,
-        'pano-bakir': 555.00,
-        'bronz-kizil': 330.00,
-        'bakir-talasi': 490.00,
+        'antigron-kablo': 380.00,
+        'pano-bakir': 655.00,
+        'bronz-kizil': 380.00,
+        'bakir-talasi': 580.00,
         'pik-demir': 13.00,
         'teneke-hurda': 10.20,
         'aluminyum-tel': 158.00,
         'aluminyum-sert': 135.00,
         'aluminyum-kutu': 118.00,
         'aluminyum-radyator': 115.00,
-        'sari-cubuk': 280.00,
-        'sari-su-saati': 250.00,
-        'sari-talas': 240.00,
-        'krom-316': 98.00,
-        'krom-201': 34.00,
+        'sari-cubuk': 350.00,
+        'sari-su-saati': 320.00,
+        'sari-talas': 310.00,
+        'krom-316': 105.00,
+        'krom-201': 38.00,
         'nikel-hurda': 1180.00,
         'cinko-hurda': 148.00,
         'kalay-hurda': 1880.00,
@@ -243,9 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'kursun-boru': 85.00,
         'ekstra-demir': 14.60,
         'bir-grup-demir': 14.90,
-        'kablo-hurdasi': 215.00,
+        'kablo-hurdasi': 280.00,
         'aluminyum-hurda': 148.00,
-        'sari-hurda': 270.00,
+        'sari-hurda': 340.00,
         'krom-paslanmaz': 78.00
     };
 
@@ -262,22 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         calculateScrapValue(); // Keep calculator synced
-    };
-
-    const jitterPrices = () => {
-        const categories = Object.keys(priceData);
-        const randomCat = categories[Math.floor(Math.random() * categories.length)];
-        const jitter = (Math.random() * 0.4 - 0.2); 
-        priceData[randomCat] = Math.max(1, priceData[randomCat] + jitter);
-        
-        // Visual indicator for jitter
-        const targets = document.querySelectorAll(`.price-val[data-cat="${randomCat}"]`);
-        targets.forEach(el => {
-            el.classList.add(jitter > 0 ? 'price-up' : 'price-down');
-            setTimeout(() => el.classList.remove('price-up', 'price-down'), 2000);
-        });
-
-        updatePricesUI();
     };
 
     // 8. Interactive Table Rows
@@ -394,7 +379,114 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Ignition
+    // Central Price Table Renderer for pages with centralPriceTableBody
+    if (document.getElementById('centralPriceTableBody') && typeof HURDA_PRICES !== 'undefined' && HURDA_PRICES.renderTable) {
+        HURDA_PRICES.renderTable('centralPriceTableBody');
+    }
+
+    // Universal / Page Specific Calculator & Filter Helpers
+    window.filterPrices = function(category, btnElement) {
+        if (typeof HURDA_PRICES !== 'undefined' && HURDA_PRICES.renderTable) {
+            HURDA_PRICES.renderTable('centralPriceTableBody', category);
+        }
+        if (btnElement) {
+            document.querySelectorAll('.price-filter-btn').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+        }
+    };
+
+    window.calculateToday = function() {
+        const typeEl = document.getElementById('calcTodayBakirType');
+        const kgEl = document.getElementById('calcTodayKg');
+        const totalEl = document.getElementById('calcTodayTotal');
+        const waBtn = document.getElementById('calcTodayWaBtn');
+        if (!typeEl || !kgEl || !totalEl) return;
+        const price = parseFloat(typeEl.value) || 0;
+        const kg = parseFloat(kgEl.value) || 0;
+        const total = price * kg;
+        totalEl.textContent = total.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' TL';
+        if (waBtn) {
+            const text = typeEl.options[typeEl.selectedIndex].text;
+            waBtn.href = `https://wa.me/905364863466?text=${encodeURIComponent('Merhaba, ' + kg + ' kg ' + text + ' için satış teklifi almak istiyorum. Toplam: ' + totalEl.textContent)}`;
+        }
+    };
+
+    window.calculateCopper = function() {
+        const typeEl = document.getElementById('calcBakirType');
+        const kgEl = document.getElementById('calcBakirKg');
+        const totalEl = document.getElementById('calcBakirTotal');
+        const waBtn = document.getElementById('calcBakirWaBtn');
+        if (!typeEl || !kgEl || !totalEl) return;
+        const price = parseFloat(typeEl.value) || 0;
+        const kg = parseFloat(kgEl.value) || 0;
+        const total = price * kg;
+        totalEl.textContent = total.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' TL';
+        if (waBtn) {
+            const text = typeEl.options[typeEl.selectedIndex].text;
+            waBtn.href = `https://wa.me/905364863466?text=${encodeURIComponent('Merhaba, ' + kg + ' kg ' + text + ' için satış yapmak istiyorum. Tutar: ' + totalEl.textContent)}`;
+        }
+    };
+
+    window.calculateKirkambar = function() {
+        const typeEl = document.getElementById('calcKirkambarType');
+        const kgEl = document.getElementById('calcKirkambarKg');
+        const totalEl = document.getElementById('calcKirkambarTotal');
+        const waBtn = document.getElementById('calcKirkambarWaBtn');
+        if (!typeEl || !kgEl || !totalEl) return;
+        const price = parseFloat(typeEl.value) || 0;
+        const kg = parseFloat(kgEl.value) || 0;
+        const total = price * kg;
+        totalEl.textContent = total.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' TL';
+        if (waBtn) {
+            const text = typeEl.options[typeEl.selectedIndex].text;
+            waBtn.href = `https://wa.me/905364863466?text=${encodeURIComponent('Merhaba, ' + kg + ' kg ' + text + ' için teklif almak istiyorum. Tutar: ' + totalEl.textContent)}`;
+        }
+    };
+
+    window.calculateLama = function() {
+        const typeEl = document.getElementById('calcLamaType');
+        const kgEl = document.getElementById('calcLamaKg');
+        const totalEl = document.getElementById('calcLamaTotal');
+        const waBtn = document.getElementById('calcLamaWaBtn');
+        if (!typeEl || !kgEl || !totalEl) return;
+        const price = parseFloat(typeEl.value) || 0;
+        const kg = parseFloat(kgEl.value) || 0;
+        const total = price * kg;
+        totalEl.textContent = total.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' TL';
+        if (waBtn) {
+            const text = typeEl.options[typeEl.selectedIndex].text;
+            waBtn.href = `https://wa.me/905364863466?text=${encodeURIComponent('Merhaba, ' + kg + ' kg ' + text + ' için satış yapmak istiyorum. Tutar: ' + totalEl.textContent)}`;
+        }
+    };
+
+    window.calcUniversal = function() {
+        const typeEl = document.getElementById('calcUniversalType');
+        const kgEl = document.getElementById('calcUniversalKg');
+        const totalEl = document.getElementById('calcUniversalTotal');
+        const waBtn = document.getElementById('calcUniversalWaBtn');
+        if (!typeEl || !kgEl || !totalEl) return;
+        const cat = typeEl.value;
+        const kg = parseFloat(kgEl.value) || 0;
+        let unitPrice = priceData[cat];
+        if (!unitPrice && typeof HURDA_PRICES !== 'undefined' && HURDA_PRICES.items[cat]) {
+            unitPrice = HURDA_PRICES.items[cat].priceMax;
+        }
+        if (!unitPrice) unitPrice = 0;
+        const total = unitPrice * kg;
+        totalEl.textContent = total.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' TL';
+        if (waBtn) {
+            const text = typeEl.options[typeEl.selectedIndex].text;
+            waBtn.href = `https://wa.me/905364863466?text=${encodeURIComponent('Merhaba, ' + kg + ' kg ' + text + ' için teklif almak istiyorum. Tahmini tutar: ' + totalEl.textContent)}`;
+        }
+    };
+
+    // Initialize sub-page calculators if elements are present
+    if (document.getElementById('calcTodayBakirType')) window.calculateToday();
+    if (document.getElementById('calcBakirType')) window.calculateCopper();
+    if (document.getElementById('calcKirkambarType')) window.calculateKirkambar();
+    if (document.getElementById('calcLamaType')) window.calculateLama();
+    if (document.getElementById('calcUniversalType')) window.calcUniversal();
+
+    // Ignition - Stable Price Initialization
     updatePricesUI();
-    setInterval(jitterPrices, 4000);
 });

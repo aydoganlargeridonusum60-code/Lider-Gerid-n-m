@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -63,7 +63,7 @@
           "name": "2026 yılında 1 kg soyma bakır hurda fiyatı ne kadar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Soyma bakır hurdasının kilogram fiyatı Londra Metal Borsası (LME) ve USD/TRY kuruna göre günlük güncellenmektedir. 2026 yılı itibarıyla soyma bakır kg fiyatı 540,00 TL ile 580,00 TL bandında seyretmektedir. Tonajlı alımlarda ekstra primli özel borsa fiyatı uygulanır."
+            "text": "Soyma bakır hurdasının kilogram fiyatı Londra Metal Borsası (LME) ve USD/TRY kuruna göre günlük güncellenmektedir. 2026 yılı itibarıyla soyma bakır kg fiyatı 660,00 TL ile 670,00 TL bandında seyretmektedir. Tonajlı alımlarda ekstra primli özel borsa fiyatı uygulanır."
           }
         },
         {
@@ -123,6 +123,19 @@
     </script>
 
     
+
+    <!-- Speakable & GEO AI Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Lider Hurda Geri DÃ¶nÃ¼ÅŸÃ¼m",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".geo-direct-answer p", ".geo-direct-title"]
+      }
+    }
+    </script>
 </head>
 <body class="analysis-page">
     <!-- Navigation -->
@@ -179,7 +192,7 @@
                 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
                     <div>
                         <span style="color:#9ca3af; font-size:0.95rem; text-transform:uppercase; letter-spacing:1px; display:block;">Anlık Soyma Bakır Borsa Alış Fiyatı</span>
-                        <span class="price-badge-xl">550.00 TL - 580.00 TL <small style="font-size:1.1rem; color:#9ca3af;">/ Kg</small></span>
+                        <span class="price-badge-xl">660.00 TL - 670.00 TL <small style="font-size:1.1rem; color:#9ca3af;">/ Kg</small></span>
                         <span style="color:#10b981; font-size:0.9rem;"><i class="fas fa-check-circle"></i> Tonajlı alımlarda +15 TL/kg prim uygulanır.</span>
                     </div>
                     <div class="cta-group">
@@ -197,6 +210,21 @@
 
     <!-- Main Content Grid -->
     <main class="container" style="padding: 60px 20px;">
+        <!-- GEO & AI Direct Answer Card (LLM Knowledge Graph & Search Snippet) -->
+        <section class="geo-direct-answer" data-geo="direct-answer" style="margin-top: 25px;">
+            <div class="geo-direct-answer-header">
+                <span class="geo-badge"><i class="fas fa-brain"></i> Yapay Zeka & HÄ±zlÄ± Bilgi Ã–zeti</span>
+                <span style="font-size: 0.85rem; color: #166534; font-weight: 600;"><i class="fas fa-check-circle"></i> DoÄŸrulanmÄ±ÅŸ Kurumsal Bilgi</span>
+            </div>
+            <h2 class="geo-direct-title"><i class="fas fa-bolt" style="color: #16a34a;"></i> Soyma BakÄ±r Hurda AlÄ±mÄ± ve Borsa Tavan Fiyat Ã–zeti</h2>
+            <p><strong>Lider Hurda (0536 486 34 66)</strong>, %99.9 saflÄ±ktaki parlak elektrolitik soyma bakÄ±r hurdalarÄ±nÄ± piyasanÄ±n en yÃ¼ksek borsa primli kilo fiyatÄ±yla satÄ±n almaktadÄ±r. Oksitsiz ve temiz soyma bakÄ±rlarÄ±nÄ±z yerinde hassas dijital kantarla tartÄ±lÄ±r ve anÄ±nda peÅŸin nakit Ã¶denir.</p>
+            <div class="geo-facts-grid">
+                <div class="geo-fact-item"><i class="fas fa-check-circle"></i> <div><strong>SaflÄ±k OranÄ±:</strong> %99.9 Elektrolitik Saf BakÄ±r</div></div>
+                <div class="geo-fact-item"><i class="fas fa-wallet"></i> <div><strong>FiyatlandÄ±rma:</strong> LME Spot BakÄ±r Tavan Kuru</div></div>
+                <div class="geo-fact-item"><i class="fas fa-scale-balanced"></i> <div><strong>Adresten AlÄ±m:</strong> Ä°stanbul ve Ã‡evre Ä°llerde 15 Dk</div></div>
+                <div class="geo-fact-item"><i class="fas fa-chart-line"></i> <div><strong>Ã–deme:</strong> AnÄ±nda Nakit / FAST Havale</div></div>
+            </div>
+        </section>
         
         <!-- Interactive Scrap Copper Calculator -->
         <section class="calc-box-pro">
@@ -210,13 +238,13 @@
                 <div>
                     <label style="display:block; color:#d1d5db; margin-bottom:8px; font-weight:600;">Bakır / Kablo Türü Seçin:</label>
                     <select id="calcBakirType" class="calc-form-control" onchange="calculateCopper()">
-                        <option value="560">Soyma Bakır Hurdası (%99.9 Parlak) - 560 TL/kg</option>
-                        <option value="540">Lama / Bara Bakır Hurdası (Trafo & Pano) - 540 TL/kg</option>
-                        <option value="490">Kırkambar Bakır Hurdası (Karışık/Lehimli) - 490 TL/kg</option>
-                        <option value="510">Çıkma Tesisat Bakır Boru - 510 TL/kg</option>
-                        <option value="480">Yanık Bakır Hurdası - 480 TL/kg</option>
-                        <option value="260">Hurda TTR & Antigron Kablo (Karışık) - 260 TL/kg</option>
-                        <option value="340">Tek Damar NYY Enerji Kablosu - 340 TL/kg</option>
+                        <option value="670">Soyma Bakır Hurdası (%99.9 Parlak) - 670 TL/kg</option>
+                        <option value="650">Lama / Bara Bakır Hurdası (Trafo & Pano) - 650 TL/kg</option>
+                        <option value="600">Kırkambar Bakır Hurdası (Karışık/Lehimli) - 600 TL/kg</option>
+                        <option value="610">Çıkma Tesisat Bakır Boru - 610 TL/kg</option>
+                        <option value="600">Yanık Bakır Hurdası - 600 TL/kg</option>
+                        <option value="330">Hurda TTR & Antigron Kablo (Karışık) - 330 TL/kg</option>
+                        <option value="450">Tek Damar NYY Enerji Kablosu - 450 TL/kg</option>
                     </select>
                 </div>
                 <div>
@@ -227,7 +255,7 @@
 
             <div class="calc-res-display">
                 <span style="color:#9ca3af; display:block; font-size:0.95rem;">Tahmini Toplam Nakit Değeri:</span>
-                <span class="calc-res-val" id="calcBakirTotal">28.000,00 TL</span>
+                <span class="calc-res-val" id="calcBakirTotal">33.500,00 TL</span>
                 <span style="display:block; color:#d1d5db; font-size:0.85rem; margin-top:6px;">*Mobil hassas kantarla yerinde tartılır, anında peşin ödenir.</span>
             </div>
 
@@ -263,43 +291,43 @@
                         <tr>
                             <td><strong>Soyma Bakır Hurdası</strong></td>
                             <td>%99.9 Elektrolitik Parlak Tel</td>
-                            <td class="price-num">550,00 - 580,00 TL</td>
-                            <td class="price-num" style="color:#34d399;">585,00 TL</td>
+                            <td class="price-num">660,00 - 670,00 TL</td>
+                            <td class="price-num" style="color:#34d399;">675,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check-circle"></i> 15 Dk. Adreste</span></td>
                         </tr>
                         <tr>
                             <td><strong>Lama Bakır Hurdası</strong></td>
                             <td>Trafo & Pano İletim Barası</td>
-                            <td class="price-num">530,00 - 560,00 TL</td>
-                            <td class="price-num" style="color:#34d399;">565,00 TL</td>
+                            <td class="price-num">640,00 - 650,00 TL</td>
+                            <td class="price-num" style="color:#34d399;">655,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check-circle"></i> 15 Dk. Adreste</span></td>
                         </tr>
                         <tr>
                             <td><strong>Kırkambar Bakır Hurdası</strong></td>
                             <td>Lehimli, Boru & Karışık</td>
-                            <td class="price-num">480,00 - 510,00 TL</td>
-                            <td class="price-num" style="color:#34d399;">520,00 TL</td>
+                            <td class="price-num">590,00 - 600,00 TL</td>
+                            <td class="price-num" style="color:#34d399;">605,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check-circle"></i> 15 Dk. Adreste</span></td>
                         </tr>
                         <tr>
                             <td><strong>Çıkma Bakır Boru (Tesisat)</strong></td>
                             <td>Temiz Kalorifer & Gaz Borusu</td>
-                            <td class="price-num">500,00 - 530,00 TL</td>
-                            <td class="price-num" style="color:#34d399;">535,00 TL</td>
+                            <td class="price-num">600,00 - 610,00 TL</td>
+                            <td class="price-num" style="color:#34d399;">615,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check-circle"></i> 15 Dk. Adreste</span></td>
                         </tr>
                         <tr>
                             <td><strong>Yanık Bakır Hurdası</strong></td>
                             <td>Ateşte Yakılmış Tel</td>
-                            <td class="price-num">470,00 - 495,00 TL</td>
-                            <td class="price-num" style="color:#34d399;">505,00 TL</td>
+                            <td class="price-num">590,00 - 600,00 TL</td>
+                            <td class="price-num" style="color:#34d399;">605,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check-circle"></i> 15 Dk. Adreste</span></td>
                         </tr>
                         <tr>
                             <td><strong>Hurda Kablo (Soyulmamış)</strong></td>
                             <td>TTR / Antigron (%40-%60 Bakır)</td>
-                            <td class="price-num">220,00 - 280,00 TL</td>
-                            <td class="price-num" style="color:#34d399;">295,00 TL</td>
+                            <td class="price-num">280,00 - 380,00 TL</td>
+                            <td class="price-num" style="color:#34d399;">390,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check-circle"></i> 15 Dk. Adreste</span></td>
                         </tr>
                     </tbody>
@@ -415,7 +443,7 @@
                     <i class="fas fa-chevron-down" style="color:#10b981;"></i>
                 </div>
                 <div class="faq-a-pro">
-                    2026 yılı itibarıyla güncel soyma bakır hurdasının kilogram fiyatı 550,00 TL ile 580,00 TL arasında değişmektedir. Fiyatlar günlük Londra Metal Borsası (LME) ve USD/TRY kuruna göre güncellenir. 500 kg üzeri tonajlarda ekstra prim verilir.
+                    2026 yılı itibarıyla güncel soyma bakır hurdasının kilogram fiyatı 660,00 TL ile 670,00 TL arasında değişmektedir. Fiyatlar günlük Londra Metal Borsası (LME) ve USD/TRY kuruna göre güncellenir. 500 kg üzeri tonajlarda ekstra prim verilir.
                 </div>
             </div>
 
