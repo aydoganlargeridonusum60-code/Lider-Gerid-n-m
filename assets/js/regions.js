@@ -5,7 +5,7 @@
 const REGIONS_DATA = {
     // MARMARA & EGE
     "istanbul": {
-        title: "İstanbul Hurda Alımı | 15 Dakikada Adresten Nakit Alım | Lider Hurda",
+        title: "İstanbul Hurda Alımı | Aradığınızda En Müsait Sürede Adresten Nakit Alım | Lider Hurda",
         h1: "İstanbul Hurda Alımı ve Geri Dönüşüm Terminali",
         meta: "İstanbul genelinde (Anadolu ve Avrupa yakası, 39 ilçe) en yüksek borsa fiyatlarıyla hurda alımı yapıyoruz. Kapınızdan nakit ödeme ile bakır, demir, sarı alıyoruz.",
         content: "İstanbul'un tüm ilçelerinde, sanayi sitelerinde ve kentsel dönüşüm alanlarında Lider Hurda güvencesiyle 7/24 hizmetinizdeyiz. Profesyonel araç filomuz ve hassas dijital tartımımızla en yüksek fiyattan adresten alım yapıyoruz.",
@@ -43,7 +43,7 @@ const REGIONS_DATA = {
         title: "Ümraniye Hurdacı | Dudullu OSB & DES Hurda Alımı",
         h1: "Ümraniye & Dudullu OSB Hurda Alım Terminali",
         meta: "Ümraniye, Dudullu OSB, İMES ve DES sanayi sitelerinde yerinde nakit ödemeli hurda bakır, kablo, alüminyum ve demir alımı.",
-        content: "Ümraniye genelinde kentsel dönüşüm ve sanayi hurdalarınızı 15 dakikada kapınızdan alıyoruz.",
+        content: "Ümraniye genelinde kentsel dönüşüm ve sanayi hurdalarınızı aradığınızda en müsait sürede kapınızdan alıyoruz.",
         whatsapp: "Merhaba, Ümraniye bölgesinden hurda satmak istiyorum."
     },
     "pendik": {
@@ -57,7 +57,7 @@ const REGIONS_DATA = {
         title: "Bağcılar Hurdacı | Oto Sanayi & Evsel Hurda Alımı",
         h1: "Bağcılar & İSTOÇ Bölgesi Hurda Alım Hizmeti",
         meta: "Bağcılar, İSTOÇ ve Yüzyıl bölgesinde bakır kablo, radyatör, sarı ve demir hurdası alımı. Adresten nakit ödeme.",
-        content: "Bağcılar ilçesinde mobil ekiplerimizle kapınızdan 15 dakikada nakit ödemeli hurda alımı yapıyoruz.",
+        content: "Bağcılar ilçesinde mobil ekiplerimizle kapınızdan en müsait sürede nakit ödemeli hurda alımı yapıyoruz.",
         whatsapp: "Merhaba, Bağcılar bölgesinden hurda satmak istiyorum."
     },
     "esenyurt": {
@@ -106,7 +106,7 @@ const REGIONS_DATA = {
         title: "Edirne Hurdacı | Yerinde Nakit Hurda Alım Merkezi",
         h1: "Edirne Geneli Hurda Bakır, Demir ve Kablo Alımı",
         meta: "Edirne merkez ve ilçelerinde evsel, tarımsal ve sanayi metal atıklarınızı yüksek fiyattan nakit ödemeyle alıyoruz.",
-        content: "Edirne ve Trakya genelinde kapınızdan 15 dakikada hurda alım hizmeti veriyoruz.",
+        content: "Edirne ve Trakya genelinde kapınızdan en müsait sürede hurda alım hizmeti veriyoruz.",
         whatsapp: "Merhaba, Edirne bölgesinden hurda satmak istiyorum."
     },
     "kirklareli": {
@@ -241,7 +241,7 @@ const REGIONS_DATA = {
         title: "Çankırı Hurdacı | OSB Metal Hurda Alımı",
         h1: "Çankırı Geneli Hurda Bakır ve Demir Alım Merkezi",
         meta: "Çankırı merkez ve Yakınkent OSB'de lastik/metal sanayi atıkları, ağır demir ve bakır hurdası alımı.",
-        content: "Çankırı genelinde adresten 15 dakikada nakit ödemeli hurda alımı gerçekleştiriyoruz.",
+        content: "Çankırı genelinde adresten en müsait sürede nakit ödemeli hurda alımı gerçekleştiriyoruz.",
         whatsapp: "Merhaba, Çankırı bölgesinden hurda satışı için ulaşıyorum."
     },
     "kirsehir": {
@@ -311,7 +311,7 @@ const REGIONS_DATA = {
         title: "Isparta Hurdacı | Sanayi Hurda Alım Merkezi",
         h1: "Isparta Geneli Hurda Bakır, Alüminyum ve Demir",
         meta: "Isparta merkez ve Süleyman Demirel OSB alanında alüminyum profil, bakır kablo ve demir hurdası alımı.",
-        content: "Isparta ilinde kapınızdan 15 dakikada nakit ödemeli profesyonel hurda alım hizmeti sunuyoruz.",
+        content: "Isparta ilinde kapınızdan en müsait sürede nakit ödemeli profesyonel hurda alım hizmeti sunuyoruz.",
         whatsapp: "Merhaba, Isparta bölgesinden hurda satmak istiyorum."
     },
     "burdur": {
@@ -425,7 +425,7 @@ const REGIONS_DATA = {
         title: "Siirt Hurdacı | OSB Sanayi Hurda Alımı",
         h1: "Siirt Geneli Hurda Bakır, Alüminyum ve Demir",
         meta: "Siirt merkez ve OSB bölgesinde bakır, kablo, alüminyum profil ve inşaat demiri alımı. Nakit ödeme.",
-        content: "Siirt genelinde kapınızdan 15 dakikada güvenilir hurda alım hizmeti veriyoruz.",
+        content: "Siirt genelinde kapınızdan en müsait sürede güvenilir hurda alım hizmeti veriyoruz.",
         whatsapp: "Merhaba, Siirt bölgesinden hurda teklifi almak istiyorum."
     },
     "sirnak": {
