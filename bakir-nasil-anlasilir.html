@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="https://www.liderhurda.com/favicon-192.png">
     <link rel="icon" type="image/svg+xml" href="https://www.liderhurda.com/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.liderhurda.com/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.09">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -32,7 +32,7 @@
           "name": "Mıknatıs bakırı tutar mı?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hayır. Saf bakır manyetik olmayan (non-ferrous) bir metaldir. Mıknatıs bakıra kesinlikle yapışmaz. Eğer mıknatıs metali çekiyorsa o metal bakır değil, bakır kaplamalı demir veya çeliktir."
+            "text": "Hayır. Saf bakır manyetik olmayan (diamanyetik) bir metaldir. Güçlü bir neodimyum mıknatıs bile saf bakıra yapışmaz. Eğer mıknatıs metali çekiyorsa materyal bakır değil, bakır kaplı demir veya çeliktir."
           }
         },
         {
@@ -40,7 +40,7 @@
           "name": "Bakır ile sarı (pirinç) nasıl ayırt edilir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bakır kızıl-turuncu ve somon rengindedir; pirinç (sarı) ise altın sarısı renktedir. Ayrıca bakır daha yumuşak ve eğilip bükülebilirken pirinç daha sert ve kırılgandır."
+            "text": "Bakır parlak kızıl-somon renktedir, özgül kütlesi 8.96 g/cm³'tür ve yumuşaktır. Pirinç (sarı) ise bakır-çinko alaşımıdır, altın sarısı renktedir, daha serttir ve vurulduğunda daha tiz çan sesi verir."
           }
         },
         {
@@ -48,7 +48,31 @@
           "name": "Bakır kaplı alüminyum (CCA) kablo nasıl anlaşılır?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Telin kesit ucuna bıçakla çentik attığınızda veya kazıdığınızda içi gümüş-beyaz renk çıkıyorsa o tel CCA (Bakır Kaplı Alüminyum) teldir. Saf bakır telin içi de dışı gibi parlak kızıldır."
+            "text": "Telin kesit ucunu kestiğinizde veya yüzeyini kazıdığınızda merkezde gümüşi beyaz renk görünüyorsa metal CCA (Copper Clad Aluminum)'dur. Saf bakırın içi de dışı gibi tamamen kızıldır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bakır taşlama motorunda kıvılcım çıkarır mı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. Saf bakır taşlama veya spiral taşına tutulduğunda kesinlikle kıvılcım çıkarmaz. Kıvılcım saçılıyorsa o malzeme demir veya çeliktir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gerçek bakırın yoğunluğu (özgül kütlesi) kaçtır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Saf elektrolitik bakırın yoğunluğu 8.96 g/cm³'tür. Alüminyumun (2.70 g/cm³) 3.3 katı, demirin (7.87 g/cm³) ise belirgin şekilde üzerindedir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "XRF spektrometre ile bakır saflığı nasıl ölçülür?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lider Hurda eksperlerinin kullandığı portatif XRF spektrometre cihazı X-ışını floresans teknolojisiyle metalin atomik tablosunu tarar; 3 saniye içinde %99.90+ Cu saflığını ve varsa çinko, kalay veya kurşun oranlarını ekrana yansıtır."
           }
         }
       ]
@@ -142,110 +166,274 @@
             <!-- Test 1 -->
             <div class="test-card">
                 <div class="test-icon"><i class="fas fa-magnet"></i></div>
-                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">1. Mıknatıs Testi (Manyetik Olmama Kuralı)</h2>
+                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">1. Neodimyum Mıknatıs Testi (Manyetik Olmama ve Eddy Akımı Etkisi)</h2>
                 <p style="color:#d1d5db; line-height:1.8;">
-                    Saf bakır, manyetik özellik taşımayan (non-ferrous) bir elementtir. Elinize güçlü bir neodyum veya normal buzdolabı mıknatısı alıp metale yaklaştırın:
+                    Saf bakır, manyetik özellik taşımayan (diamanyetik) bir metaldir. Güçlü bir neodimyum veya buzdolabı mıknatısını metale yaklaştırarak test edin:
                 </p>
                 <ul style="color:#d1d5db; padding-left:25px; margin-top:10px; line-height:1.8;">
-                    <li><strong>Mıknatıs metali çekmiyorsa:</strong> Metaliniz muhtemelen saf bakır, alüminyum veya pirinçtir.</li>
-                    <li><strong>Mıknatıs metale yapışıyorsa:</strong> O materyal kesinlikle saf bakır değildir; üzeri bakır boyanmış veya kaplanmış demir/çeliktir.</li>
+                    <li><strong>Mıknatıs metale yapışıyorsa:</strong> O materyal kesinlikle bakır değildir; üzeri bakır boyanmış veya bakır kaplanmış demir/çeliktir.</li>
+                    <li><strong>Mıknatıs metale yapışmıyor ama yüzeyden kayarken hafif bir frenleme (direnç) hissettiriyorsa:</strong> Bu durum Lenz Kanunu gereği bakırın içinde indüklenen "Eddy Akımları" nedeniyledir ve malzemenin yüksek saflıkta saf iletken bakır olduğunu kanıtlar.</li>
                 </ul>
             </div>
 
             <!-- Test 2 -->
             <div class="test-card">
                 <div class="test-icon"><i class="fas fa-palette"></i></div>
-                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">2. Kazıma ve Renk Testi (Kızıl vs. Altın Sarısı)</h2>
+                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">2. Kesit Kazıma ve Renk Testi (Kızıl-Somon vs. Sarı Pirinç & CCA)</h2>
                 <p style="color:#d1d5db; line-height:1.8;">
-                    Bakır havayla temas ettiğinde oksitlenerek kahverengi, mat veya yeşilimsi bir patina tabakası oluşturabilir. Metalin görünmeyen bir noktasını zımpara, eğe veya çakı ile kazıyın:
+                    Bakır havayla temas ettiğinde oksitlenerek kahverengi veya koyu mat bir patina tabakası oluşturabilir. Metalin görünmeyen bir noktasını çakı, zımpara veya eğe ile derinlemesine kazıyın:
                 </p>
                 <ul style="color:#d1d5db; padding-left:25px; margin-top:10px; line-height:1.8;">
-                    <li><strong>Parlak Kızıl / Somon Rengi:</strong> Gerçek ve saf bakırdır (<a href="soyma-bakir.html" style="color:#10b981;">Soyma Bakır</a> veya <a href="lama-bakir.html" style="color:#10b981;">Lama Bakır</a>).</li>
-                    <li><strong>Altın Sarısı / Limon Sarısı:</strong> Bakır değil, bakır-çinko alaşımı olan Sarı (Pirinç) hurdadır.</li>
-                    <li><strong>Gümüşi Beyaz:</strong> Bakır kaplamalı alüminyumdur (CCA).</li>
+                    <li><strong>Parlak Somon / Kızıl-Turuncu Renk:</strong> %99.9 saflıkta gerçek bakırdır (<a href="soyma-bakir.html" style="color:#10b981;">Soyma Bakır</a> veya <a href="lama-bakir.html" style="color:#10b981;">Lama Bakır</a>).</li>
+                    <li><strong>Altın Sarısı / Limon Sarısı Renk:</strong> Bakır değil, bakır-çinko alaşımı olan Sarı (Pirinç) hurdadır.</li>
+                    <li><strong>Merkezde Gümüşi Beyaz Çekirdek:</strong> Bakır kaplamalı alüminyumdur (CCA - Copper Clad Aluminum). Kablonun dışı bakır kaplama olsa da içi alüminyumdur ve hurda değeri bakırın üçte biridir.</li>
                 </ul>
             </div>
 
             <!-- Test 3 -->
             <div class="test-card">
-                <div class="test-icon"><i class="fas fa-weight-hanging"></i></div>
-                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">3. Özgül Ağırlık ve Yoğunluk Kontrolü</h2>
+                <div class="test-icon"><i class="fas fa-fire-alt"></i></div>
+                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">3. Taşlama Kıvılcım Testi (Kıvılcımsızlık Kuralı)</h2>
                 <p style="color:#d1d5db; line-height:1.8;">
-                    Bakır oldukça ağır ve yoğun bir metaldir. Özgül kütlesi <strong>8.96 g/cm³</strong>'tür. Bu oran alüminyumun (2.70 g/cm³) 3 katından fazladır. Elinize aldığınızda hacmine göre belirgin bir ağırlık ve tokluk hissettirmelidir.
+                    Atölyenizde bir spiral veya taşlama taşı varsa metali hafifçe taşa değdirin:
                 </p>
+                <ul style="color:#d1d5db; padding-left:25px; margin-top:10px; line-height:1.8;">
+                    <li><strong>Sıfır Kıvılcım (Kıvılcım Çıkmıyorsa):</strong> Bakır, pirinç ve alüminyum gibi demir dışı metaller taşlandığında kesinlikle kıvılcım çıkarmaz.</li>
+                    <li><strong>Sarı/Kırmızı Kıvılcım Saçılıyorsa:</strong> Malzemenin içinde demir veya karbon çeliği vardır; bakır değildir.</li>
+                </ul>
             </div>
 
             <!-- Test 4 -->
             <div class="test-card">
-                <div class="test-icon"><i class="fas fa-gem"></i></div>
-                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">4. Profesyonel XRF Spektrometre Analizi</h2>
+                <div class="test-icon"><i class="fas fa-weight-hanging"></i></div>
+                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">4. Arşimet Prensibi ile Özgül Ağırlık / Yoğunluk Testi (8.96 g/cm³)</h2>
                 <p style="color:#d1d5db; line-height:1.8;">
-                    Tonajlı alımlarda Lider Hurda uzmanları mobil XRF spektrometre cihazı ile metalin atomik element analizini 3 saniyede yapar. Ekranda %99.99 Cu saflık oranı tespit edilir ve raporlanır.
+                    Bakır oldukça ağır ve yoğun bir metaldir. Özgül kütlesi <strong>8.96 g/cm³</strong>'tür:
                 </p>
+                <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 12px 18px; border-radius: 6px; margin: 12px 0; color: #e5e7eb; font-size: 0.95rem;">
+                    <strong>Pratik Yoğunluk Formülü:</strong> Yoğunluk = Kuru Ağırlık (gram) / Suya Batırıldığında Taşan Hacim (cm³)<br>
+                    Hesaplanan değer 8.85 - 8.96 g/cm³ arasındaysa materyal kesinlikle saf elektrolitik bakırdır. Alüminyumun yoğunluğu 2.70 g/cm³, demirinki ise 7.87 g/cm³'tür.
+                </div>
+            </div>
+
+            <!-- Test 5 -->
+            <div class="test-card">
+                <div class="test-icon"><i class="fas fa-music"></i></div>
+                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">5. Akustik Ses & Çınlama Testi (Tok Ses vs. Tiz Rezonans)</h2>
+                <p style="color:#d1d5db; line-height:1.8;">
+                    Metale sert bir tahta veya plastik tokmakla hafifçe vurduğunuzda çıkan ses alaşım hakkında bilgi verir:
+                </p>
+                <ul style="color:#d1d5db; padding-left:25px; margin-top:10px; line-height:1.8;">
+                    <li><strong>Tok, Boğuk ve Kısa Ses:</strong> Saf bakır yumuşak ve esnek yapısı nedeniyle sesi sönümler; tok ve derin bir ses çıkarır.</li>
+                    <li><strong>Tiz, Parlak ve Çan Gibi Uzun Çınlama:</strong> Çinko içeren pirinç (sarı) veya kalay içeren bronz sert olduğu için tiz ve uzun bir çınlama sesi verir.</li>
+                </ul>
+            </div>
+
+            <!-- Test 6 -->
+            <div class="test-card">
+                <div class="test-icon"><i class="fas fa-atom"></i></div>
+                <h2 style="color:#10b981; font-size:1.4rem; margin-bottom:12px;">6. Profesyonel XRF Spektrometre Elementel Analizi</h2>
+                <p style="color:#d1d5db; line-height:1.8;">
+                    Gözle ayırt edilemeyen ince alaşımlarda ve yüksek tonajlı sanayi alımlarında Lider Hurda uzmanları mobil XRF spektrometre cihazı ile metalin atomik analizini 3 saniyede yapar. Ekranda <strong>%99.90+ Cu</strong> saflığı ve varsa kurşun, kalay, çinko yüzdeleri net olarak raporlanır.
+                </p>
+            </div>
+        </section>
+
+        <!-- Metallurgical Comparison Matrix Table -->
+        <section style="background: #111827; border: 1px solid #10b981; border-radius: 16px; padding: 30px; margin: 40px 0;">
+            <h3 style="color:#10b981; font-size:1.4rem; margin-bottom:15px; display:flex; align-items:center; gap:10px;">
+                <i class="fas fa-table"></i> Metallerin Karşılaştırmalı Fiziksel & Kimyasal Analiz Matrisi
+            </h3>
+            <p style="color:#d1d5db; font-size:0.95rem; line-height:1.7;">
+                Hurda sektöründe birbiriyle en çok karıştırılan 6 temel metalin ayırt edici özellikleri:
+            </p>
+
+            <div style="overflow-x: auto; margin-top: 15px;">
+                <table class="copper-table" style="font-size:0.92rem;">
+                    <thead>
+                        <tr>
+                            <th>Metal / Alaşım Türü</th>
+                            <th>Renk & Kesit Görünümü</th>
+                            <th>Mıknatıs Tepkisi</th>
+                            <th>Özgül Kütle (Yoğunluk)</th>
+                            <th>Kıvılcım Durumu</th>
+                            <th>2026 Değer Seviyesi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Saf Bakır (Cu-ETP)</strong></td>
+                            <td>Parlak Kızıl / Somon</td>
+                            <td>Çekmez (Diamanyetik)</td>
+                            <td>8.96 g/cm³ (Çok Ağır)</td>
+                            <td>Kıvılcım Yok</td>
+                            <td><span style="color:#10b981; font-weight:700;">660 - 670 TL/kg (En Yüksek)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sarı Pirinç (MS-58)</strong></td>
+                            <td>Altın Sarısı / Limon</td>
+                            <td>Çekmez</td>
+                            <td>8.45 g/cm³ (Ağır)</td>
+                            <td>Kıvılcım Yok</td>
+                            <td><span style="color:#34d399; font-weight:700;">410 - 450 TL/kg</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kızıl Bronz (CuSn)</strong></td>
+                            <td>Kahverengimsi Kızıl</td>
+                            <td>Çekmez</td>
+                            <td>8.75 g/cm³ (Ağır)</td>
+                            <td>Kıvılcım Yok</td>
+                            <td><span style="color:#34d399; font-weight:700;">480 - 540 TL/kg</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bakır Kaplı Alüminyum (CCA)</strong></td>
+                            <td>Dışı Kızıl / İçi Beyaz</td>
+                            <td>Çekmez</td>
+                            <td>3.60 g/cm³ (Hafif)</td>
+                            <td>Kıvılcım Yok</td>
+                            <td><span style="color:#f59e0b; font-weight:700;">140 - 180 TL/kg</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Saf Alüminyum</strong></td>
+                            <td>Gümüşi Mat Beyaz</td>
+                            <td>Çekmez</td>
+                            <td>2.70 g/cm³ (Çok Hafif)</td>
+                            <td>Kıvılcım Yok</td>
+                            <td><span style="color:#94a3b8; font-weight:700;">90 - 130 TL/kg</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>304 Paslanmaz Çelik</strong></td>
+                            <td>Parlak Krom / Çelik Rengi</td>
+                            <td>Hafif çekebilir / Çekmez</td>
+                            <td>7.90 g/cm³</td>
+                            <td>Kırmızı/Turuncu Kıvılcım</td>
+                            <td><span style="color:#94a3b8; font-weight:700;">65 - 85 TL/kg</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <!-- CTA Box -->
         <div style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.12), rgba(17, 24, 39, 0.95)); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 20px; padding: 35px; text-align: center; margin: 40px 0;">
-            <h3  style="font-size:1.6rem; margin-bottom:10px;">Emin Olamadınız mı? Bize Fotoğrafını Gönderin!</h3>
+            <h3 style="font-size:1.6rem; margin-bottom:10px; color:#fff;">Metalinizden Emin Olamadınız mı? Bize Fotoğrafını Gönderin!</h3>
             <p style="color:#d1d5db; max-width:700px; margin:0 auto 20px auto;">
-                Metalinizin fotoğrafını WhatsApp üzerinden iletin; uzman eksperlerimiz en kısa sürede metalin cinsini ve güncel nakit değerini ücretsiz analiz etsin.
+                Metalinizin fotoğrafını veya kısa videosunu WhatsApp üzerinden iletin; uzman eksperlerimiz en kısa sürede metalin tam cinsini ve güncel nakit değerini ücretsiz analiz etsin.
             </p>
-            <a href="https://wa.me/905364863466?text=Merhaba,%20elimdeki%20metalin%20fotografini%20gonderiyorum.%20Bakir%20mi%20analiz%20edebilir%20misiniz?" target="_blank" rel="noopener" class="btn-wa-hero" style="background:#25d366; color:#fff; padding:15px 30px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-flex; align-items:center; gap:10px;">
-                <i class="fab fa-whatsapp"></i> WhatsApp'tan ücretsiz Analiz İste
-            </a>
+            <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+                <a href="https://wa.me/905364863466?text=Merhaba,%20elimdeki%20metalin%20fotografini%20gonderiyorum.%20Bakir%20mi%20analiz%20edebilir%20misiniz?" target="_blank" rel="noopener" class="btn-wa-hero" style="background:#25d366; color:#fff; padding:15px 30px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-flex; align-items:center; gap:10px;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp'tan Ücretsiz Analiz İste
+                </a>
+                <a href="tel:+905364863466" class="btn-call-hero" style="background:#10b981; color:#0b0f19; padding:15px 30px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-flex; align-items:center; gap:10px;">
+                    <i class="fas fa-phone-alt"></i> 0536 486 34 66
+                </a>
+            </div>
         </div>
 
         <!-- Silo Interlinking Matrix -->
         <section style="margin: 60px 0;">
             <div style="text-align:center; margin-bottom: 30px;">
-                <h2  style="font-size:1.8rem;">Bakır Çeşitleri ve Fiyat Sayfalarımız</h2>
+                <span style="color:#10b981; font-weight:700; text-transform:uppercase; font-size:0.9rem;">Bakır Rehber Havuzu</span>
+                <h2 style="font-size:1.8rem; margin-top:5px; color:#fff;">Bakır Çeşitleri ve Fiyat Sayfalarımız</h2>
             </div>
             <div class="silo-grid-modern">
                 <a href="soyma-bakir.html" class="silo-card-link">
-                    <strong>Soyma Bakır Fiyatları 2026</strong>
+                    <strong><i class="fas fa-bolt" style="color:#10b981;"></i> Soyma Bakır Fiyatları 2026</strong>
                     <span>%99.9 parlak soyma bakır borsa fiyatı ve alımı.</span>
                 </a>
                 <a href="lama-bakir.html" class="silo-card-link">
-                    <strong>Lama & Bara Bakır Hurdası</strong>
+                    <strong><i class="fas fa-layer-group" style="color:#10b981;"></i> Lama & Bara Bakır Hurdası</strong>
                     <span>Pano ve trafo bakırlarında en yüksek nakit teklif.</span>
                 </a>
                 <a href="kirkambar-bakir.html" class="silo-card-link">
-                    <strong>Kırkambar Bakır Hurdası</strong>
+                    <strong><i class="fas fa-boxes" style="color:#10b981;"></i> Kırkambar Bakır Hurdası</strong>
                     <span>Karışık, lehimli boru ve radyatör alımı.</span>
                 </a>
                 <a href="kablo-hurdasi.html" class="silo-card-link">
-                    <strong>Hurda Kablo Alımı</strong>
+                    <strong><i class="fas fa-network-wired" style="color:#10b981;"></i> Hurda Kablo Alımı</strong>
                     <span>Soyulmamış kablolarda yüksek bakır verimi.</span>
                 </a>
                 <a href="bakir-hurda-fiyatlari-bugun.html" class="silo-card-link">
-                    <strong>Güncel Bakır Fiyatları</strong>
-                    <span>Bugünkü canlı LME borsa listesi.</span>
+                    <strong><i class="fas fa-chart-line" style="color:#10b981;"></i> Güncel Bakır Fiyatları</strong>
+                    <span>Bugünkü canlı LME borsa listesi ve kurlar.</span>
                 </a>
                 <a href="bakir-satis-rehberi.html" class="silo-card-link">
-                    <strong>Bakır Satış Rehberi</strong>
-                    <span>Kantar ve satış tüyoları.</span>
+                    <strong><i class="fas fa-balance-scale" style="color:#10b981;"></i> Bakır Satış Rehberi</strong>
+                    <span>Kantar hilelerinden korunma ve 8 altın kural.</span>
+                </a>
+                <a href="motor-bakir-verimi.html" class="silo-card-link">
+                    <strong><i class="fas fa-cogs" style="color:#10b981;"></i> Motor Bakır Verimi</strong>
+                    <span>Elektrik motoru sargı bakır randımanı hesaplayıcı.</span>
+                </a>
+                <a href="bakir-fiyat-analizi.html" class="silo-card-link">
+                    <strong><i class="fas fa-coins" style="color:#10b981;"></i> Bakır Fiyat Analizi</strong>
+                    <span>Borsa ve döviz kurlarının bakır fiyatına etkisi.</span>
                 </a>
             </div>
         </section>
 
         <!-- FAQ Section -->
         <section style="margin: 60px 0;">
-            <h2  style="font-size:1.8rem; margin-bottom:25px; text-align:center;">Sıkça Sorulan Sorular</h2>
+            <h2 style="font-size:1.8rem; margin-bottom:25px; text-align:center; color:#fff;">Bakır Tanıma Sıkça Sorulan Sorular</h2>
             
             <div class="faq-item-pro">
-                <div class="faq-q-pro">1. Mıknatıs bakırı çeker mi?</div>
-                <div class="faq-a-pro">Hayır, mıknatıs saf bakırı çekmez. Çekiyorsa demir veya çelik alaşımlıdır.</div>
+                <div class="faq-q-pro">
+                    <span>1. Mıknatıs bakırı tutar mı?</span>
+                    <i class="fas fa-chevron-down" style="color:#10b981;"></i>
+                </div>
+                <div class="faq-a-pro">
+                    Hayır. Saf bakır manyetik olmayan (diamanyetik) bir metaldir. Güçlü bir neodimyum mıknatıs bile saf bakıra yapışmaz. Eğer mıknatıs metali çekiyorsa materyal bakır değil, bakır kaplı demir veya çeliktir.
+                </div>
             </div>
 
             <div class="faq-item-pro">
-                <div class="faq-q-pro">2. Bakır ile sarı pirinç arasındaki fark nedir?</div>
-                <div class="faq-a-pro">Bakır kızıl-turuncu renktedir ve daha yumuşaktır. Pirinç ise altın sarısı renktedir, bakır ile çinko karışımıdır ve fiyatı bakırdan biraz daha düşüktür.</div>
+                <div class="faq-q-pro">
+                    <span>2. Bakır ile sarı (pirinç) nasıl ayırt edilir?</span>
+                    <i class="fas fa-chevron-down" style="color:#10b981;"></i>
+                </div>
+                <div class="faq-a-pro">
+                    Bakır parlak kızıl-somon renktedir, özgül kütlesi 8.96 g/cm³'tür ve yumuşaktır. Pirinç (sarı) ise bakır-çinko alaşımıdır, altın sarısı renktedir, daha serttir ve vurulduğunda daha tiz çan sesi verir.
+                </div>
             </div>
 
             <div class="faq-item-pro">
-                <div class="faq-q-pro">3. CCA (Bakır Kaplı Alüminyum) kablo nasıl anlaşılır?</div>
-                <div class="faq-a-pro">Kablo telini kestiğinizde ortasında beyaz alüminyum çekirdek görünür. Saf bakır telin içi ve dışı aynı kızıl renktedir.</div>
+                <div class="faq-q-pro">
+                    <span>3. Bakır kaplı alüminyum (CCA) kablo nasıl anlaşılır?</span>
+                    <i class="fas fa-chevron-down" style="color:#10b981;"></i>
+                </div>
+                <div class="faq-a-pro">
+                    Telin kesit ucunu kestiğinizde veya yüzeyini kazıdığınızda merkezde gümüşi beyaz renk görünüyorsa metal CCA (Copper Clad Aluminum)'dur. Saf bakırın içi de dışı gibi tamamen kızıldır.
+                </div>
+            </div>
+
+            <div class="faq-item-pro">
+                <div class="faq-q-pro">
+                    <span>4. Bakır taşlama motorunda kıvılcım çıkarır mı?</span>
+                    <i class="fas fa-chevron-down" style="color:#10b981;"></i>
+                </div>
+                <div class="faq-a-pro">
+                    Hayır. Saf bakır taşlama veya spiral taşına tutulduğunda kesinlikle kıvılcım çıkarmaz. Kıvılcım saçılıyorsa o malzeme demir veya çeliktir.
+                </div>
+            </div>
+
+            <div class="faq-item-pro">
+                <div class="faq-q-pro">
+                    <span>5. Gerçek bakırın yoğunluğu (özgül kütlesi) kaçtır?</span>
+                    <i class="fas fa-chevron-down" style="color:#10b981;"></i>
+                </div>
+                <div class="faq-a-pro">
+                    Saf elektrolitik bakırın yoğunluğu 8.96 g/cm³'tür. Alüminyumun (2.70 g/cm³) 3.3 katı, demirin (7.87 g/cm³) ise belirgin şekilde üzerindedir.
+                </div>
+            </div>
+
+            <div class="faq-item-pro">
+                <div class="faq-q-pro">
+                    <span>6. XRF spektrometre ile bakır saflığı nasıl ölçülür?</span>
+                    <i class="fas fa-chevron-down" style="color:#10b981;"></i>
+                </div>
+                <div class="faq-a-pro">
+                    Lider Hurda eksperlerinin kullandığı portatif XRF spektrometre cihazı X-ışını floresans teknolojisiyle metalin atomik tablosunu tarar; 3 saniye içinde %99.90+ Cu saflığını ve varsa çinko, kalay veya kurşun oranlarını ekrana yansıtır.
+                </div>
             </div>
         </section>
 
@@ -778,12 +966,12 @@
                         <i class="fas fa-map-marked-alt" style="color: var(--green-600);"></i> Hizmet Bölgelerimiz & İlçeler
                     </h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0;">                        <li>
-                            <a href="iİstanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Merkezi</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">İstanbul'un 39 ilçesinde 7/24 adresten hurda alım hizmeti.</small></span>
                             </a>
                         </li>                        <li>
-                            <a href="iİstanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Rehberi 2026</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">Avrupa ve Anadolu yakası hurda lojistik ve fiyat rehberi.</small></span>
                             </a>
@@ -980,6 +1168,6 @@
         <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Teklif</a>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.09"></script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+# Lider Hurda Geri Dönüşüm - LLM & AI Context File (llms.txt)
+> Türkiye'nin lider ve lisanslı hurda alım, fabrika söküm ve geri dönüşüm merkezi.
+
+## Firma Özeti
+- **Firma Adı:** Lider Hurda Geri Dönüşüm A.Ş.
+- **Web Sitesi:** https://www.liderhurda.com
+- **Hizmet Kapsamı:** Tüm Türkiye (81 İl), İstanbul (39 İlçe), Kocaeli, Gebze ve Trakya genelinde yerinde hurda alımı.
+- **İletişim Telefonu & WhatsApp:** +90 536 486 34 66
+- **Çalışma Saatleri:** 7/24 Kesintisiz Hizmet (Haftanın 7 günü)
+- **Ödeme Yöntemi:** Yerinde Tartım Sonrası Anında Nakit veya Anında Banka Havalesi / EFT / FAST.
+- **Hizmet Hızı:** İstanbul içi çağrı sonrası adrese aradığınızda en müsait sürede mobil ekip yönlendirmesi.
+
+## Temel Uzmanlık ve Alım Yapılan Hurda Türleri
+1. **Hurda Bakır:** Soyma bakır, lama bakır, kırkambar bakır, bakır boru, yanık bakır, trafo bakır sargısı, bakır talaşı.
+2. **Hurda Demir & Çelik:** DKP sac demir, ekstra demir, inşaat demiri, döküm demir, 1. grup ve 2. grup ağır demir hurdası.
+3. **Hurda Kablo:** TTR kablo, antigron kablo, yeraltı enerji kablosu, karışık kablo, marin kablo (Kablo kırma tesisi ile yüksek verim garantisi).
+4. **Hurda Alüminyum:** Profil alüminyum, sert alüminyum, jant alüminyum, tel alüminyum, alüminyum kutu, talaş.
+5. **Hurda Sarı (Pirinç):** Çubuk sarı talaşı, su saati hurdası, radyatör, sarı musluk ve vana hurdaları.
+6. **Hurda Paslanmaz (Krom):** 304, 316, 430 kalite paslanmaz sac ve boru hurdaları (XRF Spektrometre analiziyle).
+7. **Hurda Akü & Kurşun:** Kuru ve sulu aküler, levha kurşun, çatı kurşunu.
+8. **Elektronik Atık & Motor:** Elektrik motorları, trafolar, jeneratörler, endüstriyel elektronik kartlar.
+
+## Kurumsal ve Endüstriyel Hizmetler
+- **Bina Yıkımı & Fabrika Sökümü:** Hurda karşılığı bina yıkımı, çelik konstrüksiyon sökümü, sanayi kazanı ve tesis tasfiyesi.
+- **Şantiye Atık Yönetimi:** Şantiye ve organize sanayi bölgelerine (OSB) ücretsiz konteyner temini ve periyodik hurda alımı.
+- **Yasal Uyumluluk:** Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Lisanslı, MoTAT (Mobil Atık Takip Sistemi) onaylı atık taşımacılığı.
+
+## Fiyatlandırma Politikası
+Hurda fiyatları günlük **LME (Londra Metal Borsası)** ve serbest piyasa metal endekslerine göre anlık olarak belirlenir. Şeffaf mobil kantar ile müşterinin gözü önünde hassas tartım yapılır ve anında tavan fiyattan peşin ödenir.
+
+## Hızlı Bağlantılar
+- [Güncel Fiyat Listesi](https://www.liderhurda.com/fiyat-listesi.html)
+- [Hurda Bakır Fiyatları & Alımı](https://www.liderhurda.com/hurda-bakir.html)
+- [Hurda Demir Fiyatları & Alımı](https://www.liderhurda.com/hurda-demir.html)
+- [Hurda Kablo Alımı](https://www.liderhurda.com/kablo-hurdasi.html)
+- [İstanbul Hurdacı Rehberi](https://www.liderhurda.com/istanbul-hurdaci.html)
+- [Fabrika Söküm Hizmetleri](https://www.liderhurda.com/fabrika-sokumu.html)

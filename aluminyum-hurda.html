@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="https://www.liderhurda.com/favicon-192.png">
     <link rel="icon" type="image/svg+xml" href="https://www.liderhurda.com/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.liderhurda.com/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.09">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -44,6 +44,19 @@
           }
         }
       ]
+    }
+    </script>
+
+    <!-- Speakable & GEO AI Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Lider Hurda Geri Dönüşüm",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".geo-direct-answer p", ".geo-direct-title"]
+      }
     }
     </script>
 </head>
@@ -73,6 +86,21 @@
         
 
     <main>
+        <!-- GEO & AI Direct Answer Card (LLM Knowledge Graph & Search Snippet) -->
+        <section class="geo-direct-answer" data-geo="direct-answer" style="margin-top: 25px;">
+            <div class="geo-direct-answer-header">
+                <span class="geo-badge"><i class="fas fa-brain"></i> Yapay Zeka & Hızlı Bilgi Özeti</span>
+                <span style="font-size: 0.85rem; color: #166534; font-weight: 600;"><i class="fas fa-check-circle"></i> Doğrulanmış Kurumsal Bilgi</span>
+            </div>
+            <h2 class="geo-direct-title"><i class="fas fa-bolt" style="color: #16a34a;"></i> Hurda Alüminyum Alımı ve Güncel Fiyat Özeti</h2>
+            <p><strong>Lider Hurda (0536 486 34 66)</strong>, profil alüminyum, jant, sert alüminyum, tel ve talaş hurdalarını değerinde yerinde nakit almaktadır. Boyalı veya boyasız tüm alüminyum fireleri hassas tartımla anında nakde çevrilir.</p>
+            <div class="geo-facts-grid">
+                <div class="geo-fact-item"><i class="fas fa-check-circle"></i> <div><strong>Alüminyum Türleri:</strong> Profil, Jant, Sert, Tel, Meşrubat Kutusu</div></div>
+                <div class="geo-fact-item"><i class="fas fa-wallet"></i> <div><strong>Ödeme:</strong> Tartım Anında Peşin Nakit</div></div>
+                <div class="geo-fact-item"><i class="fas fa-scale-balanced"></i> <div><strong>Araç Hizmeti:</strong> Kendi Araçlarımızla Ücretsiz Nakliye</div></div>
+                <div class="geo-fact-item"><i class="fas fa-chart-line"></i> <div><strong>Fiyat Politikası:</strong> Günlük Alüminyum Borsa Endeksi</div></div>
+            </div>
+        </section>
         <section class="analysis-hero" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=1200'); background-size: cover;">
             <div class="container">
                 <span class="card-tag">HAFİF METAL METALLURJİSİ</span>
@@ -83,7 +111,7 @@
 
         <section class="container" style="padding: 100px 20px;">
             <div class="analysis-grid" style="display: grid; grid-template-columns: 1fr; gap: 40px;">
-                <article class="analysis-card" style="line-height: 2; font-size: 1.1rem; color: #ccc;">
+                <article class="analysis-card">
                     <h2 style="color: var(--neon-green);">Alüminyum: Geri Dönüşümün Yıldız Metali</h2>
                     <p>Alüminyum, yeryüzünde en bol bulunan metallerden biri olmasına rağmen, sıfırdan madenden üretilmesi oldukça pahalı ve yüksek enerji tüketen bir süreçtir. Bu nedenle alüminyum hurdası, geri dönüşüm sanayisinin en karlı hammaddelerinden biri olarak kabul edilir. Lider Hurda olarak biz, alüminyumun sonsuz kez geri dönüştürülebilir olma özelliğini Türkiye ekonomisine yüksek katma değer olarak sunuyoruz. Alüminyumun geri dönüştürülmesi, birincil üretiminden %95 daha az enerji harcar, bu da onu "Yeşil Dönüşümün" kalbi yapar.</p>
 
@@ -654,12 +682,12 @@
                         <i class="fas fa-map-marked-alt" style="color: var(--green-600);"></i> Hizmet Bölgelerimiz & İlçeler
                     </h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0;">                        <li>
-                            <a href="iİstanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Merkezi</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">İstanbul'un 39 ilçesinde 7/24 adresten hurda alım hizmeti.</small></span>
                             </a>
                         </li>                        <li>
-                            <a href="iİstanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Rehberi 2026</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">Avrupa ve Anadolu yakası hurda lojistik ve fiyat rehberi.</small></span>
                             </a>
@@ -856,7 +884,8 @@
         <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Teklif</a>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.09"></script>
 </body>
 </html>
+
 

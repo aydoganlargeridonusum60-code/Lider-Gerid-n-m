@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="https://www.liderhurda.com/favicon-192.png">
     <link rel="icon" type="image/svg+xml" href="https://www.liderhurda.com/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.liderhurda.com/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.09">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -129,86 +129,229 @@
 
     <main class="container" style="padding: 60px 20px;">
         
+        <!-- Interactive Motor Copper Calculator -->
+        <section class="calc-box-pro" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 35px 25px; margin: 40px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+            <div style="text-align:center; margin-bottom: 25px;">
+                <span style="color:#10b981; font-weight:700; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px;">SARGI VE RANDIMAN HESAPLAYICI</span>
+                <h2 style="font-size:1.8rem; margin-top:5px; color:#0b1e33;">Hurda Elektrik Motoru Bakır Hesaplama Motoru</h2>
+                <p style="color:#64748b; font-size:0.95rem;">Motorunuzun tipini ve toplam ağırlığını girin; içerisindeki tahmini saf bakır miktarını ve net satış bedelini görün.</p>
+            </div>
+
+            <div class="calc-input-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 25px;">
+                <div>
+                    <label style="display:block; color:#0b1e33; margin-bottom:8px; font-weight:700;">Motor / Trafo Tipi:</label>
+                    <select id="calcMotorType" class="calc-form-control" style="width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; color: #1e293b; background: #f8fafc;" onchange="calculateMotor()">
+                        <option value="635" data-ratio="0.105">Standart Sanayi Motoru (IE1/IE2 Trifaze) - %10.5 Bakır Oranı</option>
+                        <option value="640" data-ratio="0.125">Yüksek Verimli Sanayi Motoru (IE3/IE4) - %12.5 Bakır Oranı</option>
+                        <option value="630" data-ratio="0.110">Monofaze Ev & Atölye Motoru (220V) - %11.0 Bakır Oranı</option>
+                        <option value="635" data-ratio="0.135">Klima Ekovat & Kompresör Motoru - %13.5 Bakır Oranı</option>
+                        <option value="630" data-ratio="0.120">Dalgıç Pompa & Hidrofor Motoru - %12.0 Bakır Oranı</option>
+                        <option value="645" data-ratio="0.220">Kuru Tip Güç Transformatörü - %22.0 Bakır Oranı</option>
+                        <option value="640" data-ratio="0.180">Yağlı Trafo Bakır Sargısı - %18.0 Bakır Oranı</option>
+                        <option value="635" data-ratio="0.140">Dizel Jeneratör & Alternatör Sargısı - %14.0 Bakır Oranı</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display:block; color:#0b1e33; margin-bottom:8px; font-weight:700;">Motor Toplam Ağırlığı (Kg):</label>
+                    <input type="number" id="calcMotorKg" class="calc-form-control" style="width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; color: #1e293b; background: #f8fafc;" value="120" min="1" step="1" oninput="calculateMotor()" placeholder="Örn: 120">
+                </div>
+            </div>
+
+            <div class="calc-res-display" style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 22px; text-align: center; margin-bottom: 25px;">
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <div>
+                        <span style="color:#166534; font-size:0.9rem; font-weight:600;">İçindeki Tahmini Saf Bakır Sargı:</span>
+                        <span id="calcMotorCopperKg" style="font-size:1.4rem; font-weight:800; color:#15803d; display:block;">12.6 Kg Bakır</span>
+                    </div>
+                    <div>
+                        <span style="color:#166534; font-size:0.9rem; font-weight:600;">Tahmini Bakır Sargı Satış Tutarı:</span>
+                        <span id="calcMotorTotal" style="font-size: 2.2rem; font-weight: 900; color: #15803d; display: block;">8.001,00 TL</span>
+                    </div>
+                </div>
+                <span style="display:block; color:#475569; font-size:0.85rem;">*Sökülmüş bakır sargı veya komple motor gövdesi (döküm + silisli sac dahil) olarak kapınızdan nakit alınır.</span>
+            </div>
+
+            <div style="text-align:center;">
+                <a id="calcMotorWaBtn" href="https://wa.me/905364863466?text=Merhaba,%20elimde%20hurda%20elektrik%20motoru%20var.%20Fiyat%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-wa-hero" style="width:100%; max-width:440px; margin: 0 auto; justify-content:center; padding: 15px 25px; font-size: 1.05rem;">
+                    <i class="fab fa-whatsapp"></i> Motor Hurdanızı Satın (WhatsApp Teklif)
+                </a>
+            </div>
+        </section>
+
+        <script>
+        function calculateMotor() {
+            var select = document.getElementById("calcMotorType");
+            var kgInput = document.getElementById("calcMotorKg");
+            var resCopperKg = document.getElementById("calcMotorCopperKg");
+            var resTotal = document.getElementById("calcMotorTotal");
+            var waBtn = document.getElementById("calcMotorWaBtn");
+
+            if (!select || !kgInput || !resTotal) return;
+
+            var copperPrice = parseFloat(select.value) || 635;
+            var selectedOption = select.options[select.selectedIndex];
+            var ratio = parseFloat(selectedOption.getAttribute("data-ratio")) || 0.105;
+            var grossKg = parseFloat(kgInput.value) || 0;
+
+            var copperKg = grossKg * ratio;
+            var total = copperKg * copperPrice;
+            var typeName = selectedOption.text.split(" - ")[0];
+
+            if (resCopperKg) {
+                resCopperKg.innerText = copperKg.toFixed(1) + " Kg Bakır (" + (ratio * 100).toFixed(1) + "%)";
+            }
+            resTotal.innerText = total.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
+
+            if (waBtn) {
+                var message = "Merhaba, " + grossKg + " kg " + typeName + " hurdası satışı için tahmini " + copperKg.toFixed(1) + " kg bakır sargı karşılığı " + resTotal.innerText + " teklif almak istiyorum.";
+                waBtn.href = "https://wa.me/905364863466?text=" + encodeURIComponent(message);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            calculateMotor();
+        });
+        </script>
+
         <!-- Table -->
         <section style="margin: 40px 0;">
-            <h2  style="font-size:1.8rem; margin-bottom:20px;">Motor Tiplerine Göre Ortalama Bakır Oranı Tablosu</h2>
+            <h2 style="font-size:1.8rem; margin-bottom:20px; color:#0b1e33;">Motor Tiplerine Göre Ayrıntılı Bakır Verim Oranları</h2>
             <div style="overflow-x: auto;">
-                <table class="copper-table">
+                <table class="copper-table" style="width:100%; border-collapse:collapse;">
                     <thead>
                         <tr>
-                            <th>Motor Tipi / Gücü</th>
-                            <th>Toplam Ağırlık</th>
+                            <th>Motor Tipi & Güç Aralığı</th>
+                            <th>Ortalama Brüt Ağırlık</th>
                             <th>İçindeki Bakır Miktarı</th>
                             <th>Bakır Yüzdesi (%)</th>
-                            <th>2026 Alım Statüsü</th>
+                            <th>2026 Alım Modeli</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Küçük Sanayi Motoru (1.1 - 4 kW)</strong></td>
-                            <td>15 - 35 Kg</td>
-                            <td>1.5 - 3.5 Kg Bakır</td>
-                            <td class="price-num">%10 - %12</td>
-                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                            <td><strong>Küçük Sanayi Motoru (0.75 - 4 kW)</strong></td>
+                            <td>12 - 35 Kg</td>
+                            <td>1.2 - 3.8 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%10 - %12</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Orta Boy Motor (5.5 - 22 kW)</strong></td>
+                            <td><strong>Orta Boy Sanayi Motoru (5.5 - 22 kW)</strong></td>
                             <td>45 - 160 Kg</td>
-                            <td>4.5 - 16 Kg Bakır</td>
-                            <td class="price-num">%9 - %11</td>
-                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                            <td>4.5 - 18 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%9.5 - %11.5</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Ağır Sanayi Motoru (30 - 110 kW)</strong></td>
-                            <td>200 - 800 Kg</td>
-                            <td>18 - 80 Kg Bakır</td>
-                            <td class="price-num">%8 - %10</td>
-                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Vinçli Alım</span></td>
+                            <td><strong>Ağır Sanayi Motoru (30 - 160 kW)</strong></td>
+                            <td>200 - 1.200 Kg</td>
+                            <td>18 - 110 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%8.5 - %10</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Ahtapot Vinçli</span></td>
                         </tr>
                         <tr>
                             <td><strong>Klima Ekovat / Kompresör Motoru</strong></td>
-                            <td>10 - 25 Kg</td>
-                            <td>1.2 - 2.8 Kg Bakır</td>
-                            <td class="price-num">%11 - %14</td>
-                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                            <td>10 - 28 Kg</td>
+                            <td>1.3 - 3.8 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%12 - %14.5</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dalgıç Pompa & Kuyu Motoru</strong></td>
+                            <td>15 - 85 Kg</td>
+                            <td>1.8 - 10.5 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%11 - %13</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kuru Tip Güç Transformatörü</strong></td>
+                            <td>500 - 4.000 Kg</td>
+                            <td>110 - 920 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%20 - %25</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Vinç & Konteyner</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yağlı Dağıtım Trafosu</strong></td>
+                            <td>800 - 6.500 Kg</td>
+                            <td>140 - 1.200 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%16 - %20</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Lisanslı Tahliye</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dizel Jeneratör Alternatörü</strong></td>
+                            <td>80 - 850 Kg</td>
+                            <td>11 - 120 Kg Bakır</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">%13 - %15</td>
+                            <td><span style="color:#16a34a;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
+        <!-- Technical Motor Dismantling Process -->
+        <article class="content-card-pro" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; padding:30px; margin: 40px 0;">
+            <h2 style="font-size:1.55rem; color:#0b1e33; font-weight:800; margin-bottom:15px;">
+                <i class="fas fa-tools" style="color:#16a34a; margin-right:8px;"></i> Elektrik Motoru Söküm, Sargı Ayrıştırma ve Geri Kazanım Aşamaları
+            </h2>
+            <p style="color:#334155; line-height:1.8;">
+                Hurda elektrik motorları kompozit elektromekanik atıklardır. Gövde döküm pik veya alüminyum enjeksiyondan, rotor mili yüksek karbonlu çelikten, stator sacları silisli sac paketinden ve sargılar vernikli emaye bakır telden meydana gelir.
+            </p>
+            <p style="color:#334155; line-height:1.8;">
+                <strong>Lider Hurda Tesisleri</strong>'nde motorlar hidrolik stator kafa kesme makineleri ve kanca çekme presleri ile parçalanır:
+            </p>
+            <ul style="padding-left:20px; line-height:1.85; color:#334155;">
+                <li><strong>Kafa Kesme (Stator Guillotine):</strong> Sargıların birleştiği kafa kısmı hidrolik bıçakla kesilerek sargı uçları serbest bırakılır.</li>
+                <li><strong>Hidrolik Kama Çekme:</strong> Stator yarıklarındaki bakır teller çektirme kancalarıyla tek hamlede dışarı çekilir; telin üzerinde silisli sac artığı kalmaz.</li>
+                <li><strong>Silisli Sac ve Döküm Ayrımı:</strong> Kalan yüksek kaliteli silisli çelik saclar demir-çelik dökümhaneleri için değerli 1. grup ekstra demir hurdasını oluşturur.</li>
+            </ul>
+        </article>
+
         <!-- CTA Box -->
         <div style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.12), rgba(17, 24, 39, 0.95)); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 20px; padding: 35px; text-align: center; margin: 40px 0;">
-            <h3  style="font-size:1.6rem; margin-bottom:10px;">Elinizde Hurda Motor Mu Var?</h3>
-            <p style="color:#d1d5db; max-width:700px; margin:0 auto 20px auto;">
-                İster sökülmüş bakır sargı ister komple motor olarak getirin ya da adresinizden vinçli araçlarımızla alalım.
+            <h3 style="font-size:1.6rem; margin-bottom:10px; color:#fff;">Elinizde Hurda Motor veya Trafo Mu Var?</h3>
+            <p style="color:#d1d5db; max-width:700px; margin:0 auto 20px auto; line-height: 1.7;">
+                İster sökülmüş bakır sargı ister komple motor halinde satabilirsiniz. Tonajlı partilerde adresinize hidrolik ahtapot vinç ve mobil kantar araçlarımızla geliyoruz.
             </p>
-            <a href="tel:+905364863466" class="btn-call-hero" style="background:#10b981; color:#0b0f19; padding:15px 30px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-flex; align-items:center; gap:10px;">
-                <i class="fas fa-phone-alt"></i> 0536 486 34 66 - Fiyat Teklifi Al
-            </a>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+905364863466" class="btn-call-hero" style="background:#10b981; color:#0b0f19; padding:15px 30px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-flex; align-items:center; gap:10px;">
+                    <i class="fas fa-phone-alt"></i> 0536 486 34 66
+                </a>
+                <a href="https://wa.me/905364863466?text=Merhaba,%20elimdeki%20hurda%20motorlar%20icin%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" rel="noopener" class="cta-btn-wa" style="background:#25d366; color:#fff; padding:15px 30px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-flex; align-items:center; gap:10px;">
+                    <i class="fab fa-whatsapp"></i> Motor Fotoğrafı Gönder Fiyat Al
+                </a>
+            </div>
         </div>
 
         <!-- Silo Links -->
         <section style="margin: 60px 0;">
             <div style="text-align:center; margin-bottom: 30px;">
-                <h2  style="font-size:1.8rem;">Diğer Bakır Sayfalarımız</h2>
+                <span style="color:#10b981; font-weight:700; text-transform:uppercase; font-size:0.85rem;">BAĞLANTILI BAKIR VE HURDA SAYFALARI</span>
+                <h2 style="font-size:1.8rem; color:#0b1e33;">İlgili Hurda Kategorilerimiz</h2>
             </div>
             <div class="silo-grid-modern">
                 <a href="soyma-bakir.html" class="silo-card-link">
-                    <strong>Soyma Bakır Fiyatları 2026</strong>
-                    <span>%99.9 parlak soyma bakır borsa fiyatı ve alımı.</span>
+                    <strong><i class="fas fa-bolt" style="color:#10b981;"></i> Soyma Bakır Fiyatları 2026</strong>
+                    <span style="color:#64748b;">%99.9 parlak soyma bakır borsa fiyatı ve alımı.</span>
                 </a>
                 <a href="lama-bakir.html" class="silo-card-link">
-                    <strong>Lama & Bara Bakır Hurdası</strong>
-                    <span>Pano ve trafo bakırlarında en yüksek nakit teklif.</span>
+                    <strong><i class="fas fa-bars" style="color:#10b981;"></i> Lama & Bara Bakır Hurdası</strong>
+                    <span style="color:#64748b;">Pano ve trafo bakırlarında en yüksek nakit teklif.</span>
                 </a>
-                <a href="kablo-hurdasi.html" class="silo-card-link">
-                    <strong>Hurda Kablo Alımı</strong>
-                    <span>Soyulmamış kablolarda yüksek bakır verimi.</span>
+                <a href="hurda-kablo.html" class="silo-card-link">
+                    <strong><i class="fas fa-network-wired" style="color:#10b981;"></i> Hurda Kablo Alımı</strong>
+                    <span style="color:#64748b;">Soyulmamış kablolarda kırım ve yüksek bakır verimi.</span>
+                </a>
+                <a href="kablo-hurdasi-nasil-siniflandirilir.html" class="silo-card-link">
+                    <strong><i class="fas fa-book-open" style="color:#10b981;"></i> Kablo Verim Rehberi</strong>
+                    <span style="color:#64748b;">Kablo türlerine göre bakır randıman formülleri.</span>
                 </a>
                 <a href="bakir-hurda-fiyatlari-bugun.html" class="silo-card-link">
-                    <strong>Bugün Bakır Fiyatları</strong>
-                    <span>Canlı borsa ve piyasa takip tablosu.</span>
+                    <strong><i class="fas fa-chart-line" style="color:#10b981;"></i> Bugün Bakır Fiyatları</strong>
+                    <span style="color:#64748b;">Canlı borsa ve anlık serbest piyasa takip listesi.</span>
+                </a>
+                <a href="istanbul-hurdaci.html" class="silo-card-link">
+                    <strong><i class="fas fa-truck" style="color:#10b981;"></i> İstanbul Hurdacı Servisi</strong>
+                    <span style="color:#64748b;">39 ilçede aradığınızda en müsait sürede adrese mobil kantar.</span>
                 </a>
             </div>
         </section>
@@ -740,12 +883,12 @@
                         <i class="fas fa-map-marked-alt" style="color: var(--green-600);"></i> Hizmet Bölgelerimiz & İlçeler
                     </h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0;">                        <li>
-                            <a href="iİstanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Merkezi</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">İstanbul'un 39 ilçesinde 7/24 adresten hurda alım hizmeti.</small></span>
                             </a>
                         </li>                        <li>
-                            <a href="iİstanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Rehberi 2026</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">Avrupa ve Anadolu yakası hurda lojistik ve fiyat rehberi.</small></span>
                             </a>
@@ -942,6 +1085,6 @@
         <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Teklif</a>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.09"></script>
 </body>
 </html>

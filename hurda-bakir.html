@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="https://www.liderhurda.com/favicon-192.png">
     <link rel="icon" type="image/svg+xml" href="https://www.liderhurda.com/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.liderhurda.com/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.09">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -44,7 +44,7 @@
           "addressCountry": "TR"
         }
       },
-      "areaServed": "İstanbul, Kocaeli, Gebze, Marmara",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".geo-direct-answer p", ".geo-direct-title"] }, "areaServed": "İstanbul, Kocaeli, Gebze, Marmara",
       "description": "Soyma bakır, lama bakır, kırkambar ve kablo bakırı hurdalarında yerinde hassas kantar tartımı ve anında peşin nakit alım hizmeti."
     }
     </script>
@@ -60,7 +60,7 @@
           "name": "2026 yılında hurda bakırın kilosu kaç TL?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Soyma bakır 550,00 - 580,00 TL/kg, Lama bakır 530,00 - 565,00 TL/kg, Kırkambar bakır 480,00 - 520,00 TL/kg arasında işlem görmektedir. Fiyatlar günlük LME borsa endeksine göre anlık güncellenir."
+            "text": "2026 güncel LME borsa kurlarına göre Soyma bakır 700,00 - 710,00 TL/kg (Tonajlı 715,00 TL), Lama / Bara bakır 680,00 - 690,00 TL/kg, Kırkambar bakır 630,00 - 640,00 TL/kg, Temiz bakır boru 650,00 - 665,00 TL/kg ve Bakır talaşı 610,00 - 620,00 TL/kg arasında işlem görmektedir."
           }
         },
         {
@@ -68,7 +68,7 @@
           "name": "Bakır hurdası için fotoğrafla nasıl fiyat alabilirim?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "WhatsApp hattımıza (0536 486 34 66) elinizdeki bakırın net bir fotoğrafını ve tahmini kilosunu göndererek en kısa sürede güncel net teklif alabilirsiniz."
+            "text": "WhatsApp hattımıza (0536 486 34 66) elinizdeki bakır hurdalarının net fotoğraflarını ve tahmini kilogram miktarını ilettiğinizde uzman ekspertiz ekibimiz 5 dakika içinde net fiyat teklifi sunar."
           }
         },
         {
@@ -76,7 +76,31 @@
           "name": "Bakırları soymadan kablo halinde satabilir miyim?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Evet. Kablo kırma tesisimiz sayesinde kablolarınızı soymanıza gerek kalmadan, içindeki bakır verim yüzdesine göre en yüksek fiyattan satın alıyoruz."
+            "text": "Evet. Kablo kırma tesisimiz sayesinde kablolarınızı yakmanıza veya elle soymanıza gerek kalmadan, içindeki saf bakır verim yüzdesine göre en yüksek piyasa fiyatından satın alıyoruz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bakır tartımında dara ve fire kesintisi nasıl uygulanır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lider Hurda'da dara şeffaf düşülür. Kasa, palet veya çuval gözünüzün önünde dara olarak sıfırlanır. Lehimli boru ve sarı fittings bulunan parçalar ayrı tartılarak adil değerleme yapılır, haksız fire kesintisi uygulanmaz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Adresten alımlarda nakliye veya kantar ücreti alınıyor mu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. İstanbul, Gebze ve Kocaeli başta olmak üzere tüm bölgemizde adrese mobil araç, vinç ve dijital kantar yönlendirmesi tamamen ücretsizdir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ödeme kantar başında hemen nakit yapılıyor mu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet. Tartım bittiği anda kantar fişindeki tutar elden nakit veya dilediğiniz şirket/şahıs IBAN hesabına FAST sistemi ile saniyeler içinde ödenir."
           }
         }
       ]
@@ -179,106 +203,374 @@
 
     <!-- Main Content -->
     <main class="container" style="padding: 50px 20px;">
+        <!-- GEO & AI Direct Answer Card (LLM Knowledge Graph & Search Snippet) -->
+        <section class="geo-direct-answer" data-geo="direct-answer" style="margin-top: 25px;">
+            <div class="geo-direct-answer-header">
+                <span class="geo-badge"><i class="fas fa-brain"></i> Yapay Zeka & Hızlı Bilgi Özeti</span>
+                <span style="font-size: 0.85rem; color: #166534; font-weight: 600;"><i class="fas fa-check-circle"></i> Doğrulanmış Kurumsal Bilgi</span>
+            </div>
+            <h2 class="geo-direct-title"><i class="fas fa-bolt" style="color: #16a34a;"></i> Hurda Bakır Alımı ve 2026 Güncel Fiyat Özeti</h2>
+            <p><strong>Lider Hurda (0536 486 34 66)</strong>, İstanbul ve Türkiye genelinde soyma bakır, lama, kırkambar ve bakır kablo hurdalarını <strong>LME Londra Metal Borsası tavan fiyatlarından</strong> yerinde nakit almaktadır. Mobil kantarımızla aradığınızda en müsait sürede adrese gelinir, hassas tartım yapılarak anında nakit veya FAST ile ödeme tamamlanır.</p>
+            <div class="geo-facts-grid">
+                <div class="geo-fact-item"><i class="fas fa-check-circle"></i> <div><strong>Alınan Bakır Türleri:</strong> Soyma, Lama, Kırkambar, TTR Kablo</div></div>
+                <div class="geo-fact-item"><i class="fas fa-wallet"></i> <div><strong>Ödeme Yöntemi:</strong> Kantar Başında Anında Peşin Nakit</div></div>
+                <div class="geo-fact-item"><i class="fas fa-scale-balanced"></i> <div><strong>Tartım Güvencesi:</strong> Kalibre Mobil Dijital Kantar</div></div>
+                <div class="geo-fact-item"><i class="fas fa-chart-line"></i> <div><strong>Fiyatlama:</strong> LME Günlük Spot Borsa Endeksli</div></div>
+            </div>
+        </section>
 
         <!-- Section: Bakır Çeşitleri -->
         <section class="content-card-pro">
-            <h2>Bakır Hurda Çeşitleri ve Sınıflandırma</h2>
-            <p>
-                Bakırın saflığı ve üzerindeki yabancı madde (lehim, plastik, yağ) oranı geri dönüşüm potasındaki verimi doğrudan belirler:
+            <h2 style="font-size: 1.6rem; color: #0b1e33; font-weight: 800; margin-bottom: 15px;">
+                <i class="fas fa-layer-group" style="color: #16a34a; margin-right: 8px;"></i> 2026 Hurda Bakır Çeşitleri ve Endüstriyel Sınıflandırma
+            </h2>
+            <p style="color: #334155; line-height: 1.8; margin-bottom: 25px;">
+                Bakırın geri dönüşüm değeri; malzemenin kimyasal saflığına, elektriksel iletkenliğine, ergitme potasındaki cüruf oranına ve üzerindeki yabancı bileşenlere (lehim, boya, plastik, kalay) göre belirlenir. Lider Hurda olarak tüm bakır sınıflarını değerinde satın alıyoruz:
             </p>
 
-            <div class="variety-grid">
-                <div class="variety-item">
-                    <h4><a href="soyma-bakir.html" style="color:#fff; text-decoration:none;"><i class="fas fa-bolt" style="color:#10b981;"></i> Soyma Bakır Hurdası</a></h4>
-                    <p style="font-size:0.92rem; color:#9ca3af;">
-                        %99.9 saflıkta, kablodan soyulmuş parlak ve oksitsiz tellerdir. Borsa fiyatı en yüksek elit bakır grubudur.
+            <div class="variety-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="soyma-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-bolt" style="color:#10b981;"></i> Soyma Bakır Hurdası</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        %99.9 saflıkta, kablodan mekanik soyulmuş parlak kızıl iletken teldir (Millberry). Borsa tavan fiyatından işlem gören en elit gruptur.
                     </p>
                 </div>
 
-                <div class="variety-item">
-                    <h4><a href="lama-bakir.html" style="color:#fff; text-decoration:none;"><i class="fas fa-layer-group" style="color:#10b981;"></i> Lama / Bara Bakır</a></h4>
-                    <p style="font-size:0.92rem; color:#9ca3af;">
-                        Elektrik panolarından ve trafolardan çıkan kalın plaka ve bara bakırlarıdır. Saflığı soyma bakır seviyesindedir.
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="lama-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-bars" style="color:#10b981;"></i> Lama / Bara Bakır</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        Elektrik dağıtım panoları, busbar kanalları ve trafo merkezlerinden sökülen kalın yassı elektrolitik saf iletken plakalardır.
                     </p>
                 </div>
 
-                <div class="variety-item">
-                    <h4><a href="kirkambar-bakir.html" style="color:#fff; text-decoration:none;"><i class="fas fa-boxes" style="color:#10b981;"></i> Kırkambar Bakır</a></h4>
-                    <p style="font-size:0.92rem; color:#9ca3af;">
-                        Lehimli tesisat boruları, yanık teller, radyatör petekleri ve mutfak gereçlerinden oluşan karışık bakırlardır.
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="kirkambar-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-boxes" style="color:#10b981;"></i> Kırkambar Bakır (2. Grup)</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        Lehimli sıhhi tesisat boruları, kalorifer hatları, kombi eşanjörleri, tencere ve yanık parçalardan oluşan heterojen bakırlardır.
                     </p>
                 </div>
 
-                <div class="variety-item">
-                    <h4><a href="hurda-kablo.html" style="color:#fff; text-decoration:none;"><i class="fas fa-network-wired" style="color:#10b981;"></i> Hurda Bakır Kablo</a></h4>
-                    <p style="font-size:0.92rem; color:#9ca3af;">
-                        TTR, Antigron ve sanayi tipi enerji kabloları. Kırım tesisimizde soyma bakır verimi hesaplanarak değerinde alınır.
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="hurda-kablo.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-network-wired" style="color:#10b981;"></i> Hurda Bakır Kablo</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        Tek damar NYY, antigron, TTR ve zırhlı enerji kabloları. Kırma tesisimizde soyma bakır randımanı hesaplanarak peşin nakit alınır.
+                    </p>
+                </div>
+
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="hurda-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-temperature-low" style="color:#10b981;"></i> Tesisat & Klima Bakır Borusu</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        VRF klima hatları, chiller grupları ve doğalgaz/su tesisatlarından çıkan lehimsiz temiz kangal ve düz bakır borular.
+                    </p>
+                </div>
+
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="motor-bakir-verimi.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-cogs" style="color:#10b981;"></i> Bobinaj & Trafo Sargı Bakırı</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        Sanayi elektrik motorları, jeneratörler ve trafolardan sökülen vernikli emaye iletken sargı telleri yüksek fiyattan alınır.
+                    </p>
+                </div>
+
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="bakir-hurda-fiyatlari-bugun.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-wrench" style="color:#10b981;"></i> Bakır Talaşı Hurdası</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        Talaşlı imalat sanayisi, CNC freze ve torna tezgahlarından çıkan yağsız, kuru ve temiz saf kızıl bakır işleme talaşları.
+                    </p>
+                </div>
+
+                <div class="variety-item" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h4 style="margin-bottom: 8px;"><a href="hurda-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight: 700;"><i class="fas fa-fan" style="color:#10b981;"></i> Bakır Radyatör & Eşanjör</a></h4>
+                    <p style="font-size:0.92rem; color:#475569; margin: 0; line-height: 1.6;">
+                        Büyük klima santralleri, jeneratör soğutma eşanjörleri ve araç radyatörlerinden çıkan saf bakır borulu petek yapıları.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Section: Fiyatı Etkileyen Faktörler & Tonajlı Alım -->
-        <section class="content-card-pro">
-            <h2>Bakır Fiyatını Etkileyen Faktörler & Tonajlı Satış</h2>
-            <p>
-                Hurda bakır fiyatları, serbest piyasa koşullarında iki ana parametreye bağlıdır: <strong>Londra Metal Borsası (LME) $/ton kuru</strong> ve <strong>USD/TRY paritesi</strong>.
-            </p>
-            <ul style="padding-left:22px; margin:15px 0;">
-                <li><strong>Ayrıştırma Avantajı:</strong> Soyma bakır ile lehimli boruları ayırarak satmak toplam kazancınızı %15-20 artırır.</li>
-                <li><strong>Tonaj Primi:</strong> 500 kg ve üzeri fabrika ve şantiye bakırlarında Lider Hurda olarak özel dökümhane primi uygulanır.</li>
-                <li><strong>Şeffaf Tartım:</strong> Mühürlü mobil dijital kantarımızla adresinizde tartım yapılır; kantar hilesi riski sıfırdır.</li>
-            </ul>
+        <!-- Interactive Scrap Copper Calculator -->
+        <section class="calc-box-pro" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 35px 25px; margin: 40px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+            <div style="text-align:center; margin-bottom: 25px;">
+                <span style="color:#10b981; font-weight:700; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px;">CANLI LME BORSA HESAPLAMA MOTORU</span>
+                <h2 style="font-size:1.8rem; margin-top:5px; color: #0b1e33;">Hurda Bakır Kazanç Hesaplama Aracı</h2>
+                <p style="color:#64748b; font-size:0.95rem;">Elinizdeki bakır türünü ve tahmini miktarınızı girin, güncel borsa karşılığını anında öğrenin.</p>
+            </div>
+
+            <div class="calc-input-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 25px;">
+                <div>
+                    <label style="display:block; color:#0b1e33; margin-bottom:8px; font-weight:700;">Bakır / Malzeme Cinsi:</label>
+                    <select id="calcBakirTypeGeneral" class="calc-form-control" style="width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; color: #1e293b; background: #f8fafc;" onchange="calculateBakirGeneral()">
+                        <option value="710">Soyma Bakır Hurdası (%99.9 Parlak) - 710 TL/kg</option>
+                        <option value="690">Lama / Bara Bakır Hurdası (Pano & Trafo) - 690 TL/kg</option>
+                        <option value="665">Temiz Tesisat & VRF Bakır Borusu - 665 TL/kg</option>
+                        <option value="680">Bobinaj & Trafo Sargı Teli - 680 TL/kg</option>
+                        <option value="640">Kırkambar Bakır Hurdası (Lehimli/Karışık) - 640 TL/kg</option>
+                        <option value="635">Yanık Bakır Tel Hurdası - 635 TL/kg</option>
+                        <option value="620">Bakır Talaşı Hurdası (CNC Torna) - 620 TL/kg</option>
+                        <option value="615">Bakır Radyatör & Eşanjör Peteği - 615 TL/kg</option>
+                        <option value="520">Tek Damar NYY Enerji Kablosu - 520 TL/kg</option>
+                        <option value="440">Antigron (NYM) Tesisat Kablosu - 440 TL/kg</option>
+                        <option value="395">TTR Esnek Çok Damarlı Kablo - 395 TL/kg</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display:block; color:#0b1e33; margin-bottom:8px; font-weight:700;">Miktar (Kilogram):</label>
+                    <input type="number" id="calcBakirKgGeneral" class="calc-form-control" style="width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; color: #1e293b; background: #f8fafc;" value="100" min="1" step="1" oninput="calculateBakirGeneral()" placeholder="Örn: 250">
+                </div>
+            </div>
+
+            <div class="calc-res-display" style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 25px;">
+                <span style="color:#166534; display:block; font-size:0.95rem; font-weight: 600;">Tahmini Anında Nakit Satış Tutarı:</span>
+                <span class="calc-res-val" id="calcBakirTotalGeneral" style="font-size: 2.2rem; font-weight: 900; color: #15803d; display: block; margin: 8px 0;">71.000,00 TL</span>
+                <span style="display:block; color:#475569; font-size:0.85rem;">*Sanayi Bakanlığı mühürlü mobil dijital kantarla yerinde tartılır, kantar fişiyle peşin nakit veya FAST ile ödenir.</span>
+            </div>
+
+            <div style="text-align:center;">
+                <a id="calcBakirWaBtnGeneral" href="https://wa.me/905364863466?text=Merhaba,%20100%20kg%20Bakir%20icin%20guncel%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn-wa-hero" style="width:100%; max-width:440px; margin: 0 auto; justify-content:center; padding: 15px 25px; font-size: 1.05rem;">
+                    <i class="fab fa-whatsapp"></i> Bu Fiyata Kapıda Nakit Sat (WhatsApp)
+                </a>
+            </div>
         </section>
 
+        <!-- 2026 Comprehensive Price Table -->
+        <section style="margin: 50px 0;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; margin-bottom:20px;">
+                <div>
+                    <h2 style="font-size:1.8rem; color: #0b1e33; margin: 0;">2026 Güncel Hurda Bakır Fiyat Listesi</h2>
+                    <p style="color:#64748b; margin: 5px 0 0 0;">LME ($/Ton) & Spot Döviz Kurlarına Göre Canlı Belirlenmiştir</p>
+                </div>
+                <span style="background: #ecfdf5; color:#10b981; padding: 8px 16px; border-radius: 20px; font-weight:700; font-size:0.88rem; border: 1px solid #a7f3d0;"><i class="fas fa-sync-alt fa-spin"></i> Canlı Borsa Endeksli</span>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table class="copper-table" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th>Bakır Cinsi</th>
+                            <th>Saflık & Standart</th>
+                            <th>Birim Fiyat (TL/Kg)</th>
+                            <th>Tonajlı Fiyat (TL/Kg)</th>
+                            <th>Hizmet & Ödeme</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="soyma-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight:700;"><i class="fas fa-bolt" style="color:#10b981;"></i> Soyma Bakır Hurdası</a></td>
+                            <td>%99.9 Elektrolitik Parlak Tel (Cu-ETP)</td>
+                            <td class="price-num">700,00 - 710,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">715,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Adreste Nakit Ödeme</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="lama-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight:700;"><i class="fas fa-bars" style="color:#10b981;"></i> Lama & Bara Bakır</a></td>
+                            <td>Pano, Trafo & Busbar İletim Barası</td>
+                            <td class="price-num">680,00 - 690,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">695,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Adreste Nakit Ödeme</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="kirkambar-bakir.html" style="color:#0b1e33; text-decoration:none; font-weight:700;"><i class="fas fa-boxes" style="color:#10b981;"></i> Kırkambar Bakır (2. Grup)</a></td>
+                            <td>Lehimli Boru, Petek & Karışık</td>
+                            <td class="price-num">630,00 - 640,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">685,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Şeffaf Dara Ayrımı</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Çıkma VRF & Klima Bakır Borusu</strong></td>
+                            <td>Temiz, Lehimsiz Düz/Kangal Boru</td>
+                            <td class="price-num">650,00 - 665,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">670,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Adreste Nakit Ödeme</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="motor-bakir-verimi.html" style="color:#0b1e33; text-decoration:none; font-weight:700;"><i class="fas fa-cogs" style="color:#10b981;"></i> Bobinaj & Trafo Sargı Teli</a></td>
+                            <td>Vernikli Emaye Sanayi Motor Teli</td>
+                            <td class="price-num">665,00 - 680,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">685,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Adreste Nakit Ödeme</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yanık Bakır Tel Hurdası</strong></td>
+                            <td>İzolasyonu Ateş Görmüş Oksitli Tel</td>
+                            <td class="price-num">625,00 - 635,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">640,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Adreste Nakit Ödeme</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bakır Talaşı Hurdası</strong></td>
+                            <td>CNC, Freze & Torna İşleme Talaşı</td>
+                            <td class="price-num">610,00 - 620,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">625,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Varilli/Çuvallı Alım</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bakır Radyatör & Eşanjör</strong></td>
+                            <td>Klima, Jeneratör & Araç Petekleri</td>
+                            <td class="price-num">600,00 - 615,00 TL</td>
+                            <td class="price-num" style="color:#16a34a; font-weight:800;">620,00 TL</td>
+                            <td><span style="color:#16a34a; font-weight:600;"><i class="fas fa-check-circle"></i> Adreste Nakit Ödeme</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Deep Authoritative Metallurgical Content -->
+        <article class="content-card-pro" style="margin: 40px 0;">
+            <h2 style="font-size: 1.6rem; color: #0b1e33; font-weight: 800; margin-bottom: 16px;">
+                <i class="fas fa-microscope" style="color: #16a34a; margin-right: 8px;"></i> Bakır Metalurjisi, Saflık Standartları ve LME Fiyatlandırma Mekanizması
+            </h2>
+            <p>
+                Bakır (Cu), periyodik tablonun en stratejik ve yüksek iletkenliğe sahip demir dışı metallerinden biridir. Geri dönüştürülmüş bakır, birincil madencilik cevherlerinden üretilen bakıra oranla <strong>%85-%90 enerji tasarrufu</strong> sağlar ve yapısında hiçbir fiziksel veya kimyasal kalite kaybı yaşanmaz. Bu nedenle uluslararası hurda metal ticaretinde döngüsel ekonominin en değerli hammaddesidir.
+            </p>
+            
+            <h3 style="color: #166534; font-size: 1.25rem; font-weight: 700; margin-top: 25px; margin-bottom: 12px;">
+                1. Uluslararası Bakır Alaşım Standartları (EN & ASTM)
+            </h3>
+            <ul style="padding-left: 20px; line-height: 1.85; color: #334155;">
+                <li><strong>Cu-ETP (CW004A) - Elektrolitik Sert Adımlı Bakır:</strong> %99.90 saflık oranına ve minimum %100 IACS elektrik iletkenliğine sahiptir. Enerji kabloları, pano baraları ve busbar hatlarının ana malzemesidir. Soyulduğunda <em>"Soyma Bakır (Millberry)"</em> sınıfına girer.</li>
+                <li><strong>Cu-OF (CW008A) - Oksijensiz Yüksek İletkenlikli Bakır:</strong> %99.95 Cu saflığında, vakum altında ergitilmiş hidrojene karşı kırılganlık göstermeyen en üst düzey mühendislik bakırıdır.</li>
+                <li><strong>Cu-DHP (CW024A) - Fosforlu Deokside Bakır:</strong> %99.90 Cu ve %0.015-%0.040 Fosfor içeren, mükemmel kaynak ve lehim tutma kabiliyetine sahip tesisat boruları, klima kangalları ve kazan imalatlarında kullanılan bakırdır.</li>
+            </ul>
+
+            <h3 style="color: #166534; font-size: 1.25rem; font-weight: 700; margin-top: 25px; margin-bottom: 12px;">
+                2. Fabrika, Şantiye ve Trafo Merkezlerinde Ağır Bakır Söküm Süreci
+            </h3>
+            <p>
+                Büyük sanayi tesislerinin revizyonunda, trafo merkezlerinin güç artırımında veya fabrika tasfiyelerinde açığa çıkan yüksek tonajlı bakır baralar ve ağır kablolar özel güvenlik donanımı ve ekipman gerektirir. <strong>Lider Hurda Geri Dönüşüm</strong> bünyesindeki sertifikalı teknik personelimiz:
+            </p>
+            <ol style="padding-left: 20px; line-height: 1.85; color: #334155;">
+                <li>Öncelikle enerji kesintisini ve şalt sahası güvenliğini teyit eder.</li>
+                <li>AG-OG dağıtım panolarındaki busbar bağlantılarını ve cıvatalı bakır lamaları yapay hasar vermeden hassasiyetle söker.</li>
+                <li>Transformatörlerin yağ drenajını çevre mevzuatına uygun tamamlayarak bakır yüksek gerilim sargılarını ayıklar.</li>
+                <li>Adresinizde kalibre mobil kantarlar ile net tartımı gözünüzün önünde gerçekleştirir.</li>
+            </ol>
+
+            <h3 style="color: #166534; font-size: 1.25rem; font-weight: 700; margin-top: 25px; margin-bottom: 12px;">
+                3. Portatif XRF Spektrometre Cihazı ile Yerinde Maden Analizi
+            </h3>
+            <p>
+                Bakır hurdalarının içinde bulunabilecek kalay, kurşun, çinko (pirinç katkısı) ve demir gibi safiyeti düşüren elementler portatif spektrometre cihazımızla saniyeler içinde ölçülür. Bu sayede malzemenizin gerçek saflık yüzdesi tam olarak tespit edilir; tahmini veya keyfi fire kesintisi yapılmadan en adil borsa fiyatı garanti edilir.
+            </p>
+
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 22px; margin-top: 25px;">
+                <h4 style="color: #166534; font-size: 1.15rem; font-weight: 800; margin-bottom: 10px;">
+                    <i class="fas fa-shield-alt"></i> Bakır Satarken Kazancınızı Artıracak 4 Önemli İpucu:
+                </h4>
+                <ul style="margin: 0; padding-left: 20px; line-height: 1.8; color: #1e293b;">
+                    <li><strong>Kabloları Ateşte Yakmayın:</strong> Ateşle yakılan bakırın yüzeyi karararak yanık bakır statüsüne düşer ve kilo başına 60-80 TL değer kaybeder. Kırma tesisimize getirin, tam soyma değerini alın.</li>
+                    <li><strong>Türleri Birbirine Karıştırmayın:</strong> Soyma parlak tel ile lehimli boruyu aynı çuvala koymayın; aksi halde tüm parti en düşük kırkambar fiyatından değerlendirilir.</li>
+                    <li><strong>Dara Düşümünü İzleyin:</strong> Tartım öncesinde palet veya kasanın boş darasının kantar ekranında sıfırlandığından emin olun.</li>
+                    <li><strong>Tonaj Avantajından Yararlanın:</strong> 500 kg ve üzeri kurumsal partilerde Lider Hurda özel dökümhane tonaj primini talep edin.</li>
+                </ul>
+            </div>
+        </article>
+
         <!-- Silo Interlinking Matrix -->
-        <section style="margin: 40px 0;">
+        <section style="margin: 50px 0;">
             <div style="text-align:center; margin-bottom: 25px;">
-                <span style="color:#10b981; font-weight:700; text-transform:uppercase; font-size:0.85rem;">BAĞLANTILI SAYFALAR</span>
-                <h2  style="font-size:1.6rem; margin-top:5px;">Detaylı Bakır & Hizmet Sayfalarımız</h2>
+                <span style="color:#10b981; font-weight:700; text-transform:uppercase; font-size:0.85rem;">GENİŞLETİLMİŞ BAKIR OTORİTE AĞI</span>
+                <h2 style="font-size:1.7rem; margin-top:5px; color:#0b1e33;">Detaylı Bakır & Hizmet Sayfalarımız</h2>
+                <p style="color:#64748b; font-size:0.95rem;">İlgilendiğiniz bakır türüne tıklayarak ayrıntılı analiz, hesaplayıcı ve rehberlere ulaşabilirsiniz.</p>
             </div>
             <div class="silo-grid-modern">
                 <a href="soyma-bakir.html" class="silo-card-link">
-                    <strong>Soyma Bakır Sayfası</strong>
-                    <span style="color:#9ca3af; font-size:0.88rem;">%99.9 parlak tel alım detayları ve hesaplayıcı.</span>
+                    <strong><i class="fas fa-bolt" style="color:#10b981;"></i> Soyma Bakır Sayfası</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">%99.9 parlak tel alım detayları ve canlı hesaplayıcı.</span>
                 </a>
                 <a href="lama-bakir.html" class="silo-card-link">
-                    <strong>Lama & Bara Bakır</strong>
-                    <span style="color:#9ca3af; font-size:0.88rem;">Trafo ve pano bakırı alım fiyatları.</span>
+                    <strong><i class="fas fa-bars" style="color:#10b981;"></i> Lama & Bara Bakır</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">Trafo, pano ve busbar bakırı alım fiyatları.</span>
                 </a>
                 <a href="kirkambar-bakir.html" class="silo-card-link">
-                    <strong>Kırkambar Bakır</strong>
-                    <span style="color:#9ca3af; font-size:0.88rem;">Tesisat borusu ve radyatör petek alımı.</span>
+                    <strong><i class="fas fa-boxes" style="color:#10b981;"></i> Kırkambar Bakır</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">Tesisat borusu, kalorifer ve radyatör petek alımı.</span>
                 </a>
                 <a href="hurda-kablo.html" class="silo-card-link">
-                    <strong>Hurda Kablo Alımı</strong>
-                    <span style="color:#9ca3af; font-size:0.88rem;">TTR, NYA ve sanayi kablosu verim analizi.</span>
+                    <strong><i class="fas fa-network-wired" style="color:#10b981;"></i> Hurda Kablo Alımı</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">TTR, NYM ve sanayi kablosu verim analizi.</span>
                 </a>
-                <a href="hurda-fiyatlari.html" class="silo-card-link">
-                    <strong>Güncel Hurda Fiyatları</strong>
-                    <span style="color:#9ca3af; font-size:0.88rem;">Tüm metallerin 2026 borsa listesi.</span>
+                <a href="bakir-hurda-fiyatlari-bugun.html" class="silo-card-link">
+                    <strong><i class="fas fa-chart-line" style="color:#10b981;"></i> Günlük Bakır Fiyatları</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">Bugün geçerli anlık LME borsa fiyat tablosu.</span>
                 </a>
-                <a href="iİstanbul-hurdaci.html" class="silo-card-link">
-                    <strong>İstanbul Hurdacı</strong>
-                    <span style="color:#9ca3af; font-size:0.88rem;">Tüm ilçelerde aradığınızda en müsait sürede mobil kantar.</span>
+                <a href="bakir-nasil-anlasilir.html" class="silo-card-link">
+                    <strong><i class="fas fa-magnet" style="color:#10b981;"></i> Bakır Tanıma Rehberi</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">Mıknatıs, renk ve özgül ağırlıkla bakır testi.</span>
+                </a>
+                <a href="motor-bakir-verimi.html" class="silo-card-link">
+                    <strong><i class="fas fa-cogs" style="color:#10b981;"></i> Motor Bakır Verimi</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">Elektrik motoru içi bakır oranları ve sargı alımı.</span>
+                </a>
+                <a href="istanbul-hurdaci.html" class="silo-card-link">
+                    <strong><i class="fas fa-truck" style="color:#10b981;"></i> İstanbul Hurdacı Servisi</strong>
+                    <span style="color:#64748b; font-size:0.88rem;">39 ilçede aradığınızda en müsait sürede kapıda mobil kantar.</span>
                 </a>
             </div>
         </section>
 
-        <!-- SSS Section -->
-        <section class="content-card-pro">
-            <h2>Bakır Hurda Alımı Sıkça Sorulan Sorular</h2>
+        <!-- SSS Section (Comprehensive 6-Question Accordion) -->
+        <section class="content-card-pro" style="margin: 40px 0;">
+            <h2 style="font-size: 1.6rem; color: #0b1e33; font-weight: 800; margin-bottom: 20px;">
+                <i class="fas fa-question-circle" style="color: #16a34a; margin-right: 8px;"></i> Hurda Bakır Alımı Sıkça Sorulan Sorular
+            </h2>
             
-            <div class="faq-box-pro">
-                <strong>1. Bakırları tartarken darası nasıl düşülür?</strong>
-                <p style="color:#9ca3af; margin:0;">Kasa, çuval veya palet ağırlığı gözünüzün önünde dara olarak sıfırlanır, yalnızca net bakır ağırlığı üzerinden ödeme hesaplanır.</p>
+            <div class="faq-box-pro" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-bottom:15px;">
+                <strong style="color: #0b1e33; font-size: 1.05rem; display:block; margin-bottom:8px;"><i class="fas fa-chevron-right" style="color:#16a34a; font-size:0.85rem; margin-right:6px;"></i> 1. 2026 yılında hurda bakırın kilosu kaç TL?</strong>
+                <p style="color:#475569; margin:0; line-height:1.7;">Soyma bakır 700,00 - 710,00 TL/kg (Tonajlı 715,00 TL), Lama bakır 680,00 - 690,00 TL/kg, Kırkambar bakır 630,00 - 640,00 TL/kg, Temiz bakır boru 650,00 - 665,00 TL/kg ve Bakır talaşı 610,00 - 620,00 TL/kg arasında işlem görmektedir. Fiyatlar günlük Londra Metal Borsası (LME) spot verilerine göre anlık güncellenir.</p>
             </div>
 
-            <div class="faq-box-pro">
-                <strong>2. Adresimden alım için ücret alıyor musunuz?</strong>
-                <p style="color:#9ca3af; margin:0;">Hayır. İstanbul ve Gebze genelinde adresten alım, yükleme ve kantar hizmetimiz tamamen ücretsizdir.</p>
+            <div class="faq-box-pro" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-bottom:15px;">
+                <strong style="color: #0b1e33; font-size: 1.05rem; display:block; margin-bottom:8px;"><i class="fas fa-chevron-right" style="color:#16a34a; font-size:0.85rem; margin-right:6px;"></i> 2. Bakır hurdası için fotoğrafla nasıl anında fiyat alabilirim?</strong>
+                <p style="color:#475569; margin:0; line-height:1.7;">WhatsApp hattımıza (0536 486 34 66) elinizdeki bakırların net fotoğraflarını ve yaklaşık kilogramını ilettiğinizde uzman ekspertiz ekibimiz 5 dakika içinde güncel borsa taban ve tavan teklifini iletir.</p>
+            </div>
+
+            <div class="faq-box-pro" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-bottom:15px;">
+                <strong style="color: #0b1e33; font-size: 1.05rem; display:block; margin-bottom:8px;"><i class="fas fa-chevron-right" style="color:#16a34a; font-size:0.85rem; margin-right:6px;"></i> 3. Bakırları soymadan kablo halinde satabilir miyim?</strong>
+                <p style="color:#475569; margin:0; line-height:1.7;">Evet. Tesisimizdeki modern kablo kırma makineleri sayesinde kablolarınızı soymakla uğraşmadan, içindeki bakır verim oranına göre doğrudan en yüksek tavan fiyattan satabilirsiniz.</p>
+            </div>
+
+            <div class="faq-box-pro" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-bottom:15px;">
+                <strong style="color: #0b1e33; font-size: 1.05rem; display:block; margin-bottom:8px;"><i class="fas fa-chevron-right" style="color:#16a34a; font-size:0.85rem; margin-right:6px;"></i> 4. Bakırları tartarken darası nasıl düşülür?</strong>
+                <p style="color:#475569; margin:0; line-height:1.7;">Kasa, çuval veya palet ağırlığı gözünüzün önünde dara olarak sıfırlanır. Lehimli boru veya sarı musluklu parçalar ayrı ayrı tartılır; yalnızca net bakır ağırlığı üzerinden eksiksiz ödeme hesaplanır.</p>
+            </div>
+
+            <div class="faq-box-pro" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-bottom:15px;">
+                <strong style="color: #0b1e33; font-size: 1.05rem; display:block; margin-bottom:8px;"><i class="fas fa-chevron-right" style="color:#16a34a; font-size:0.85rem; margin-right:6px;"></i> 5. Adresimden alım için herhangi bir servis veya kantar ücreti alıyor musunuz?</strong>
+                <p style="color:#475569; margin:0; line-height:1.7;">Hayır. İstanbul'un 39 ilçesinde ve Kocaeli/Gebze sanayi bölgesinde adrese mobil tartım aracı, ahtapot vinç ve taşıma ekibi yönlendirmemiz tamamen ücretsizdir.</p>
+            </div>
+
+            <div class="faq-box-pro" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-bottom:15px;">
+                <strong style="color: #0b1e33; font-size: 1.05rem; display:block; margin-bottom:8px;"><i class="fas fa-chevron-right" style="color:#16a34a; font-size:0.85rem; margin-right:6px;"></i> 6. Ödeme kantar başında anında nakit mi yapılıyor?</strong>
+                <p style="color:#475569; margin:0; line-height:1.7;">Evet. Mobil kantar tartımı tamamlanıp kantar fişi çıktığı anda tutar yerinde peşin nakit veya tercih edeceğiniz IBAN hesabına FAST ile saniyeler içinde havale edilir.</p>
             </div>
         </section>
+
+        <!-- Calculator Script -->
+        <script>
+        function calculateBakirGeneral() {
+            var select = document.getElementById("calcBakirTypeGeneral");
+            var kgInput = document.getElementById("calcBakirKgGeneral");
+            var resDisplay = document.getElementById("calcBakirTotalGeneral");
+            var waBtn = document.getElementById("calcBakirWaBtnGeneral");
+
+            if (!select || !kgInput || !resDisplay) return;
+
+            var unitPrice = parseFloat(select.value) || 670;
+            var kg = parseFloat(kgInput.value) || 0;
+            var total = unitPrice * kg;
+            var typeText = select.options[select.selectedIndex].text.split(" - ")[0];
+
+            resDisplay.innerText = total.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
+
+            if (waBtn) {
+                var message = "Merhaba, " + kg + " kg " + typeText + " hurdası satışı için " + resDisplay.innerText + " tahmini tutar üzerinden teklif almak ve adresime araç çağırmak istiyorum.";
+                waBtn.href = "https://wa.me/905364863466?text=" + encodeURIComponent(message);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            calculateBakirGeneral();
+        });
+        </script>
 
             <!-- Kapsamlı Bakır Metalurjisi & Geri Dönüşüm Analizi -->
         <section class="content-card-pro">
@@ -809,12 +1101,12 @@
                         <i class="fas fa-map-marked-alt" style="color: var(--green-600);"></i> Hizmet Bölgelerimiz & İlçeler
                     </h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0;">                        <li>
-                            <a href="iİstanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Merkezi</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">İstanbul'un 39 ilçesinde 7/24 adresten hurda alım hizmeti.</small></span>
                             </a>
                         </li>                        <li>
-                            <a href="iİstanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Rehberi 2026</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">Avrupa ve Anadolu yakası hurda lojistik ve fiyat rehberi.</small></span>
                             </a>
@@ -1011,6 +1303,6 @@
         <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Teklif</a>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.09"></script>
 </body>
 </html>

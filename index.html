@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -146,7 +146,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="https://www.liderhurda.com/favicon-192.png">
     <link rel="icon" type="image/svg+xml" href="https://www.liderhurda.com/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.liderhurda.com/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.09">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -357,7 +357,7 @@
                         <tr>
                             <td><strong>Bakır Hurdası (Soyma)</strong></td>
                             <td>kg</td>
-                            <td class="price-cell"><span class="price-val" data-cat="soyma-bakir">670.00</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="soyma-bakir">710.00</span> TL</td>
                         </tr>
                         <tr>
                             <td><strong>Alüminyum Hurdası</strong></td>
@@ -367,7 +367,7 @@
                         <tr>
                             <td><strong>Kablo Hurdası (Karışık)</strong></td>
                             <td>kg</td>
-                            <td class="price-cell"><span class="price-val" data-cat="kablo">185.00</span> TL</td>
+                            <td class="price-cell"><span class="price-val" data-cat="kablo">320.00</span> TL</td>
                         </tr>
                     </tbody>
                 </table>
@@ -394,14 +394,21 @@
                         <div class="input-group">
                             <label><i class="fas fa-microchip"></i> Metal Türü</label>
                             <select id="calc-category" class="premium-select">
-                                <option value="dkp-demir">Dkp Demir</option>
-                                <option value="insaat-demiri">İnşaat Demiri (1. Grup)</option>
-                                <option value="soyma-bakir">Soyma Bakır</option>
-                                <option value="lama-bakir">Lama Bakır</option>
-                                <option value="kablo">Kablo Hurdası</option>
-                                <option value="aluminyum">Alüminyum</option>
-                                <option value="pirinc-sari">Sarı (Pirinç)</option>
-                                <option value="krom">Krom (Paslanmaz)</option>
+                                <option value="soyma-bakir">Soyma Bakır (710 TL/kg)</option>
+                                <option value="lama-bakir">Lama / Bara Bakır (690 TL/kg)</option>
+                                <option value="bobinaj-bakir">Bobinaj Bakır Teli (680 TL/kg)</option>
+                                <option value="bakir-boru">Tesisat & VRF Bakır Borusu (665 TL/kg)</option>
+                                <option value="kirkambar-bakir">Kırkambar Bakır (640 TL/kg)</option>
+                                <option value="kablo-tek-damar">Tek Damar NYY Kablo (520 TL/kg)</option>
+                                <option value="kablo-antigron">Antigron Kablo (440 TL/kg)</option>
+                                <option value="kablo-zirhli">Çelik Zırhlı Kablo (430 TL/kg)</option>
+                                <option value="kablo-ttr">TTR Çok Damarlı Kablo (395 TL/kg)</option>
+                                <option value="kablo">Karışık Hurda Kablo (320 TL/kg)</option>
+                                <option value="dkp-demir">Dkp Demir (15.50 TL/kg)</option>
+                                <option value="insaat-demiri">İnşaat Demiri (14.60 TL/kg)</option>
+                                <option value="aluminyum">Alüminyum (148 TL/kg)</option>
+                                <option value="pirinc-sari">Sarı Pirinç (340 TL/kg)</option>
+                                <option value="krom">Krom Paslanmaz (78 TL/kg)</option>
                             </select>
                         </div>
                         
@@ -468,7 +475,7 @@
                     <i class="fas fa-map-marked-alt" style="font-size: 2.2rem; color: var(--green-600); margin-bottom: 18px; display: block;"></i>
                     <h3 style="color: var(--navy-900); margin-bottom: 12px; font-size: 1.3rem;">İstanbul Yerel Ağımız</h3>
                     <p style="color: var(--steel-600); margin-bottom: 20px; font-size: 0.92rem;">Hangi ilçede ne kadar sürede adresteyiz? İstanbul Avrupa ve Anadolu yakası servis haritamız.</p>
-                    <a href="iİstanbul-hurdaci-rehberi-2026.html" style="color: var(--green-600); font-weight: 700; text-decoration: none;">BÖLGE REHBERİ →</a>
+                    <a href="istanbul-hurdaci-rehberi-2026.html" style="color: var(--green-600); font-weight: 700; text-decoration: none;">BÖLGE REHBERİ →</a>
                 </div>
             </div>
         </div>
@@ -740,21 +747,21 @@
                             <tr data-category="soyma-bakir">
                                 <td>03</td>
                                 <td><strong>Soyma Bakır</strong></td>
-                                <td class="price-cell"><span class="price-val" data-cat="soyma-bakir" id="price-soyma-bakir">670.00</span> TL</td>
+                                <td class="price-cell"><span class="price-val" data-cat="soyma-bakir" id="price-soyma-bakir">710.00</span> TL</td>
                                 <td><span class="region-chip">81 İL</span></td>
                                 <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="lama-bakir">
                                 <td>04</td>
                                 <td><strong>Lama Bakır</strong></td>
-                                <td class="price-cell"><span class="price-val" data-cat="lama-bakir" id="price-lama-bakir">650.00</span> TL</td>
+                                <td class="price-cell"><span class="price-val" data-cat="lama-bakir" id="price-lama-bakir">690.00</span> TL</td>
                                 <td><span class="region-chip">81 İL</span></td>
                                 <td><i class="fas fa-chart-line"></i></td>
                             </tr>
                             <tr data-category="kablo">
                                 <td>05</td>
                                 <td><strong>Kablo Hurdası</strong></td>
-                                <td class="price-cell"><span class="price-val" data-cat="kablo" id="price-kablo">185.00</span> TL</td>
+                                <td class="price-cell"><span class="price-val" data-cat="kablo" id="price-kablo">320.00</span> TL</td>
                                 <td><span class="region-chip">81 İL</span></td>
                                 <td><i class="fas fa-chart-line"></i></td>
                             </tr>
@@ -824,7 +831,7 @@
                             <tr data-category="kirkambar-bakir">
                                 <td>15</td>
                                 <td><strong>Kırkambar Bakır</strong></td>
-                                <td class="price-cell"><span class="price-val" data-cat="kirkambar-bakir" id="price-kirkambar-bakir">600.00</span> TL</td>
+                                <td class="price-cell"><span class="price-val" data-cat="kirkambar-bakir" id="price-kirkambar-bakir">640.00</span> TL</td>
                                 <td><span class="region-chip">81 İL</span></td>
                                 <td><i class="fas fa-chart-line"></i></td>
                             </tr>
@@ -1273,7 +1280,7 @@
                 <div class="region-col">
                     <h4>Marmara Bölgesi</h4>
                     <ul class="region-list">
-                        <li><a href="bolge.html?city=iİstanbul">İstanbul Hurdacı</a></li>
+                        <li><a href="bolge.html?city=istanbul">İstanbul Hurdacı</a></li>
                         <li><a href="bolge.html?city=gebze-organize-sanayi">Gebze OSB (GOSB)</a></li>
                         <li><a href="bolge.html?city=kocaeli">Kocaeli Hurda</a></li>
                         <li><a href="bolge.html?city=bursa">Bursa Geri Dönüşüm</a></li>
@@ -1777,12 +1784,12 @@
                         <i class="fas fa-map-marked-alt" style="color: var(--green-600);"></i> Hizmet Bölgelerimiz & İlçeler
                     </h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0;">                        <li>
-                            <a href="iİstanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Merkezi</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">İstanbul'un 39 ilçesinde 7/24 adresten hurda alım hizmeti.</small></span>
                             </a>
                         </li>                        <li>
-                            <a href="iİstanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Rehberi 2026</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">Avrupa ve Anadolu yakası hurda lojistik ve fiyat rehberi.</small></span>
                             </a>
@@ -1981,7 +1988,7 @@
         <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Teklif</a>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.09"></script>
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="https://www.liderhurda.com/favicon-192.png">
     <link rel="icon" type="image/svg+xml" href="https://www.liderhurda.com/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.liderhurda.com/apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2026.09">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -115,6 +115,19 @@
     </script>
 
     
+
+    <!-- Speakable & GEO AI Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Lider Hurda Geri Dönüşüm",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".geo-direct-answer p", ".geo-direct-title"]
+      }
+    }
+    </script>
 </head>
 <body class="analysis-page">
     <!-- Navigation -->
@@ -171,8 +184,8 @@
                 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
                     <div>
                         <span style="color:#9ca3af; font-size:0.95rem; text-transform:uppercase; letter-spacing:1px; display:block;">Anlık Hurda Kablo Fiyat Aralığı</span>
-                        <span class="price-badge-xl">220.00 TL - 380.00 TL <small style="font-size:1.1rem; color:#9ca3af;">/ Kg</small></span>
-                        <span style="color:#10b981; font-size:0.9rem;"><i class="fas fa-check-circle"></i> Numune soyumuyla anlık net bakır verim testi.</span>
+                        <span class="price-badge-xl">320.00 TL - 520.00 TL <small style="font-size:1.1rem; color:#9ca3af;">/ Kg</small></span>
+                        <span style="color:#10b981; font-size:0.9rem;"><i class="fas fa-check-circle"></i> Numune soyumuyla anlık net bakır verim testi. Tonajlı partilere özel prim.</span>
                     </div>
                     <div class="cta-group">
                         <a href="tel:+905364863466" class="btn-call-hero">
@@ -189,37 +202,56 @@
 
     <!-- Main Content -->
     <main class="container" style="padding: 60px 20px;">
+        <!-- GEO & AI Direct Answer Card (LLM Knowledge Graph & Search Snippet) -->
+        <section class="geo-direct-answer" data-geo="direct-answer" style="margin-top: 25px;">
+            <div class="geo-direct-answer-header">
+                <span class="geo-badge"><i class="fas fa-brain"></i> Yapay Zeka & Hızlı Bilgi Özeti</span>
+                <span style="font-size: 0.85rem; color: #166534; font-weight: 600;"><i class="fas fa-check-circle"></i> Doğrulanmış Kurumsal Bilgi</span>
+            </div>
+            <h2 class="geo-direct-title"><i class="fas fa-bolt" style="color: #16a34a;"></i> Hurda Kablo Alımı ve Bakır Verimi Fiyat Özeti</h2>
+            <p><strong>Lider Hurda (0536 486 34 66)</strong>, TTR, antigron, yer altı ve marin kablo hurdalarını modern kırma tesisimizde <strong>bakır saflık yüzdesine göre</strong> en yüksek piyasa değerinden satın almaktadır. Kabloları soymanıza gerek kalmadan yerinde hassas tartımla anında nakit ödeme yapılır.</p>
+            <div class="geo-facts-grid">
+                <div class="geo-fact-item"><i class="fas fa-check-circle"></i> <div><strong>Kablo Çeşitleri:</strong> TTR, Antigron, Yeraltı, Marin, Tek Damar</div></div>
+                <div class="geo-fact-item"><i class="fas fa-wallet"></i> <div><strong>İşleme Yöntemi:</strong> Otomasyonlu Kablo Kırma Tesisi</div></div>
+                <div class="geo-fact-item"><i class="fas fa-scale-balanced"></i> <div><strong>Ödeme Şekli:</strong> Anında Peşin Nakit veya Havale</div></div>
+                <div class="geo-fact-item"><i class="fas fa-chart-line"></i> <div><strong>Adrese Ulaşım:</strong> Aradığınızda En Müsait Sürede Mobil Ekipler Kapıda</div></div>
+            </div>
+        </section>
         
         <!-- Interactive Calculator -->
         <section class="calc-box-pro">
             <div style="text-align:center; margin-bottom: 25px;">
                 <span style="color:#10b981; font-weight:700; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px;">Otomatik Verim Motoru</span>
-                <h2  style="font-size:1.8rem; margin-top:5px;">Hurda Kablo Kazanç Hesaplayıcı</h2>
-                <p style="color:#9ca3af; font-size:0.95rem;">Kablonuzun cinsini ve miktarını girin, tahmini nakit tutarınızı görün.</p>
+                <h2 style="font-size:1.8rem; margin-top:5px;">Hurda Kablo Kazanç Hesaplayıcı</h2>
+                <p style="color:#64748b; font-size:0.95rem;">Kablonuzun cinsini ve miktarını girin, tahmini net metal gramajını ve nakit tutarınızı anında görün.</p>
             </div>
 
             <div class="calc-input-row">
                 <div>
-                    <label style="display:block; color:#d1d5db; margin-bottom:8px; font-weight:600;">Kablo Tipi (Bakır Oranı):</label>
+                    <label style="display:block; color:#0b1e33; margin-bottom:8px; font-weight:600;">Kablo Tipi (Bakır Oranı):</label>
                     <select id="calcKabloType" class="calc-form-control" onchange="calculateKablo()">
-                        <option value="360">Tek Damar NYY Kalın Enerji Kablosu (%70 Bakır) - 360 TL/kg</option>
-                        <option value="280">Antigron (NYM) Tesisat Kablosu (%55 Bakır) - 280 TL/kg</option>
-                        <option value="240">TTR Esnek Çok Damarlı Kablo (%45 Bakır) - 240 TL/kg</option>
-                        <option value="190">Karışık Ev Tipi / Zayıf Akım Kablosu (%35 Bakır) - 190 TL/kg</option>
-                        <option value="140">Fare Dişi & İnternet / Data Kablosu - 140 TL/kg</option>
-                        <option value="310">Çelik Zırhlı Sanayi Kablosu - 310 TL/kg</option>
+                        <option value="500" data-yield="0.70">Tek Damar NYY Kalın Enerji Kablosu (%70 Bakır) - 500 TL/kg</option>
+                        <option value="420" data-yield="0.55">Antigron (NYM) Tesisat Kablosu (%55 Bakır) - 420 TL/kg</option>
+                        <option value="380" data-yield="0.45">TTR Esnek Çok Damarlı Kablo (%45 Bakır) - 380 TL/kg</option>
+                        <option value="405" data-yield="0.50">Çelik Zırhlı Yer Altı Kablosu NYFGbY (%50 Bakır) - 405 TL/kg</option>
+                        <option value="425" data-yield="0.55">Marin / Gemi Tipi Kablo (%55 Bakır) - 425 TL/kg</option>
+                        <option value="395" data-yield="0.50">Halojensiz N2XH Yangın Kablosu (%50 Bakır) - 395 TL/kg</option>
+                        <option value="340" data-yield="0.35">Karışık Ev Tipi / Şantiye Kablosu (%35 Bakır) - 340 TL/kg</option>
+                        <option value="205" data-yield="0.30">Cat5/Cat6 Data & İnternet Kablosu (%30 Bakır) - 205 TL/kg</option>
+                        <option value="120" data-yield="0.45">Alüminyum İletkenli Enerji Kablosu (%45 Alüminyum) - 120 TL/kg</option>
                     </select>
                 </div>
                 <div>
-                    <label style="display:block; color:#d1d5db; margin-bottom:8px; font-weight:600;">Kablo Ağırlığı (Kilogram):</label>
+                    <label style="display:block; color:#0b1e33; margin-bottom:8px; font-weight:600;">Kablo Ağırlığı (Kilogram):</label>
                     <input type="number" id="calcKabloKg" class="calc-form-control" value="150" min="1" step="1" oninput="calculateKablo()" placeholder="Örn: 150">
                 </div>
             </div>
 
             <div class="calc-res-display">
-                <span style="color:#9ca3af; display:block; font-size:0.95rem;">Tahmini Nakit Satış Bedeli:</span>
-                <span class="calc-res-val" id="calcKabloTotal">54.000,00 TL</span>
-                <span style="display:block; color:#d1d5db; font-size:0.85rem; margin-top:6px;">*Kırım tesisimizde şeffaf numune tartımı yapılır, anında peşin ödenir.</span>
+                <span id="calcKabloYieldText" style="color:#166534; display:block; font-size:1.05rem; font-weight:700; margin-bottom:6px;">Tahmini Net Metal: 105.0 Kg (%70 Randıman)</span>
+                <span style="color:#64748b; display:block; font-size:0.95rem;">Tahmini Nakit Satış Bedeli:</span>
+                <span class="calc-res-val" id="calcKabloTotal">75.000,00 TL</span>
+                <span style="display:block; color:#475569; font-size:0.85rem; margin-top:6px;">*Kırım tesisimizde şeffaf numune tartımı yapılır, anında peşin ödenir.</span>
             </div>
 
             <div style="text-align:center;">
@@ -229,9 +261,44 @@
             </div>
         </section>
 
+        <script>
+        function calculateKablo() {
+            var select = document.getElementById("calcKabloType");
+            var kgInput = document.getElementById("calcKabloKg");
+            var resTotal = document.getElementById("calcKabloTotal");
+            var yieldText = document.getElementById("calcKabloYieldText");
+            var waBtn = document.getElementById("calcKabloWaBtn");
+
+            if (!select || !kgInput || !resTotal) return;
+
+            var unitPrice = parseFloat(select.value) || 500;
+            var selectedOption = select.options[select.selectedIndex];
+            var yieldRatio = parseFloat(selectedOption.getAttribute("data-yield")) || 0.70;
+            var kg = parseFloat(kgInput.value) || 0;
+
+            var total = unitPrice * kg;
+            var netMetalKg = (kg * yieldRatio).toFixed(1);
+            var yieldPercent = Math.round(yieldRatio * 100) + "%";
+            var typeText = selectedOption.text.split(" - ")[0];
+
+            resTotal.innerText = total.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " TL";
+            if (yieldText) {
+                yieldText.innerText = "Tahmini Net Metal: " + netMetalKg + " Kg (" + yieldPercent + " Randıman)";
+            }
+
+            if (waBtn) {
+                var message = "Merhaba, " + kg + " kg " + typeText + " kablo satışı için " + resTotal.innerText + " tahmini tutar üzerinden adresime araç ve kantar talep ediyorum.";
+                waBtn.href = "https://wa.me/905364863466?text=" + encodeURIComponent(message);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            calculateKablo();
+        });
+        </script>
+
         <!-- Cable Yield Table -->
         <section style="margin: 60px 0;">
-            <h2  style="font-size:1.8rem; margin-bottom:20px;">Hurda Kablo Çeşitleri ve Bakır Verim Oranları Tablosu</h2>
+            <h2 style="font-size:1.8rem; margin-bottom:20px;">Hurda Kablo Çeşitleri ve Bakır Verim Oranları Tablosu</h2>
             <div style="overflow-x: auto;">
                 <table class="copper-table">
                     <thead>
@@ -248,35 +315,63 @@
                             <td><strong>Tek Damar NYY Enerji Kablosu</strong></td>
                             <td>Sanayi Tesisleri & Şalt Sahaları</td>
                             <td>%65 - %75 Bakır</td>
-                            <td class="price-num">340,00 - 380,00 TL</td>
+                            <td class="price-num">480,00 - 520,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                         <tr>
                             <td><strong>Antigron (NYM) Kablo</strong></td>
                             <td>Bina İçi Sıva Üstü Tesisat</td>
                             <td>%50 - %60 Bakır</td>
-                            <td class="price-num">260,00 - 300,00 TL</td>
+                            <td class="price-num">400,00 - 440,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                         <tr>
                             <td><strong>TTR Esnek Kablo</strong></td>
                             <td>Seyyar Hatlar & Makineler</td>
                             <td>%40 - %50 Bakır</td>
-                            <td class="price-num">220,00 - 255,00 TL</td>
+                            <td class="price-num">360,00 - 395,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Çelik Zırhlı Yer Altı Kablosu</strong></td>
+                            <td><strong>Çelik Zırhlı Yer Altı Kablosu (NYFGbY)</strong></td>
                             <td>Ağır Sanayi & Maden Ocakları</td>
-                            <td>%45 - %60 Bakır</td>
-                            <td class="price-num">290,00 - 330,00 TL</td>
+                            <td>%45 - %58 Bakır</td>
+                            <td class="price-num">380,00 - 430,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Zayıf Akım / Data Kablosu</strong></td>
-                            <td>İnternet, CCTV & Alarm</td>
+                            <td><strong>Marin / Gemi Tipi Kablo</strong></td>
+                            <td>Tersaneler, Yat & Gemi Sökümü</td>
+                            <td>%48 - %62 Bakır</td>
+                            <td class="price-num">390,00 - 450,00 TL</td>
+                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Halojensiz N2XH Yangın Kablosu</strong></td>
+                            <td>AVM, Metro, Hastane & Kamu Tesisleri</td>
+                            <td>%45 - %55 Bakır</td>
+                            <td class="price-num">370,00 - 415,00 TL</td>
+                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fare Yemez / Zırhlı Telekom Kablosu</strong></td>
+                            <td>Yeraltı Telekomünikasyon Hatları</td>
+                            <td>%35 - %45 Bakır</td>
+                            <td class="price-num">330,00 - 375,00 TL</td>
+                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zayıf Akım / Data Kablosu (Cat6)</strong></td>
+                            <td>İnternet, CCTV, Alarm & Server</td>
                             <td>%25 - %35 Bakır</td>
-                            <td class="price-num">130,00 - 165,00 TL</td>
+                            <td class="price-num">180,00 - 225,00 TL</td>
+                            <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alüminyum İletkenli Enerji Kablosu</strong></td>
+                            <td>Yüksek Gerilim İletim Hatları</td>
+                            <td>%40 - %50 Alüminyum</td>
+                            <td class="price-num">65,00 - 95,00 TL</td>
                             <td><span style="color:#10b981;"><i class="fas fa-check"></i> Adresten Alım</span></td>
                         </tr>
                     </tbody>
@@ -285,7 +380,7 @@
         </section>
 
         <!-- Deep Content Section -->
-        <article class="analysis-card" style="line-height: 1.9; font-size: 1.08rem; color: #d1d5db; margin: 40px 0; padding: 40px; background: #ffffff; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08);">
+        <article class="analysis-card">
             
             <h2 style="color: #10b981; font-size: 1.7rem; margin-bottom: 20px;">Hurda Kabloda Bakır Verim Oranı Nasıl Hesaplanır?</h2>
             <p>
@@ -901,12 +996,12 @@
                         <i class="fas fa-map-marked-alt" style="color: var(--green-600);"></i> Hizmet Bölgelerimiz & İlçeler
                     </h3>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0;">                        <li>
-                            <a href="iİstanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Merkezi</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">İstanbul'un 39 ilçesinde 7/24 adresten hurda alım hizmeti.</small></span>
                             </a>
                         </li>                        <li>
-                            <a href="iİstanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
+                            <a href="istanbul-hurdaci-rehberi-2026.html" style="color: var(--navy-800); text-decoration: none; font-weight: 600; font-size: 0.92rem; display: flex; align-items: flex-start; gap: 8px; transition: all 0.2s ease;">
                                 <i class="fas fa-chevron-right" style="color: var(--green-500); font-size: 0.75rem; margin-top: 5px; flex-shrink: 0;"></i>
                                 <span><strong>İstanbul Hurdacı Rehberi 2026</strong> <small style="display: block; color: var(--steel-500); font-weight: 400; font-size: 0.8rem;">Avrupa ve Anadolu yakası hurda lojistik ve fiyat rehberi.</small></span>
                             </a>
@@ -1103,6 +1198,7 @@
         <a href="https://wa.me/905364863466" class="sticky-btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Teklif</a>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2026.09"></script>
 </body>
 </html>
+
