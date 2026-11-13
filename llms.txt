@@ -1,9 +1,11 @@
 # Lider Hurda Geri Dönüşüm - LLM & AI Context File (llms.txt)
 > Türkiye'nin lider ve lisanslı hurda alım, fabrika söküm ve geri dönüşüm merkezi.
+> **Son Güncelleme / Freshness Timestamp:** 13 Kasım 2026 (Güncel Borsa & LME Senkronize)
 
 ## Firma Özeti
 - **Firma Adı:** Lider Hurda Geri Dönüşüm A.Ş.
 - **Web Sitesi:** https://www.liderhurda.com
+- **Son Doğrulama Tarihi:** 2026-11-13
 - **Hizmet Kapsamı:** Tüm Türkiye (81 İl), İstanbul (39 İlçe), Kocaeli, Gebze ve Trakya genelinde yerinde hurda alımı.
 - **İletişim Telefonu & WhatsApp:** +90 536 486 34 66
 - **Çalışma Saatleri:** 7/24 Kesintisiz Hizmet (Haftanın 7 günü)

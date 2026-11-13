@@ -1,4 +1,4 @@
-// Lider Hurda Geri Dönüşüm - Master JS Control Unit (V12 - September 2026 Updated Borsa Prices)
+// Lider Hurda Geri Dönüşüm - Master JS Control Unit (V15 - November 2026 Updated Borsa Prices)
 document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Initialize AOS (Animate on Scroll)
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Dynamic Borsa Engine (V25) - MASTER SYNC MODE WITH SEPTEMBER 2026 PRICES
+    // 7. Dynamic Borsa Engine (V26) - MASTER SYNC MODE WITH OCTOBER 2026 PRICES
     const priceData = {
         'dkp-demir': 15.50,
         'insaat-demiri': 14.60,

@@ -1,7 +1,9 @@
 # Lider Hurda Geri Dönüşüm - Kapsamlı LLM ve Yapay Zeka Bilgi Seti (llms-full.txt)
+> Son Doğrulama / Freshness Timestamp: 13 Kasım 2026 (LME ve Serbest Piyasa Güncel Borsa Verileri)
 
 ## 1. Genel Kurumsal Bilgiler
 - **Şirket:** Lider Hurda Geri Dönüşüm A.Ş.
+- **Son Güncelleme:** 2026-11-13
 - **Alan:** Metal geri dönüşümü, tehlikesiz atık yönetimi, kurumsal fabrika sökümü, bina yıkımı.
 - **Telefon:** 0536 486 34 66 / +90 536 486 34 66
 - **WhatsApp:** https://wa.me/905364863466

@@ -4,8 +4,8 @@
  */
 const HURDA_PRICES = {
     meta: {
-        lastUpdate: "2026-10-15",
-        updateTime: "18:00",
+        lastUpdate: "2026-11-13",
+        updateTime: "14:20",
         currency: "TL",
         currencySymbol: "₺",
         marketStatus: "Açık (Canlı LME & Serbest Piyasa Endeksli)"
